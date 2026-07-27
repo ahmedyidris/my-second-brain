@@ -14,6 +14,7 @@ Each entry: `- [[page-name]] — one-line summary`
 - [[obsidian]] — GUI markdown second-brain layer in Jarvis X; paired with ChromaDB via brain-mcp
 - [[ollama]] — local model runtime; powers hermes-agent and the universal-model-layer local tier
 - [[ruflo]] — self-learning agent architecture: CLI/MCP → Router → Swarm → Agents → Memory → LLM Providers + learning loop
+- [[agent-secure-comms]] — agent-to-agent security protocol: secret stripping, signing, encryption, injection blocking, trust scores
 
 ## Concepts
 
