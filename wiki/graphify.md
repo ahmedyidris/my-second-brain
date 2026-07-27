@@ -92,6 +92,38 @@ Shortest path (3 hops):
 
 Each edge is tagged `EXTRACTED` (read directly from source) or `INFERRED` (resolved by graphify) — you can tell what was explicit vs. inferred.
 
+## MCP server
+
+Graphify can expose a graph as an MCP tool server, letting any MCP-compatible agent query it without running graphify locally.
+
+```bash
+# stdio (default) — for local agents, IDEs
+python -m graphify.serve graphify-out/graph.json
+
+# register with Kimi Code
+kimi mcp add --transport stdio graphify -- python -m graphify.serve graphify-out/graph.json
+
+# HTTP — one server, whole team points at the URL
+python -m graphify.serve graphify-out/graph.json --transport http --port 8080
+python -m graphify.serve graphify-out/graph.json --transport http --host 0.0.0.0 --api-key "$SECRET"
+```
+
+Both the positional argument and `--graph` flag are accepted:
+
+```bash
+python -m graphify.serve graphify-out/graph.json
+python -m graphify.serve --graph graphify-out/graph.json   # same thing
+```
+
+For the HTTP transport: expose on `0.0.0.0` and set `--api-key` for a shared team endpoint with auth. With the default stdio transport, no network port is opened.
+
+## Advanced queries
+
+```bash
+# target a specific graph.json (not the default ./graphify-out/graph.json)
+graphify query "what connects DigestAuth to Response?" --graph graphify-out/graph.json
+```
+
 ## Workflow in CLAUDE.md
 
 The vault `CLAUDE.md` instructs: run `graphify query "<question>"` before broad source browsing. The graph returns a scoped subgraph — much smaller context than raw grep. After modifying code/wiki, run `graphify update .` to keep the graph current.
