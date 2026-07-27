@@ -1,0 +1,302 @@
+{
+  "raw/Apps Downloaded/kimi-webbridge-extension/background.js": {
+    "mtime": 1783937568.0,
+    "ast_hash": "d692e80153178ffd576ebbe766f50e54",
+    "semantic_hash": ""
+  },
+  "raw/Apps Downloaded/kimi-webbridge-extension/chunks/popup-Cs4QebOl.js": {
+    "mtime": 1783937568.0,
+    "ast_hash": "14b84d015db50a07bcdec94f1d86db77",
+    "semantic_hash": ""
+  },
+  "skills-lock.json": {
+    "mtime": 1785189773.2049115,
+    "ast_hash": "026d7e1e9e6ae777aaa660c355c0cd72",
+    "semantic_hash": ""
+  },
+  "AGENTS.md": {
+    "mtime": 1785192732.931134,
+    "ast_hash": "e60deed321866596d29ae4651b660984",
+    "semantic_hash": ""
+  },
+  "CLAUDE.md": {
+    "mtime": 1785192732.8155787,
+    "ast_hash": "991392059611ca03265a0539c2d1a9b5",
+    "semantic_hash": ""
+  },
+  "raw/2026-07-27-agent-secure-comms.md": {
+    "mtime": 1785183328.5489845,
+    "ast_hash": "e66c17c05eea8c584141affbfca58e0d",
+    "semantic_hash": ""
+  },
+  "raw/2026-07-27-composio-setup.md": {
+    "mtime": 1785183871.0966916,
+    "ast_hash": "7023d2dec3ab73465968a40f0587c88a",
+    "semantic_hash": ""
+  },
+  "raw/2026-07-27-llm-wiki-pattern-why.md": {
+    "mtime": 1785180746.8066645,
+    "ast_hash": "6b7468142abf61f6477ec0a4cf95e565",
+    "semantic_hash": ""
+  },
+  "raw/2026-07-27-llm-wiki-query-patterns.md": {
+    "mtime": 1785181359.3707404,
+    "ast_hash": "c44aecd7d2cf221ec38bd71bae8ebcaf",
+    "semantic_hash": ""
+  },
+  "raw/2026-07-27-llm-wiki-self-heal-prompt.md": {
+    "mtime": 1785181426.2401946,
+    "ast_hash": "d3673199648673b258a8ec7f1480c8c5",
+    "semantic_hash": ""
+  },
+  "raw/2026-07-27-llm-wiki-skills-install.md": {
+    "mtime": 1785180859.0185878,
+    "ast_hash": "7c510fc8140fffd6cf4b2e7b189334b3",
+    "semantic_hash": ""
+  },
+  "raw/2026-07-27-llm-wiki-vault-structure.md": {
+    "mtime": 1785180801.0406277,
+    "ast_hash": "ec4b9f35bbe06d60f88e76e93dde6bf1",
+    "semantic_hash": ""
+  },
+  "raw/2026-07-27-research-vault-setup.md": {
+    "mtime": 1785181100.9404204,
+    "ast_hash": "af1522d8ae91a47aba3949673ae829c0",
+    "semantic_hash": ""
+  },
+  "raw/2026-07-27-ruflo-architecture.md": {
+    "mtime": 1785182259.2017107,
+    "ast_hash": "0cef66a0cf15ae631634465e39ab5a33",
+    "semantic_hash": ""
+  },
+  "raw/2026-07-27-ruflo-federation-plugin.md": {
+    "mtime": 1785183445.821921,
+    "ast_hash": "5408537b5b601a96fe4d08168d10303a",
+    "semantic_hash": ""
+  },
+  "raw/2026-07-27-ruflo-install.md": {
+    "mtime": 1785182812.280283,
+    "ast_hash": "050a3763f058591f47eb465b38335db8",
+    "semantic_hash": ""
+  },
+  "raw/2026-07-27-ruflo-mcp-setup.md": {
+    "mtime": 1785183253.290025,
+    "ast_hash": "67f3b774b92b118491d5555de5970863",
+    "semantic_hash": ""
+  },
+  "raw/2026-07-27-ruflo-one-line-install.md": {
+    "mtime": 1785183190.2230592,
+    "ast_hash": "da3f4904aaceeffaedf841252c369fde",
+    "semantic_hash": ""
+  },
+  "raw/2026-07-28-agent-starter-kit-install.md": {
+    "mtime": 1785189794.5738957,
+    "ast_hash": "9e08029b07ca86df40a01ae023e677af",
+    "semantic_hash": ""
+  },
+  "raw/Apps Downloaded/kimi-webbridge-extension/popup.html": {
+    "mtime": 1783937568.0,
+    "ast_hash": "1c6249ab7f5b670384316b377fa562c7",
+    "semantic_hash": ""
+  },
+  "raw/Jarvis X Resources/DeepSeek Files/DeepSeek_Jarvis_X_Master_Plan.md": {
+    "mtime": 1784763017.7946804,
+    "ast_hash": "c96d4520c1994bf2fbb76faad8b6008a",
+    "semantic_hash": ""
+  },
+  "raw/Jarvis X Resources/DeepSeek Files/deepseek_markdown_20260722_eb91b8.md": {
+    "mtime": 1784757432.4700391,
+    "ast_hash": "f253ef1c46b38d550e2def3c80608c6a",
+    "semantic_hash": ""
+  },
+  "raw/Jarvis X Resources/Google Drive/gemini-code-jarvis-x.md": {
+    "mtime": 1784686729.270674,
+    "ast_hash": "7e192f7ec17ad961109f8aa49c803266",
+    "semantic_hash": ""
+  },
+  "raw/Jarvis X Resources/Jarvis X/Jarvis_X_v2_Ascension_Plan.md": {
+    "mtime": 1785105340.1104276,
+    "ast_hash": "83a6524deb47df9cfe814b5ad37cefd1",
+    "semantic_hash": ""
+  },
+  "wiki/agent-secure-comms.md": {
+    "mtime": 1785183471.2309074,
+    "ast_hash": "9eb9e03538f61586daed753bb0d5b274",
+    "semantic_hash": ""
+  },
+  "wiki/agent-starter-kit.md": {
+    "mtime": 1785189811.646883,
+    "ast_hash": "ecc93668e5cc182d1a0e286cf85d8c23",
+    "semantic_hash": ""
+  },
+  "wiki/audits/audit-2026-07-27.md": {
+    "mtime": 1785182081.9978507,
+    "ast_hash": "2d7f4038789ba7840f7efcab888988eb",
+    "semantic_hash": ""
+  },
+  "wiki/composio.md": {
+    "mtime": 1785185721.7716653,
+    "ast_hash": "4981addf22d16c8bae345075d9e28daf",
+    "semantic_hash": ""
+  },
+  "wiki/constitutional-autonomy.md": {
+    "mtime": 1785182167.3227894,
+    "ast_hash": "106fe4696dd7baa97e47137b9dc438d8",
+    "semantic_hash": ""
+  },
+  "wiki/hermes-agent.md": {
+    "mtime": 1785180343.3658924,
+    "ast_hash": "357baec66c149e9320149d0386479c3e",
+    "semantic_hash": ""
+  },
+  "wiki/index.md": {
+    "mtime": 1785192444.5217268,
+    "ast_hash": "4fcc648b71424e42cbc706f4931e9683",
+    "semantic_hash": ""
+  },
+  "wiki/jarvis-x-app.md": {
+    "mtime": 1785182156.7347987,
+    "ast_hash": "ba3d54d32714a9e6a5fc6e0a17078c17",
+    "semantic_hash": ""
+  },
+  "wiki/jarvis-x-content-engine.md": {
+    "mtime": 1785182179.7857788,
+    "ast_hash": "149528f04c20e824ecc013907b19121d",
+    "semantic_hash": ""
+  },
+  "wiki/jarvis-x-hardware.md": {
+    "mtime": 1785182169.5157876,
+    "ast_hash": "9ab11a8320c0a46e76c88e0a825fbf97",
+    "semantic_hash": ""
+  },
+  "wiki/jarvis-x-income-roadmap.md": {
+    "mtime": 1785182176.9757812,
+    "ast_hash": "0a0b6f1a7980929df82f6eb8558f0a8e",
+    "semantic_hash": ""
+  },
+  "wiki/jarvis-x-trading-module.md": {
+    "mtime": 1785180407.2448657,
+    "ast_hash": "f3d48ecd2bed94b317a8794ca14c04d2",
+    "semantic_hash": ""
+  },
+  "wiki/jarvis-x-voice-engine.md": {
+    "mtime": 1785180374.2558796,
+    "ast_hash": "42368f2c6e92bac6ca91cb94967e10dc",
+    "semantic_hash": ""
+  },
+  "wiki/jarvis-x.md": {
+    "mtime": 1785180324.1299005,
+    "ast_hash": "65c68defec93ff3a5f230630c1af6839",
+    "semantic_hash": ""
+  },
+  "wiki/llm-wiki-pattern.md": {
+    "mtime": 1785181437.8071887,
+    "ast_hash": "71642409dcf539bb5f5553c7dc68b171",
+    "semantic_hash": ""
+  },
+  "wiki/llm-wiki-setup-skill.md": {
+    "mtime": 1785182122.7988276,
+    "ast_hash": "573b58a4306792fe306e95d7fd57c442",
+    "semantic_hash": ""
+  },
+  "wiki/log.md": {
+    "mtime": 1785192449.7927206,
+    "ast_hash": "626b68ef2ab1930a46ce3a50b4e0663d",
+    "semantic_hash": ""
+  },
+  "wiki/obsidian.md": {
+    "mtime": 1785182134.337818,
+    "ast_hash": "454cf93e6a00529062e389f0495b76a8",
+    "semantic_hash": ""
+  },
+  "wiki/ollama.md": {
+    "mtime": 1785182144.1218095,
+    "ast_hash": "ad3c2ab5955a167cebfa4c9fd779d5a8",
+    "semantic_hash": ""
+  },
+  "wiki/research-vault.md": {
+    "mtime": 1785181110.1994133,
+    "ast_hash": "0bb7998308a5957f5a2edf7a76639297",
+    "semantic_hash": ""
+  },
+  "wiki/ruflo.md": {
+    "mtime": 1785183462.5239122,
+    "ast_hash": "1fec430c3e4d2149cc78e48065328ab4",
+    "semantic_hash": ""
+  },
+  "wiki/second-brain.md": {
+    "mtime": 1785182098.5808418,
+    "ast_hash": "b47c4e938e302f50cdca20af3171d5c0",
+    "semantic_hash": ""
+  },
+  "wiki/self-improvement-loop.md": {
+    "mtime": 1785180427.533857,
+    "ast_hash": "29dae9c8c0a54c91f6f4029f6c79a4f7",
+    "semantic_hash": ""
+  },
+  "wiki/source-deepseek-jarvis-x-master-plan.md": {
+    "mtime": 1785180439.9178517,
+    "ast_hash": "48f9d8b4f738c9da1aa2cc125003d26c",
+    "semantic_hash": ""
+  },
+  "wiki/source-jarvis-x-v2-ascension-plan.md": {
+    "mtime": 1785180452.6488452,
+    "ast_hash": "7a77e9919d11495fe2ae43db34a18172",
+    "semantic_hash": ""
+  },
+  "wiki/the-council.md": {
+    "mtime": 1785182164.8287916,
+    "ast_hash": "f91316d2cb7c614816a55d2cf92efd0a",
+    "semantic_hash": ""
+  },
+  "wiki/universal-model-layer.md": {
+    "mtime": 1785180351.3158891,
+    "ast_hash": "83b3c5dc0f27fbfd98259ee559b9a6fc",
+    "semantic_hash": ""
+  },
+  "wiki/wiki-self-heal-skill.md": {
+    "mtime": 1785182113.247834,
+    "ast_hash": "e0e505552b75e04793d20aab1b3458d8",
+    "semantic_hash": ""
+  },
+  "raw/Apps Downloaded/kimi-webbridge-extension/icon/128.png": {
+    "mtime": 1783937570.0,
+    "ast_hash": "3ef310d3a53770299e598c63e3b22a88",
+    "semantic_hash": ""
+  },
+  "raw/Apps Downloaded/kimi-webbridge-extension/icon/16.png": {
+    "mtime": 1783937570.0,
+    "ast_hash": "40bb3d4644edec1b934d8211e79b485e",
+    "semantic_hash": ""
+  },
+  "raw/Apps Downloaded/kimi-webbridge-extension/icon/32.png": {
+    "mtime": 1783937570.0,
+    "ast_hash": "2c98216ad25e10d0f96a06572a5cdc44",
+    "semantic_hash": ""
+  },
+  "raw/Apps Downloaded/kimi-webbridge-extension/icon/48.png": {
+    "mtime": 1783937570.0,
+    "ast_hash": "25179a66834799c23fbb905aab61d90f",
+    "semantic_hash": ""
+  },
+  ".claude/settings.json": {
+    "mtime": 1785192732.8159409,
+    "ast_hash": "55172502eafafe087841c974f7833b0e",
+    "semantic_hash": ""
+  },
+  ".claude/CLAUDE.md": {
+    "mtime": 1785192732.812589,
+    "ast_hash": "9b31786b637be3c13978bec4c2330752",
+    "semantic_hash": ""
+  },
+  "raw/2026-07-28-graphify-output-structure.md": {
+    "mtime": 1785192423.6537526,
+    "ast_hash": "a32c47071499f193bbd8576bf162ba34",
+    "semantic_hash": ""
+  },
+  "wiki/graphify.md": {
+    "mtime": 1785192897.343172,
+    "ast_hash": "8005c6470774b5ee075ffed690d71751",
+    "semantic_hash": ""
+  }
+}

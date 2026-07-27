@@ -1,0 +1,26 @@
+# Git
+.git/
+
+# Skills data (CSVs, scripts — not knowledge sources)
+.agents/
+agent/
+.claude/skills/
+.codex/
+
+# Node / Python
+node_modules/
+__pycache__/
+*.pyc
+.venv/
+
+# Graphify output (don't index itself)
+graphify-out/
+
+# Binary / media raw sources
+raw/*.pdf
+raw/**/*.pdf
+raw/*.mp3
+raw/*.m4a
+raw/*.docx
+raw/*.odt
+raw/*.deb

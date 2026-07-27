@@ -53,6 +53,22 @@ graphify explain "concept"           # focused explanation of one concept
 - `graphify-out/graph.html` — interactive browser view
 - `graphify-out/GRAPH_REPORT.md` — highlights and suggested queries
 
+## .graphifyignore
+
+Controls which files graphify indexes. Same syntax as `.gitignore`. Place in the project root.
+
+```
+# Exclude noisy dirs
+node_modules/
+dist/
+*.generated.py
+
+# Only index src/, ignore everything else
+*
+!src/
+!src/**
+```
+
 ## Example output
 
 ```
