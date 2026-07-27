@@ -1,80 +1,54 @@
 # Graph Report - my-second-brain  (2026-07-28)
 
 ## Corpus Check
-- 84 files · ~62,846 words
+- 55 files · ~24,405 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1199 nodes · 2497 edges · 109 communities (100 shown, 9 thin omitted)
-- Extraction: 90% EXTRACTED · 10% INFERRED · 0% AMBIGUOUS · INFERRED: 258 edges (avg confidence: 0.55)
+- 805 nodes · 1974 edges · 77 communities (66 shown, 11 thin omitted)
+- Extraction: 88% EXTRACTED · 12% INFERRED · 0% AMBIGUOUS · INFERRED: 238 edges (avg confidence: 0.55)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `b940d471`
+- Built from commit: `5ac96270`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
 - background.js
-- popup-Cs4QebOl.js
+- up
 - n
 - nc
 - Z
-- wd
+- popup-Cs4QebOl.js
 - rn
 - jo
-- i
+- vc
 - gu
-- .agents/skills/ui-ux-pro-max/scripts/design_system.py
-- DesignSystemGenerator
-- DesignSystemGenerator
-- BM25
-- agent/skills/ui-ux-pro-max/scripts/design_system.py
-- UI/UX Pro Max - Design Intelligence
-- BM25
-- UI/UX Pro Max - Design Intelligence
+- i
+- Graphify
+- Graphify — Output Structure
+- Second Brain
+- .claude/CLAUDE.md
 - BOOK I: THE GENESIS
 - Wiki Log
 - MEDIUM
-- ps
-- Find Skills
-- agent/skills/ui-ux-pro-max/scripts/core.py
-- agent/skills/ui-ux-pro-max/scripts/tests/test_core.py
-- Find Skills
-- .agents/skills/ui-ux-pro-max/scripts/core.py
 - LLM Wiki Schema
-- Pre-Delivery Checklist (canonical — the only one)
-- Quick Reference
-- Pre-Delivery Checklist (canonical — the only one)
-- Quick Reference
-- agent/skills/caveman/SKILL.md
-- .agents/skills/caveman/SKILL.md
 - c
 - JARVIS X — v2.0 "Ascension" Plan
-- search
-- .agents/skills/ui-ux-pro-max/scripts/tests/test_core.py
-- search
-- second-brain.md
+- index.md
 - Ruflo
-- Arabic Design — clean Arabic in AI-generated UI
-- Arabic Design — clean Arabic in AI-generated UI
 - Agent Starter Kit — Install Commands
 - Core Components Quick Reference
 - Step-by-Step Setup Guide
 - LLM Wiki Pattern
-- detect_domain
 - LLM Wiki — AGENTS.md
 - BOOK XII: THE PROPHECY
 - Agent-to-Agent Secure Communication
 - Wiki Index
 - Jarvis X Content Engine
 - wiki-self-heal Skill
-- agent-browser
-- Karpathy Guidelines
-- agent-browser
-- Karpathy Guidelines
-- Agent Starter Kit
-- DeepSeek_Jarvis_X_Master_Plan.md
+- DEEPSEEK JARVIS X — SOVEREIGN MASTER PLAN
 - BOOK I: THE GENESIS
 - BOOK IV: THE COUNCIL
 - BOOK I: THE BIBLE OF JARVIS X (Philosophy, Identity, & Core Directives)
@@ -85,8 +59,6 @@
 - Jarvis X Voice Engine
 - llm-wiki-setup Skill
 - Obsidian
-- install.sh
-- agent-starter-kit — the skills and MCPs to start any agent with
 - Ruflo — Plugin Marketplace & Installation
 - Trading & Crypto Intelligence
 - Hardware Architecture
@@ -100,15 +72,11 @@
 - Ollama
 - Self-Improvement Loop
 - Universal Model Layer
-- arabic-design — make AI-generated designs render Arabic correctly
-- agent/skills/ui-ux-pro-max/scripts/validate_data.py
-- arabic-design — make AI-generated designs render Arabic correctly
-- .agents/skills/ui-ux-pro-max/scripts/validate_data.py
 - Composio — Setup
 - Why the LLM Wiki Pattern Exists
 - Ruflo Federation Plugin
 - APPENDIX
-- Obsidian + ChromaDB — Second Brain Architecture
+- DeepSeek_Jarvis_X_Master_Plan.md
 - Content & Monetization Engine
 - Jarvis X Income Roadmap
 - Source — DeepSeek Jarvis X Master Plan
@@ -134,196 +102,108 @@
 7. `a()` - 31 edges
 8. `wd()` - 27 edges
 9. `vc()` - 26 edges
-10. `DesignSystemGenerator` - 24 edges
+10. `mc()` - 24 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `TestDomainDetection` --uses--> `BM25`  [INFERRED]
-  agent/skills/ui-ux-pro-max/scripts/tests/test_core.py → .agents/skills/ui-ux-pro-max/scripts/core.py
-- `TestPersistence` --uses--> `BM25`  [INFERRED]
-  agent/skills/ui-ux-pro-max/scripts/tests/test_core.py → .agents/skills/ui-ux-pro-max/scripts/core.py
-- `TestReasoningMatch` --uses--> `BM25`  [INFERRED]
-  agent/skills/ui-ux-pro-max/scripts/tests/test_core.py → .agents/skills/ui-ux-pro-max/scripts/core.py
-- `TestSearchDomains` --uses--> `BM25`  [INFERRED]
-  agent/skills/ui-ux-pro-max/scripts/tests/test_core.py → .agents/skills/ui-ux-pro-max/scripts/core.py
-- `TestTokenizer` --uses--> `BM25`  [INFERRED]
-  agent/skills/ui-ux-pro-max/scripts/tests/test_core.py → .agents/skills/ui-ux-pro-max/scripts/core.py
+- `as()` --indirect_call--> `e()`  [INFERRED]
+  raw/Apps Downloaded/kimi-webbridge-extension/chunks/popup-Cs4QebOl.js → raw/Apps Downloaded/kimi-webbridge-extension/background.js
+- `hu()` --indirect_call--> `e()`  [INFERRED]
+  raw/Apps Downloaded/kimi-webbridge-extension/chunks/popup-Cs4QebOl.js → raw/Apps Downloaded/kimi-webbridge-extension/background.js
+- `ne()` --indirect_call--> `e()`  [INFERRED]
+  raw/Apps Downloaded/kimi-webbridge-extension/chunks/popup-Cs4QebOl.js → raw/Apps Downloaded/kimi-webbridge-extension/background.js
+- `os()` --indirect_call--> `e()`  [INFERRED]
+  raw/Apps Downloaded/kimi-webbridge-extension/chunks/popup-Cs4QebOl.js → raw/Apps Downloaded/kimi-webbridge-extension/background.js
+- `pp()` --indirect_call--> `e()`  [INFERRED]
+  raw/Apps Downloaded/kimi-webbridge-extension/chunks/popup-Cs4QebOl.js → raw/Apps Downloaded/kimi-webbridge-extension/background.js
 
 ## Import Cycles
 - None detected.
 
-## Communities (109 total, 9 thin omitted)
+## Communities (77 total, 11 thin omitted)
 
 ### Community 0 - "background.js"
 Cohesion: 0.08
-Nodes (56): a(), B(), buildTree(), c(), Ce(), clearConnectingTimer(), clickByRef(), clickBySelector() (+48 more)
+Nodes (57): a(), B(), buildTree(), c(), Ce(), clearConnectingTimer(), clickByRef(), clickBySelector() (+49 more)
 
-### Community 1 - "popup-Cs4QebOl.js"
-Cohesion: 0.07
-Nodes (32): ap(), cp(), dp(), Fa(), hl(), ip(), Je(), jl() (+24 more)
+### Community 1 - "up"
+Cohesion: 0.18
+Nodes (13): ap(), dp(), ip(), Je(), kp(), lp(), rp(), st() (+5 more)
 
 ### Community 2 - "n"
-Cohesion: 0.11
-Nodes (48): e(), s(), u(), a(), as(), bd(), cd(), cn() (+40 more)
+Cohesion: 0.15
+Nodes (28): as(), bd(), cn(), cp(), cs(), ct(), dn(), gi() (+20 more)
 
 ### Community 3 - "nc"
-Cohesion: 0.11
-Nodes (44): z(), ac(), ai(), at(), ba(), cc(), cf(), co() (+36 more)
+Cohesion: 0.06
+Nodes (69): R(), z(), ai(), at(), ba(), bi(), cc(), cf() (+61 more)
 
 ### Community 4 - "Z"
-Cohesion: 0.10
-Nodes (36): Ar(), bl(), cl(), dl(), ec(), el(), fl(), Go() (+28 more)
+Cohesion: 0.07
+Nodes (51): bl(), cl(), df(), dl(), ec(), ef(), el(), fl() (+43 more)
 
-### Community 5 - "wd"
-Cohesion: 0.09
-Nodes (31): ad(), br(), bt(), bu(), dr(), dt(), Ed(), er() (+23 more)
+### Community 5 - "popup-Cs4QebOl.js"
+Cohesion: 0.06
+Nodes (51): ad(), Ar(), br(), bt(), bu(), cd(), dr(), dt() (+43 more)
 
 ### Community 6 - "rn"
-Cohesion: 0.13
-Nodes (31): bi(), df(), Ee(), ef(), fd(), Ft(), get(), gf() (+23 more)
+Cohesion: 0.24
+Nodes (16): fd(), Ft(), Gt(), Ht(), jt(), Kt(), Lt(), Nd() (+8 more)
 
 ### Community 7 - "jo"
-Cohesion: 0.10
-Nodes (27): Ao(), bs(), cs(), es(), Fu(), Io(), Iu(), jo() (+19 more)
-
-### Community 8 - "i"
 Cohesion: 0.12
-Nodes (27): Bc(), be(), ea(), en(), ff(), gl(), H(), hc() (+19 more)
+Nodes (20): af(), Bo(), bs(), ds(), es(), fo(), hs(), Io() (+12 more)
+
+### Community 8 - "vc"
+Cohesion: 0.18
+Nodes (19): ac(), Bc(), be(), Do(), ff(), fi(), gc(), oc() (+11 more)
 
 ### Community 9 - "gu"
-Cohesion: 0.13
-Nodes (26): Au(), Cu(), Da(), et(), Eu(), fc(), gu(), Ic() (+18 more)
-
-### Community 10 - ".agents/skills/ui-ux-pro-max/scripts/design_system.py"
-Cohesion: 0.12
-Nodes (24): ansi_ljust(), _detect_page_type(), format_ascii_box(), format_markdown(), format_master_md(), format_page_override_md(), generate_design_system(), _generate_intelligent_overrides() (+16 more)
-
-### Community 11 - "DesignSystemGenerator"
-Cohesion: 0.13
-Nodes (12): DesignSystemGenerator, Find matching reasoning rule for a category., Apply reasoning rules to search results., Select best matching result based on priority keywords., Extract results list from search result dict., Generate complete design system recommendation.          variance/motion/density, Bucket a 1-10 dial value into its tier config. Returns None if value is None., Generates design system recommendations from aggregated searches. (+4 more)
-
-### Community 13 - "DesignSystemGenerator"
 Cohesion: 0.14
-Nodes (10): DesignSystemGenerator, Find matching reasoning rule for a category., Apply reasoning rules to search results., Select best matching result based on priority keywords., Extract results list from search result dict., Generate complete design system recommendation.          variance/motion/density, Generates design system recommendations from aggregated searches., Load reasoning rules from CSV. (+2 more)
+Nodes (25): Ao(), Au(), Cu(), Da(), Eu(), Fu(), gu(), id() (+17 more)
 
-### Community 14 - "BM25"
-Cohesion: 0.15
-Nodes (9): BM25, _normalize(), Apply synonym substitution before tokenizing., BM25 ranking algorithm for text search, Lowercase, normalize synonyms, split, remove punctuation, filter stopwords, Build BM25 index from documents, Score all documents against query, All indexed terms, for suggestion/typo-recovery purposes. (+1 more)
+### Community 10 - "i"
+Cohesion: 0.24
+Nodes (20): s(), a(), d(), di(), ep(), hc(), i(), kc() (+12 more)
 
-### Community 15 - "agent/skills/ui-ux-pro-max/scripts/design_system.py"
-Cohesion: 0.15
-Nodes (16): ansi_ljust(), _detect_page_type(), format_ascii_box(), format_page_override_md(), _generate_intelligent_overrides(), hex_to_ansi(), Format a page-specific override file with intelligent AI-generated content., Generate intelligent overrides based on page type using layered search. (+8 more)
+### Community 11 - "Graphify"
+Cohesion: 0.25
+Nodes (8): Commands, Example output, Graphify, .graphifyignore, Install, Output, This vault (~/my-second-brain), Workflow in CLAUDE.md
 
-### Community 16 - "UI/UX Pro Max - Design Intelligence"
-Cohesion: 0.12
-Nodes (16): Before Delivering App UI, Example Workflow, If a search returns 0 results, Output Formats, Rule Categories by Priority, Running the search tool, Step 1: Analyze User Requirements, Step 2: Generate Design System (REQUIRED for new pages/projects) (+8 more)
+### Community 13 - "Graphify — Output Structure"
+Cohesion: 0.50
+Nodes (3): Current vault stats (~/my-second-brain, 2026-07-28), Graphify — Output Structure, What each file is
 
-### Community 17 - "BM25"
-Cohesion: 0.15
-Nodes (9): BM25, _normalize(), Apply synonym substitution before tokenizing., BM25 ranking algorithm for text search, Lowercase, normalize synonyms, split, remove punctuation, filter stopwords, Build BM25 index from documents, Score all documents against query, All indexed terms, for suggestion/typo-recovery purposes. (+1 more)
-
-### Community 18 - "UI/UX Pro Max - Design Intelligence"
-Cohesion: 0.12
-Nodes (16): Before Delivering App UI, Example Workflow, If a search returns 0 results, Output Formats, Rule Categories by Priority, Running the search tool, Step 1: Analyze User Requirements, Step 2: Generate Design System (REQUIRED for new pages/projects) (+8 more)
+### Community 14 - "Second Brain"
+Cohesion: 0.50
+Nodes (4): Implementations in this vault, Second Brain, The LLM wiki variant, The problem it solves
 
 ### Community 19 - "BOOK I: THE GENESIS"
 Cohesion: 0.12
 Nodes (16): A Comprehensive Reference for Building the Ultimate Agentic AI Operating System, BOOK I: THE GENESIS, BOOK II: THE BODY, Hardware Architecture, Hardware Bottlenecks Analysis, JARVIS X — THE SOVEREIGN BIBLE, Memory Bandwidth Constraint, TABLE OF CONTENTS (+8 more)
 
 ### Community 20 - "Wiki Log"
-Cohesion: 0.12
-Nodes (17): [2026-07-27] ingest | Agent-to-Agent Secure Communication protocol, [2026-07-27] ingest | Composio CLI setup, [2026-07-27] ingest | DeepSeek Jarvis X Master Plan + v2 Ascension Plan, [2026-07-27] ingest | LLM Wiki Pattern — vault structure diagram, [2026-07-27] ingest | LLM Wiki Pattern — Why It Exists, [2026-07-27] ingest | LLM wiki query patterns, [2026-07-27] ingest | LLM Wiki Skills — installation recipe, [2026-07-27] ingest | research-vault setup (+9 more)
+Cohesion: 0.11
+Nodes (18): [2026-07-27] ingest | Agent-to-Agent Secure Communication protocol, [2026-07-27] ingest | Composio CLI setup, [2026-07-27] ingest | DeepSeek Jarvis X Master Plan + v2 Ascension Plan, [2026-07-27] ingest | LLM Wiki Pattern — vault structure diagram, [2026-07-27] ingest | LLM Wiki Pattern — Why It Exists, [2026-07-27] ingest | LLM wiki query patterns, [2026-07-27] ingest | LLM Wiki Skills — installation recipe, [2026-07-27] ingest | research-vault setup (+10 more)
 
 ### Community 21 - "MEDIUM"
 Cohesion: 0.12
 Nodes (16): 10. [data-gap] `jarvis-x-content-engine.md` — brand kit details not captured, 11. [template-artifact] `index.md` comment blocks contain example wikilinks, 1. [broken-wikilink] `[[second-brain]]` — no page exists, 2. [broken-wikilink] `[[wiki-self-heal-skill]]` — no page exists, 3. [broken-wikilink] `[[llm-wiki-setup-skill]]` — no page exists, 4. [missing-page] `[[obsidian]]` — referenced in 3 pages, no page exists, 5. [missing-page] `[[ollama]]` — referenced in 3 pages, no page exists, 6. [missing-cross-ref] `the-council.md` ↔ `constitutional-autonomy.md` (+8 more)
 
-### Community 22 - "ps"
-Cohesion: 0.17
-Nodes (15): af(), Bo(), dd(), ds(), fo(), fs(), ga(), ha() (+7 more)
-
-### Community 23 - "Find Skills"
-Cohesion: 0.14
-Nodes (13): Common Skill Categories, Find Skills, How to Help Users Find Skills, Step 1: Understand What They Need, Step 2: Check the Leaderboard First, Step 3: Search for Skills, Step 4: Verify Quality Before Recommending, Step 5: Present Options to the User (+5 more)
-
-### Community 24 - "agent/skills/ui-ux-pro-max/scripts/core.py"
-Cohesion: 0.21
-Nodes (12): _domain_keywords(), _get_bm25(), _load_csv(), _load_product_keywords(), Load CSV and return list of dicts, with mtime-based caching., Fitted BM25 index for this file+columns, with mtime-based caching., Core search function using BM25. Returns (results, bm25_or_none)., Nearest known vocabulary terms for a query that returned 0 hits,     so the call (+4 more)
-
-### Community 25 - "agent/skills/ui-ux-pro-max/scripts/tests/test_core.py"
-Cohesion: 0.18
-Nodes (11): format_markdown(), format_master_md(), generate_design_system(), persist_design_system(), Format design system as markdown., Main entry point for design system generation.      Args:         query: Search, Slugify a name into a single safe path segment.      Only [a-z0-9_-] survives; e, Persist design system to design-system/<project>/ folder using Master + Override (+3 more)
-
-### Community 26 - "Find Skills"
-Cohesion: 0.14
-Nodes (13): Common Skill Categories, Find Skills, How to Help Users Find Skills, Step 1: Understand What They Need, Step 2: Check the Leaderboard First, Step 3: Search for Skills, Step 4: Verify Quality Before Recommending, Step 5: Present Options to the User (+5 more)
-
-### Community 27 - ".agents/skills/ui-ux-pro-max/scripts/core.py"
-Cohesion: 0.21
-Nodes (12): _domain_keywords(), _get_bm25(), _load_csv(), _load_product_keywords(), Load CSV and return list of dicts, with mtime-based caching., Fitted BM25 index for this file+columns, with mtime-based caching., Core search function using BM25. Returns (results, bm25_or_none)., Nearest known vocabulary terms for a query that returned 0 hits,     so the call (+4 more)
-
 ### Community 28 - "LLM Wiki Schema"
-Cohesion: 0.14
-Nodes (13): Guardrails, LLM Wiki Schema, Naming conventions, Navigation quick reference, Page format, Routing table, The map (read this first, every time), The three layers (+5 more)
-
-### Community 29 - "Pre-Delivery Checklist (canonical — the only one)"
-Cohesion: 0.15
-Nodes (12): Accessibility, Common Rules for Professional UI + Pre-Delivery Checklist, Icons & Visual Elements, Interaction, Interaction (App), Layout, Layout & Spacing, Light/Dark Mode (+4 more)
-
-### Community 30 - "Quick Reference"
-Cohesion: 0.15
-Nodes (12): 10. Charts & Data (LOW), 1. Accessibility (CRITICAL), 2. Touch & Interaction (CRITICAL), 3. Performance (HIGH), 4. Style Selection (HIGH), 5. Layout & Responsive (HIGH), 6. Typography & Color (MEDIUM), 7. Animation (MEDIUM) (+4 more)
-
-### Community 31 - "Pre-Delivery Checklist (canonical — the only one)"
-Cohesion: 0.15
-Nodes (12): Accessibility, Common Rules for Professional UI + Pre-Delivery Checklist, Icons & Visual Elements, Interaction, Interaction (App), Layout, Layout & Spacing, Light/Dark Mode (+4 more)
-
-### Community 32 - "Quick Reference"
-Cohesion: 0.15
-Nodes (12): 10. Charts & Data (LOW), 1. Accessibility (CRITICAL), 2. Touch & Interaction (CRITICAL), 3. Performance (HIGH), 4. Style Selection (HIGH), 5. Layout & Responsive (HIGH), 6. Typography & Color (MEDIUM), 7. Animation (MEDIUM) (+4 more)
-
-### Community 33 - "agent/skills/caveman/SKILL.md"
-Cohesion: 0.17
-Nodes (10): caveman, Example output, How to invoke, See also, What it does, Auto-Clarity, Boundaries, Intensity (+2 more)
-
-### Community 34 - ".agents/skills/caveman/SKILL.md"
-Cohesion: 0.17
-Nodes (10): caveman, Example output, How to invoke, See also, What it does, Auto-Clarity, Boundaries, Intensity (+2 more)
+Cohesion: 0.13
+Nodes (14): graphify, Guardrails, LLM Wiki Schema, Naming conventions, Navigation quick reference, Page format, Routing table, The map (read this first, every time) (+6 more)
 
 ### Community 35 - "c"
-Cohesion: 0.33
-Nodes (12): b(), c(), ce(), ie(), l(), le(), oe(), re() (+4 more)
+Cohesion: 0.22
+Nodes (16): b(), c(), ce(), ea(), ie(), l(), np(), oe() (+8 more)
 
 ### Community 36 - "JARVIS X — v2.0 "Ascension" Plan"
 Cohesion: 0.17
 Nodes (11): 10. THE PROMPT (paste this to me to execute), 1. THE IDENTITY, 2. WHAT CHANGES FROM v1 (reframe), 3. UNIVERSAL MODEL LAYER (integration with all models), 4. VOICE ENGINE (accents & bilingual), 5. CONSTITUTIONAL AUTONOMY (the laptop as body & home), 6. CONTENT & MONETIZATION ENGINE (money stream #3), 7. MARKET INTELLIGENCE MODULE (the trading answer) (+3 more)
 
-### Community 37 - "search"
-Cohesion: 0.24
-Nodes (6): Main search function with auto-domain detection, search(), format_output(), Format results for Claude consumption (token-optimized), Known query -> expected top-domain sanity checks (not exact-row pinning,     sin, TestSearchDomains
-
-### Community 38 - ".agents/skills/ui-ux-pro-max/scripts/tests/test_core.py"
-Cohesion: 0.25
-Nodes (4): detect_domain(), Auto-detect the most relevant domain from query.      Matches are weighted by ke, TestDomainDetection, TestPersistence
-
-### Community 39 - "search"
-Cohesion: 0.24
-Nodes (6): Main search function with auto-domain detection, search(), format_output(), Format results for Claude consumption (token-optimized), Known query -> expected top-domain sanity checks (not exact-row pinning,     sin, TestSearchDomains
-
-### Community 40 - "second-brain.md"
-Cohesion: 0.27
-Nodes (5): research-vault, Implementations in this vault, Second Brain, The LLM wiki variant, The problem it solves
-
 ### Community 41 - "Ruflo"
 Cohesion: 0.20
 Nodes (10): Architecture, Claude Code integration (MCP), Components, Core plugins, Federation via claude-flow, Installation, Plugin system, Relationship to Jarvis X (+2 more)
-
-### Community 42 - "Arabic Design — clean Arabic in AI-generated UI"
-Cohesion: 0.22
-Nodes (8): Arabic Design — clean Arabic in AI-generated UI, Pre-ship checklist, Rule 1 — NEVER negative `letter-spacing` on Arabic (the #1 bug), Rule 2 — Use a real Arabic font (never Latin-font fallback), Rule 3 — Line-height must clear the diacritics, Rule 4 — Direction & bidi (the "words are reversed" family of bugs), Rule 5 — Punctuation & line breaks, Rule 6 — Mobile legibility
-
-### Community 43 - "Arabic Design — clean Arabic in AI-generated UI"
-Cohesion: 0.22
-Nodes (8): Arabic Design — clean Arabic in AI-generated UI, Pre-ship checklist, Rule 1 — NEVER negative `letter-spacing` on Arabic (the #1 bug), Rule 2 — Use a real Arabic font (never Latin-font fallback), Rule 3 — Line-height must clear the diacritics, Rule 4 — Direction & bidi (the "words are reversed" family of bugs), Rule 5 — Punctuation & line breaks, Rule 6 — Mobile legibility
 
 ### Community 44 - "Agent Starter Kit — Install Commands"
 Cohesion: 0.25
@@ -341,13 +221,9 @@ Nodes (8): Ritual 1: Install Ollama, Ritual 2: Pull CPU-Friendly Models, Ritual 
 Cohesion: 0.25
 Nodes (8): Example queries, Installation, LLM Wiki Pattern, Skills, Three-layer mental model, Three operations, Vault structure, Why it works at scale
 
-### Community 48 - "detect_domain"
-Cohesion: 0.43
-Nodes (3): detect_domain(), Auto-detect the most relevant domain from query.      Matches are weighted by ke, TestDomainDetection
-
 ### Community 49 - "LLM Wiki — AGENTS.md"
-Cohesion: 0.29
-Nodes (6): Guardrails, Layout, LLM Wiki — AGENTS.md, Log format, Operations, Page format
+Cohesion: 0.25
+Nodes (7): graphify, Guardrails, Layout, LLM Wiki — AGENTS.md, Log format, Operations, Page format
 
 ### Community 50 - "BOOK XII: THE PROPHECY"
 Cohesion: 0.29
@@ -369,29 +245,9 @@ Nodes (7): Brand kit, Content types, Honest math, Jarvis X Content Engine, Music
 Cohesion: 0.29
 Nodes (7): 6 gap types audited, Installation, Scheduling, Simplicity rule, The loop (full mode), Two modes, wiki-self-heal Skill
 
-### Community 55 - "agent-browser"
-Cohesion: 0.33
-Nodes (5): agent-browser, Observability Dashboard, Specialized skills, Start here, Why agent-browser
-
-### Community 56 - "Karpathy Guidelines"
-Cohesion: 0.33
-Nodes (5): 1. Think Before Coding, 2. Simplicity First, 3. Surgical Changes, 4. Goal-Driven Execution, Karpathy Guidelines
-
-### Community 57 - "agent-browser"
-Cohesion: 0.33
-Nodes (5): agent-browser, Observability Dashboard, Specialized skills, Start here, Why agent-browser
-
-### Community 58 - "Karpathy Guidelines"
-Cohesion: 0.33
-Nodes (5): 1. Think Before Coding, 2. Simplicity First, 3. Surgical Changes, 4. Goal-Driven Execution, Karpathy Guidelines
-
-### Community 59 - "Agent Starter Kit"
-Cohesion: 0.33
-Nodes (5): Agent Starter Kit, Honest scope note, How to run it, What it installs, When invoked as a skill
-
-### Community 60 - "DeepSeek_Jarvis_X_Master_Plan.md"
-Cohesion: 0.33
-Nodes (5): A Comprehensive Reference for Building the Ultimate Agentic AI Operating System, BOOK IX: THE RITUALS, DEEPSEEK JARVIS X — SOVEREIGN MASTER PLAN, TABLE OF CONTENTS, The Complete Manual of the Soul
+### Community 60 - "DEEPSEEK JARVIS X — SOVEREIGN MASTER PLAN"
+Cohesion: 0.50
+Nodes (4): A Comprehensive Reference for Building the Ultimate Agentic AI Operating System, DEEPSEEK JARVIS X — SOVEREIGN MASTER PLAN, TABLE OF CONTENTS, The Complete Manual of the Soul
 
 ### Community 61 - "BOOK I: THE GENESIS"
 Cohesion: 0.33
@@ -432,14 +288,6 @@ Nodes (6): Active vaults, Installation, llm-wiki-setup Skill, Safety, Setup choi
 ### Community 70 - "Obsidian"
 Cohesion: 0.33
 Nodes (6): brain-mcp setup, Key plugins, LLM Hub config (Ollama), Obsidian, Relationship to the LLM wiki pattern, Role in Jarvis X
-
-### Community 71 - "install.sh"
-Cohesion: 0.70
-Nodes (4): good(), say(), install.sh script, warn()
-
-### Community 72 - "agent-starter-kit — the skills and MCPs to start any agent with"
-Cohesion: 0.40
-Nodes (4): agent-starter-kit — the skills and MCPs to start any agent with, Honest scope, Install, What it installs
 
 ### Community 73 - "Ruflo — Plugin Marketplace & Installation"
 Cohesion: 0.40
@@ -493,22 +341,6 @@ Nodes (5): Evolution timeline, Planned capabilities, Safety constraint, Self-Imp
 Cohesion: 0.40
 Nodes (5): CLI usage, Key constraint, Registered providers, Router rules, Universal Model Layer
 
-### Community 86 - "arabic-design — make AI-generated designs render Arabic correctly"
-Cohesion: 0.50
-Nodes (3): arabic-design — make AI-generated designs render Arabic correctly, Install (30 seconds), What it covers
-
-### Community 87 - "agent/skills/ui-ux-pro-max/scripts/validate_data.py"
-Cohesion: 0.83
-Nodes (3): _check_file(), main(), _read_rows()
-
-### Community 88 - "arabic-design — make AI-generated designs render Arabic correctly"
-Cohesion: 0.50
-Nodes (3): arabic-design — make AI-generated designs render Arabic correctly, Install (30 seconds), What it covers
-
-### Community 89 - ".agents/skills/ui-ux-pro-max/scripts/validate_data.py"
-Cohesion: 0.83
-Nodes (3): _check_file(), main(), _read_rows()
-
 ### Community 90 - "Composio — Setup"
 Cohesion: 0.50
 Nodes (3): Composio — Setup, Install, Login
@@ -525,9 +357,9 @@ Nodes (3): Install via claude-flow CLI, Install via Ruflo plugin system, Ruflo F
 Cohesion: 0.50
 Nodes (4): APPENDIX, File Structure, Quick Links, Version History
 
-### Community 94 - "Obsidian + ChromaDB — Second Brain Architecture"
-Cohesion: 0.50
-Nodes (4): BOOK V: THE MEMORY, Obsidian + ChromaDB — Second Brain Architecture, Obsidian Plugin Configuration, Setup Commands
+### Community 94 - "DeepSeek_Jarvis_X_Master_Plan.md"
+Cohesion: 0.33
+Nodes (5): BOOK IX: THE RITUALS, BOOK V: THE MEMORY, Obsidian + ChromaDB — Second Brain Architecture, Obsidian Plugin Configuration, Setup Commands
 
 ### Community 95 - "Content & Monetization Engine"
 Cohesion: 0.50
@@ -550,19 +382,19 @@ Cohesion: 0.50
 Nodes (4): Integration architecture, Members, PAL MCP, The Council
 
 ## Knowledge Gaps
-- **407 isolated node(s):** `Start here`, `Specialized skills`, `Why agent-browser`, `Observability Dashboard`, `Install (30 seconds)` (+402 more)
+- **271 isolated node(s):** `graphify`, `Layout`, `Page format`, `Log format`, `Operations` (+266 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **9 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **11 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `DesignSystemGenerator` connect `DesignSystemGenerator` to `search`, `.agents/skills/ui-ux-pro-max/scripts/tests/test_core.py`, `search`, `.agents/skills/ui-ux-pro-max/scripts/design_system.py`, `DesignSystemGenerator`, `BM25`, `detect_domain`, `BM25`, `agent/skills/ui-ux-pro-max/scripts/tests/test_core.py`?**
-  _High betweenness centrality (0.013) - this node is a cross-community bridge._
-- **Why does `r()` connect `n` to `background.js`, `popup-Cs4QebOl.js`, `nc`, `c`, `Z`, `rn`, `jo`, `i`, `gu`, `wd`?**
+- **Why does `r()` connect `n` to `background.js`, `up`, `c`, `nc`, `popup-Cs4QebOl.js`, `Z`, `jo`, `vc`, `gu`, `i`, `rn`?**
+  _High betweenness centrality (0.019) - this node is a cross-community bridge._
+- **Why does `execute()` connect `background.js` to `n`, `i`, `nc`?**
+  _High betweenness centrality (0.017) - this node is a cross-community bridge._
+- **Why does `n()` connect `n` to `background.js`, `c`, `nc`, `popup-Cs4QebOl.js`, `rn`, `jo`, `vc`, `gu`, `i`, `Z`?**
   _High betweenness centrality (0.011) - this node is a cross-community bridge._
-- **Why does `DesignSystemGenerator` connect `DesignSystemGenerator` to `agent/skills/ui-ux-pro-max/scripts/tests/test_core.py`, `agent/skills/ui-ux-pro-max/scripts/design_system.py`?**
-  _High betweenness centrality (0.007) - this node is a cross-community bridge._
 - **Are the 19 inferred relationships involving `i()` (e.g. with `c()` and `cc()`) actually correct?**
   _`i()` has 19 INFERRED edges - model-reasoned connections that need verification._
 - **Are the 40 inferred relationships involving `n()` (e.g. with `buildTree()` and `s()`) actually correct?**

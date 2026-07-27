@@ -49,7 +49,7 @@ graphify explain "concept"           # focused explanation of one concept
 
 ## This vault (~/my-second-brain)
 
-- **805 nodes**, **1,974 edges**, **77 communities** (as of 2026-07-28, after .graphifyignore applied)
+- **811 nodes**, **1,980 edges**, **63 communities** (as of 2026-07-28, after .graphifyignore applied)
 - `graphify-out/graph.html` — interactive browser view
 - `graphify-out/GRAPH_REPORT.md` — highlights and suggested queries
 

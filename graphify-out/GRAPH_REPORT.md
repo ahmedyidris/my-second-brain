@@ -1,42 +1,41 @@
 # Graph Report - my-second-brain  (2026-07-28)
 
 ## Corpus Check
-- 55 files · ~24,405 words
+- 55 files · ~24,901 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 805 nodes · 1974 edges · 77 communities (66 shown, 11 thin omitted)
+- 811 nodes · 1980 edges · 63 communities (53 shown, 10 thin omitted)
 - Extraction: 88% EXTRACTED · 12% INFERRED · 0% AMBIGUOUS · INFERRED: 238 edges (avg confidence: 0.55)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `5ac96270`
+- Built from commit: `df27757a`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
 - background.js
-- up
-- n
-- nc
-- Z
-- popup-Cs4QebOl.js
-- rn
-- jo
-- vc
-- gu
+- Lu
 - i
+- mc
+- vl
+- n
+- popup-Cs4QebOl.js
+- jo
+- nc
+- hu
+- Z
 - Graphify
+- index.md
 - Graphify — Output Structure
-- Second Brain
 - .claude/CLAUDE.md
 - BOOK I: THE GENESIS
 - Wiki Log
 - MEDIUM
 - LLM Wiki Schema
-- c
+- get
 - JARVIS X — v2.0 "Ascension" Plan
-- index.md
 - Ruflo
 - Agent Starter Kit — Install Commands
 - Core Components Quick Reference
@@ -56,7 +55,6 @@
 - Constitutional Autonomy
 - Jarvis X App
 - Jarvis X
-- Jarvis X Voice Engine
 - llm-wiki-setup Skill
 - Obsidian
 - Ruflo — Plugin Marketplace & Installation
@@ -65,23 +63,12 @@
 - Speech & Audio Pipeline
 - Career & Income Roadmap
 - Command Reference
-- Composio
-- Hermes Agent
-- Jarvis X Hardware
-- Jarvis X Trading Module
-- Ollama
-- Self-Improvement Loop
-- Universal Model Layer
 - Composio — Setup
 - Why the LLM Wiki Pattern Exists
 - Ruflo Federation Plugin
-- APPENDIX
 - DeepSeek_Jarvis_X_Master_Plan.md
+- Obsidian + ChromaDB — Second Brain Architecture
 - Content & Monetization Engine
-- Jarvis X Income Roadmap
-- Source — DeepSeek Jarvis X Master Plan
-- Source — Jarvis X v2 Ascension Plan
-- The Council
 - 2026-07-27-agent-secure-comms.md
 - 2026-07-27-llm-wiki-query-patterns.md
 - 2026-07-27-llm-wiki-self-heal-prompt.md
@@ -119,71 +106,71 @@
 ## Import Cycles
 - None detected.
 
-## Communities (77 total, 11 thin omitted)
+## Communities (63 total, 10 thin omitted)
 
 ### Community 0 - "background.js"
 Cohesion: 0.08
-Nodes (57): a(), B(), buildTree(), c(), Ce(), clearConnectingTimer(), clickByRef(), clickBySelector() (+49 more)
+Nodes (56): a(), B(), buildTree(), c(), Ce(), clearConnectingTimer(), clickByRef(), clickBySelector() (+48 more)
 
-### Community 1 - "up"
-Cohesion: 0.18
-Nodes (13): ap(), dp(), ip(), Je(), kp(), lp(), rp(), st() (+5 more)
+### Community 1 - "Lu"
+Cohesion: 0.22
+Nodes (10): Du(), Lu(), m(), nt(), qf(), tf(), tt(), U() (+2 more)
 
-### Community 2 - "n"
+### Community 2 - "i"
 Cohesion: 0.15
-Nodes (28): as(), bd(), cn(), cp(), cs(), ct(), dn(), gi() (+20 more)
+Nodes (16): en(), Fa(), gi(), H(), i(), Ma(), Oa(), Po() (+8 more)
 
-### Community 3 - "nc"
+### Community 3 - "mc"
+Cohesion: 0.20
+Nodes (21): ge(), R(), z(), co(), dc(), _e(), Hd(), it() (+13 more)
+
+### Community 4 - "vl"
+Cohesion: 0.16
+Nodes (20): Ar(), bl(), dl(), gl(), Hf(), kl(), kr(), ol() (+12 more)
+
+### Community 5 - "n"
 Cohesion: 0.06
-Nodes (69): R(), z(), ai(), at(), ba(), bi(), cc(), cf() (+61 more)
+Nodes (95): s(), a(), b(), Bc(), bd(), be(), Bo(), br() (+87 more)
 
-### Community 4 - "Z"
-Cohesion: 0.07
-Nodes (51): bl(), cl(), df(), dl(), ec(), ef(), el(), fl() (+43 more)
-
-### Community 5 - "popup-Cs4QebOl.js"
+### Community 6 - "popup-Cs4QebOl.js"
 Cohesion: 0.06
-Nodes (51): ad(), Ar(), br(), bt(), bu(), cd(), dr(), dt() (+43 more)
-
-### Community 6 - "rn"
-Cohesion: 0.24
-Nodes (16): fd(), Ft(), Gt(), Ht(), jt(), Kt(), Lt(), Nd() (+8 more)
+Nodes (34): bi(), bu(), dn(), Ee(), et(), fc(), hl(), hs() (+26 more)
 
 ### Community 7 - "jo"
-Cohesion: 0.12
-Nodes (20): af(), Bo(), bs(), ds(), es(), fo(), hs(), Io() (+12 more)
-
-### Community 8 - "vc"
-Cohesion: 0.18
-Nodes (19): ac(), Bc(), be(), Do(), ff(), fi(), gc(), oc() (+11 more)
-
-### Community 9 - "gu"
-Cohesion: 0.14
-Nodes (25): Ao(), Au(), Cu(), Da(), Eu(), Fu(), gu(), id() (+17 more)
-
-### Community 10 - "i"
 Cohesion: 0.24
-Nodes (20): s(), a(), d(), di(), ep(), hc(), i(), kc() (+12 more)
+Nodes (11): as(), bs(), es(), Io(), jo(), ka(), ks(), ns() (+3 more)
+
+### Community 8 - "nc"
+Cohesion: 0.13
+Nodes (29): ac(), ba(), cc(), cf(), di(), Do(), Eo(), ff() (+21 more)
+
+### Community 9 - "hu"
+Cohesion: 0.06
+Nodes (57): ad(), ai(), Ao(), ap(), at(), Au(), cs(), Cu() (+49 more)
+
+### Community 10 - "Z"
+Cohesion: 0.23
+Nodes (15): cl(), ec(), el(), fl(), hc(), Il(), Ll(), Nl() (+7 more)
 
 ### Community 11 - "Graphify"
-Cohesion: 0.25
-Nodes (8): Commands, Example output, Graphify, .graphifyignore, Install, Output, This vault (~/my-second-brain), Workflow in CLAUDE.md
+Cohesion: 0.18
+Nodes (11): Advanced queries, Commands, Example output — code project (FastAPI), Example output — this vault, Graphify, .graphifyignore, Install, MCP server (+3 more)
+
+### Community 12 - "index.md"
+Cohesion: 0.05
+Nodes (62): Composio, Installation, Login, MCP endpoint, Role in Jarvis X, Hermes Agent, Installation, Key features (+54 more)
 
 ### Community 13 - "Graphify — Output Structure"
 Cohesion: 0.50
 Nodes (3): Current vault stats (~/my-second-brain, 2026-07-28), Graphify — Output Structure, What each file is
-
-### Community 14 - "Second Brain"
-Cohesion: 0.50
-Nodes (4): Implementations in this vault, Second Brain, The LLM wiki variant, The problem it solves
 
 ### Community 19 - "BOOK I: THE GENESIS"
 Cohesion: 0.12
 Nodes (16): A Comprehensive Reference for Building the Ultimate Agentic AI Operating System, BOOK I: THE GENESIS, BOOK II: THE BODY, Hardware Architecture, Hardware Bottlenecks Analysis, JARVIS X — THE SOVEREIGN BIBLE, Memory Bandwidth Constraint, TABLE OF CONTENTS (+8 more)
 
 ### Community 20 - "Wiki Log"
-Cohesion: 0.11
-Nodes (18): [2026-07-27] ingest | Agent-to-Agent Secure Communication protocol, [2026-07-27] ingest | Composio CLI setup, [2026-07-27] ingest | DeepSeek Jarvis X Master Plan + v2 Ascension Plan, [2026-07-27] ingest | LLM Wiki Pattern — vault structure diagram, [2026-07-27] ingest | LLM Wiki Pattern — Why It Exists, [2026-07-27] ingest | LLM wiki query patterns, [2026-07-27] ingest | LLM Wiki Skills — installation recipe, [2026-07-27] ingest | research-vault setup (+10 more)
+Cohesion: 0.10
+Nodes (21): [2026-07-27] ingest | Agent-to-Agent Secure Communication protocol, [2026-07-27] ingest | Composio CLI setup, [2026-07-27] ingest | DeepSeek Jarvis X Master Plan + v2 Ascension Plan, [2026-07-27] ingest | LLM Wiki Pattern — vault structure diagram, [2026-07-27] ingest | LLM Wiki Pattern — Why It Exists, [2026-07-27] ingest | LLM wiki query patterns, [2026-07-27] ingest | LLM Wiki Skills — installation recipe, [2026-07-27] ingest | research-vault setup (+13 more)
 
 ### Community 21 - "MEDIUM"
 Cohesion: 0.12
@@ -193,9 +180,9 @@ Nodes (16): 10. [data-gap] `jarvis-x-content-engine.md` — brand kit details no
 Cohesion: 0.13
 Nodes (14): graphify, Guardrails, LLM Wiki Schema, Naming conventions, Navigation quick reference, Page format, Routing table, The map (read this first, every time) (+6 more)
 
-### Community 35 - "c"
-Cohesion: 0.22
-Nodes (16): b(), c(), ce(), ea(), ie(), l(), np(), oe() (+8 more)
+### Community 35 - "get"
+Cohesion: 0.16
+Nodes (21): af(), df(), ef(), fo(), get(), gf(), If(), jf() (+13 more)
 
 ### Community 36 - "JARVIS X — v2.0 "Ascension" Plan"
 Cohesion: 0.17
@@ -277,10 +264,6 @@ Nodes (6): Architecture, Brand kit (self-generated), Definition of done (v2.0), 
 Cohesion: 0.33
 Nodes (6): Core capabilities, Definition of "finished v2.0", Jarvis X, Related, Sovereignty principles, v2 identity notes
 
-### Community 68 - "Jarvis X Voice Engine"
-Cohesion: 0.33
-Nodes (6): Config, ESP32-S3-BOX-3 satellite, Future (GPU box), Jarvis X Voice Engine, Offline core, Online accent pack (edge-tts, $0)
-
 ### Community 69 - "llm-wiki-setup Skill"
 Cohesion: 0.33
 Nodes (6): Active vaults, Installation, llm-wiki-setup Skill, Safety, Setup choices (asked once), What it creates
@@ -313,34 +296,6 @@ Nodes (5): BOOK X: THE LORE, Career & Income Roadmap, Certification Roadmap, Inc
 Cohesion: 0.40
 Nodes (5): BOOK XI: THE SCROLLS, Command Reference, Hardware Commands, MCP Integration Code, Software Installation Commands
 
-### Community 79 - "Composio"
-Cohesion: 0.40
-Nodes (5): Composio, Installation, Login, MCP endpoint, Role in Jarvis X
-
-### Community 80 - "Hermes Agent"
-Cohesion: 0.40
-Nodes (5): Hermes Agent, Installation, Key features, Models, Role in the system
-
-### Community 81 - "Jarvis X Hardware"
-Cohesion: 0.40
-Nodes (5): CPU-only model strategy, Current specs, GPU fix commands, Jarvis X Hardware, Upgrade roadmap
-
-### Community 82 - "Jarvis X Trading Module"
-Cohesion: 0.40
-Nodes (5): Backtested strategies (SOL/USDT), Hard gates before going live, Jarvis X Trading Module, What gets built now (zero capital at risk), What JARVIS X will not do
-
-### Community 83 - "Ollama"
-Cohesion: 0.40
-Nodes (5): Essential models (CPU-first, Lenovo Y50-70), Hardware constraint, Install, Ollama, Role in Jarvis X
-
-### Community 84 - "Self-Improvement Loop"
-Cohesion: 0.40
-Nodes (5): Evolution timeline, Planned capabilities, Safety constraint, Self-Improvement Loop, The loop
-
-### Community 85 - "Universal Model Layer"
-Cohesion: 0.40
-Nodes (5): CLI usage, Key constraint, Registered providers, Router rules, Universal Model Layer
-
 ### Community 90 - "Composio — Setup"
 Cohesion: 0.50
 Nodes (3): Composio — Setup, Install, Login
@@ -353,48 +308,32 @@ Nodes (3): How it works, Why the LLM Wiki Pattern Exists, Why this exists
 Cohesion: 0.50
 Nodes (3): Install via claude-flow CLI, Install via Ruflo plugin system, Ruflo Federation Plugin
 
-### Community 93 - "APPENDIX"
-Cohesion: 0.50
-Nodes (4): APPENDIX, File Structure, Quick Links, Version History
-
-### Community 94 - "DeepSeek_Jarvis_X_Master_Plan.md"
+### Community 93 - "DeepSeek_Jarvis_X_Master_Plan.md"
 Cohesion: 0.33
-Nodes (5): BOOK IX: THE RITUALS, BOOK V: THE MEMORY, Obsidian + ChromaDB — Second Brain Architecture, Obsidian Plugin Configuration, Setup Commands
+Nodes (5): APPENDIX, BOOK IX: THE RITUALS, File Structure, Quick Links, Version History
+
+### Community 94 - "Obsidian + ChromaDB — Second Brain Architecture"
+Cohesion: 0.50
+Nodes (4): BOOK V: THE MEMORY, Obsidian + ChromaDB — Second Brain Architecture, Obsidian Plugin Configuration, Setup Commands
 
 ### Community 95 - "Content & Monetization Engine"
 Cohesion: 0.50
 Nodes (4): BOOK VII: THE TRADE, Content & Monetization Engine, Content Pipeline, Content Types
 
-### Community 96 - "Jarvis X Income Roadmap"
-Cohesion: 0.50
-Nodes (4): Active income platforms, Certification roadmap, Jarvis X Income Roadmap, Phases
-
-### Community 97 - "Source — DeepSeek Jarvis X Master Plan"
-Cohesion: 0.50
-Nodes (4): Books, Pages created from this source, Relationship to v2 plan, Source — DeepSeek Jarvis X Master Plan
-
-### Community 98 - "Source — Jarvis X v2 Ascension Plan"
-Cohesion: 0.50
-Nodes (4): 12-week overlay, Execute prompt, Key v2 changes over v1, Source — Jarvis X v2 Ascension Plan
-
-### Community 99 - "The Council"
-Cohesion: 0.50
-Nodes (4): Integration architecture, Members, PAL MCP, The Council
-
 ## Knowledge Gaps
-- **271 isolated node(s):** `graphify`, `Layout`, `Page format`, `Log format`, `Operations` (+266 more)
+- **277 isolated node(s):** `graphify`, `Layout`, `Page format`, `Log format`, `Operations` (+272 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **11 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **10 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `r()` connect `n` to `background.js`, `up`, `c`, `nc`, `popup-Cs4QebOl.js`, `Z`, `jo`, `vc`, `gu`, `i`, `rn`?**
+- **Why does `r()` connect `n` to `background.js`, `Lu`, `i`, `mc`, `vl`, `popup-Cs4QebOl.js`, `jo`, `nc`, `hu`, `Z`?**
   _High betweenness centrality (0.019) - this node is a cross-community bridge._
-- **Why does `execute()` connect `background.js` to `n`, `i`, `nc`?**
+- **Why does `execute()` connect `background.js` to `mc`, `n`?**
   _High betweenness centrality (0.017) - this node is a cross-community bridge._
-- **Why does `n()` connect `n` to `background.js`, `c`, `nc`, `popup-Cs4QebOl.js`, `rn`, `jo`, `vc`, `gu`, `i`, `Z`?**
-  _High betweenness centrality (0.011) - this node is a cross-community bridge._
+- **Why does `Wiki Log` connect `Wiki Log` to `index.md`?**
+  _High betweenness centrality (0.013) - this node is a cross-community bridge._
 - **Are the 19 inferred relationships involving `i()` (e.g. with `c()` and `cc()`) actually correct?**
   _`i()` has 19 INFERRED edges - model-reasoned connections that need verification._
 - **Are the 40 inferred relationships involving `n()` (e.g. with `buildTree()` and `s()`) actually correct?**

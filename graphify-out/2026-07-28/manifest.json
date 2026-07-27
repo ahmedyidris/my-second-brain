@@ -1,59 +1,4 @@
 {
-  ".agents/skills/ui-ux-pro-max/scripts/core.py": {
-    "mtime": 1785189766.4132957,
-    "ast_hash": "41d488b60b5bfb818c4b17413f7477c3",
-    "semantic_hash": ""
-  },
-  ".agents/skills/ui-ux-pro-max/scripts/design_system.py": {
-    "mtime": 1785189766.413363,
-    "ast_hash": "c17f639b44756832e7c556bc65ba2d1d",
-    "semantic_hash": ""
-  },
-  ".agents/skills/ui-ux-pro-max/scripts/search.py": {
-    "mtime": 1785189766.413363,
-    "ast_hash": "10012353bb7d92c645ea7ab245e461e6",
-    "semantic_hash": ""
-  },
-  ".agents/skills/ui-ux-pro-max/scripts/tests/test_core.py": {
-    "mtime": 1785189766.4149377,
-    "ast_hash": "136d8ec87735cf5b77d70ad0adea59c0",
-    "semantic_hash": ""
-  },
-  ".agents/skills/ui-ux-pro-max/scripts/validate_data.py": {
-    "mtime": 1785189766.4133985,
-    "ast_hash": "9ea4300a8385a7377457dd6d1ee99224",
-    "semantic_hash": ""
-  },
-  ".claude/skills/agent-starter-kit/install.sh": {
-    "mtime": 1785188799.9617019,
-    "ast_hash": "cd8934a4d4ccebad170dc0c90f492ec0",
-    "semantic_hash": ""
-  },
-  "agent/skills/ui-ux-pro-max/scripts/core.py": {
-    "mtime": 1785189765.4784155,
-    "ast_hash": "41d488b60b5bfb818c4b17413f7477c3",
-    "semantic_hash": ""
-  },
-  "agent/skills/ui-ux-pro-max/scripts/design_system.py": {
-    "mtime": 1785189765.4785058,
-    "ast_hash": "c17f639b44756832e7c556bc65ba2d1d",
-    "semantic_hash": ""
-  },
-  "agent/skills/ui-ux-pro-max/scripts/search.py": {
-    "mtime": 1785189765.4785058,
-    "ast_hash": "10012353bb7d92c645ea7ab245e461e6",
-    "semantic_hash": ""
-  },
-  "agent/skills/ui-ux-pro-max/scripts/tests/test_core.py": {
-    "mtime": 1785189765.482101,
-    "ast_hash": "136d8ec87735cf5b77d70ad0adea59c0",
-    "semantic_hash": ""
-  },
-  "agent/skills/ui-ux-pro-max/scripts/validate_data.py": {
-    "mtime": 1785189765.478584,
-    "ast_hash": "9ea4300a8385a7377457dd6d1ee99224",
-    "semantic_hash": ""
-  },
   "raw/Apps Downloaded/kimi-webbridge-extension/background.js": {
     "mtime": 1783937568.0,
     "ast_hash": "d692e80153178ffd576ebbe766f50e54",
@@ -69,124 +14,14 @@
     "ast_hash": "026d7e1e9e6ae777aaa660c355c0cd72",
     "semantic_hash": ""
   },
-  ".agents/skills/agent-browser/SKILL.md": {
-    "mtime": 1785189757.2014225,
-    "ast_hash": "ed92243681e40e1c279a284e1c7e9735",
-    "semantic_hash": ""
-  },
-  ".agents/skills/arabic-design/README.md": {
-    "mtime": 1785189773.184535,
-    "ast_hash": "0e953390aef77eed63406da2ac001ba9",
-    "semantic_hash": ""
-  },
-  ".agents/skills/arabic-design/SKILL.md": {
-    "mtime": 1785189773.1845658,
-    "ast_hash": "6e3c469d446f4c8fdc747ed1e9457d94",
-    "semantic_hash": ""
-  },
-  ".agents/skills/caveman/README.md": {
-    "mtime": 1785189769.7121208,
-    "ast_hash": "273a25110a7bb5681f488c17417986ce",
-    "semantic_hash": ""
-  },
-  ".agents/skills/caveman/SKILL.md": {
-    "mtime": 1785189769.712092,
-    "ast_hash": "b947774b88d414637bff02071c65dc9b",
-    "semantic_hash": ""
-  },
-  ".agents/skills/find-skills/SKILL.md": {
-    "mtime": 1785189754.6358712,
-    "ast_hash": "62b297abdee9aea84c577ab2e04e1974",
-    "semantic_hash": ""
-  },
-  ".agents/skills/karpathy-guidelines/SKILL.md": {
-    "mtime": 1785189760.5783784,
-    "ast_hash": "568fe33228692e85543530ce376f695f",
-    "semantic_hash": ""
-  },
-  ".agents/skills/ui-ux-pro-max/SKILL.md": {
-    "mtime": 1785189766.4112465,
-    "ast_hash": "1681b2e1e657c20b6c409126f234fa82",
-    "semantic_hash": ""
-  },
-  ".agents/skills/ui-ux-pro-max/references/pro-rules.md": {
-    "mtime": 1785189766.4127722,
-    "ast_hash": "5e0f69d66caff34bb710c536062e8fb0",
-    "semantic_hash": ""
-  },
-  ".agents/skills/ui-ux-pro-max/references/quick-reference.md": {
-    "mtime": 1785189766.4127975,
-    "ast_hash": "9e039b887010d11bfb1002b31815b929",
-    "semantic_hash": ""
-  },
-  ".claude/skills/agent-starter-kit/README.md": {
-    "mtime": 1785188799.9616747,
-    "ast_hash": "fb54d99845ec83c41a1b12c35f1c64a5",
-    "semantic_hash": ""
-  },
-  ".claude/skills/agent-starter-kit/SKILL.md": {
-    "mtime": 1785188799.9616747,
-    "ast_hash": "029ed24399db0a39ab4d5b49dc62220a",
-    "semantic_hash": ""
-  },
   "AGENTS.md": {
-    "mtime": 1785179229.565159,
-    "ast_hash": "ad62d7fb66ad80ce034523f880bbedff",
+    "mtime": 1785192732.931134,
+    "ast_hash": "e60deed321866596d29ae4651b660984",
     "semantic_hash": ""
   },
   "CLAUDE.md": {
-    "mtime": 1785179220.215138,
-    "ast_hash": "252757cbb21070b3e05f835e41c6a5f1",
-    "semantic_hash": ""
-  },
-  "agent/skills/agent-browser/SKILL.md": {
-    "mtime": 1785189757.1629233,
-    "ast_hash": "0d7c8d982afe09d0b45665ac086035a6",
-    "semantic_hash": ""
-  },
-  "agent/skills/arabic-design/README.md": {
-    "mtime": 1785189773.1244237,
-    "ast_hash": "0e953390aef77eed63406da2ac001ba9",
-    "semantic_hash": ""
-  },
-  "agent/skills/arabic-design/SKILL.md": {
-    "mtime": 1785189773.1229115,
-    "ast_hash": "f7aa3090cf844d0dcd06596903d56111",
-    "semantic_hash": ""
-  },
-  "agent/skills/caveman/README.md": {
-    "mtime": 1785189769.6440911,
-    "ast_hash": "273a25110a7bb5681f488c17417986ce",
-    "semantic_hash": ""
-  },
-  "agent/skills/caveman/SKILL.md": {
-    "mtime": 1785189769.6436493,
-    "ast_hash": "6ad40f7e5e14464ebe5295b45a85450d",
-    "semantic_hash": ""
-  },
-  "agent/skills/find-skills/SKILL.md": {
-    "mtime": 1785189754.598925,
-    "ast_hash": "b01f87229859ca6228366a590b6af6d9",
-    "semantic_hash": ""
-  },
-  "agent/skills/karpathy-guidelines/SKILL.md": {
-    "mtime": 1785189760.5209208,
-    "ast_hash": "ce11b1309c4889172298482d27e1b3b8",
-    "semantic_hash": ""
-  },
-  "agent/skills/ui-ux-pro-max/SKILL.md": {
-    "mtime": 1785189765.4719172,
-    "ast_hash": "a887b9643de047f11a4fdbbdbaf9f27c",
-    "semantic_hash": ""
-  },
-  "agent/skills/ui-ux-pro-max/references/pro-rules.md": {
-    "mtime": 1785189765.4783301,
-    "ast_hash": "5e0f69d66caff34bb710c536062e8fb0",
-    "semantic_hash": ""
-  },
-  "agent/skills/ui-ux-pro-max/references/quick-reference.md": {
-    "mtime": 1785189765.4784155,
-    "ast_hash": "9e039b887010d11bfb1002b31815b929",
+    "mtime": 1785192732.8155787,
+    "ast_hash": "991392059611ca03265a0539c2d1a9b5",
     "semantic_hash": ""
   },
   "raw/2026-07-27-agent-secure-comms.md": {
@@ -315,8 +150,8 @@
     "semantic_hash": ""
   },
   "wiki/index.md": {
-    "mtime": 1785189817.1848788,
-    "ast_hash": "f63d3fd1f7b4d6e5ece62a59593ee6ba",
+    "mtime": 1785192444.5217268,
+    "ast_hash": "4fcc648b71424e42cbc706f4931e9683",
     "semantic_hash": ""
   },
   "wiki/jarvis-x-app.md": {
@@ -365,8 +200,8 @@
     "semantic_hash": ""
   },
   "wiki/log.md": {
-    "mtime": 1785189823.5528743,
-    "ast_hash": "005a1f7d4f6d15231460185b1a023b45",
+    "mtime": 1785192449.7927206,
+    "ast_hash": "626b68ef2ab1930a46ce3a50b4e0663d",
     "semantic_hash": ""
   },
   "wiki/obsidian.md": {
@@ -442,6 +277,26 @@
   "raw/Apps Downloaded/kimi-webbridge-extension/icon/48.png": {
     "mtime": 1783937570.0,
     "ast_hash": "25179a66834799c23fbb905aab61d90f",
+    "semantic_hash": ""
+  },
+  ".claude/settings.json": {
+    "mtime": 1785192732.8159409,
+    "ast_hash": "55172502eafafe087841c974f7833b0e",
+    "semantic_hash": ""
+  },
+  ".claude/CLAUDE.md": {
+    "mtime": 1785192732.812589,
+    "ast_hash": "9b31786b637be3c13978bec4c2330752",
+    "semantic_hash": ""
+  },
+  "raw/2026-07-28-graphify-output-structure.md": {
+    "mtime": 1785192423.6537526,
+    "ast_hash": "a32c47071499f193bbd8576bf162ba34",
+    "semantic_hash": ""
+  },
+  "wiki/graphify.md": {
+    "mtime": 1785192897.343172,
+    "ast_hash": "8005c6470774b5ee075ffed690d71751",
     "semantic_hash": ""
   }
 }
