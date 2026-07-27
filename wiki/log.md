@@ -13,6 +13,12 @@ Utility: `grep "^## \[" wiki/log.md | tail -5` returns the last 5 operations.
 
 ---
 
+## [2026-07-27] ingest | wiki-self-heal trigger prompt
+
+Read `raw/2026-07-27-llm-wiki-self-heal-prompt.md`. Updated [[llm-wiki-pattern]] (added autonomous self-heal to Example queries section).
+
+---
+
 ## [2026-07-27] ingest | LLM wiki query patterns
 
 Read `raw/2026-07-27-llm-wiki-query-patterns.md`. Updated [[llm-wiki-pattern]] (added Example queries section).

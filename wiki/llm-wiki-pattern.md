@@ -6,6 +6,7 @@ sources:
   - raw/2026-07-27-llm-wiki-vault-structure.md
   - raw/2026-07-27-llm-wiki-skills-install.md
   - raw/2026-07-27-llm-wiki-query-patterns.md
+  - raw/2026-07-27-llm-wiki-self-heal-prompt.md
 related: [[second-brain]], [[wiki-self-heal-skill]], [[llm-wiki-setup-skill]]
 last_updated: 2026-07-27
 ---
@@ -66,7 +67,12 @@ Reads all pages for the topic, surfaces agreements and conflicts, cites specific
 **Audit/lint:**
 > "What are the gaps in my wiki right now?"
 
-Triggers the lint workflow: orphan pages, missing cross-references, concepts referenced ≥2 times without their own page, stale claims, data gaps. Returns a severity-ranked list. For an autonomous version, run `wiki-self-heal`.
+Triggers the lint workflow: orphan pages, missing cross-references, concepts referenced ≥2 times without their own page, stale claims, data gaps. Returns a severity-ranked list.
+
+**Autonomous self-heal:**
+> "Run wiki-self-heal on this vault"
+
+Runs the full `wiki-self-heal` skill loop: creates a `wiki-heal/YYYY-MM-DD` branch, audits for 6 gap types, researches and fills the top-N high-severity gaps, commits — never auto-merges. For audit-only: "Run wiki-self-heal audit-only" or "dry run wiki-self-heal".
 
 **Query + file-back:**
 > "Write a comparison page for X vs Y and file it back into the wiki."
