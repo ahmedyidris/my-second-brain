@@ -5,6 +5,7 @@ sources:
   - raw/2026-07-27-llm-wiki-pattern-why.md
   - raw/2026-07-27-llm-wiki-vault-structure.md
   - raw/2026-07-27-llm-wiki-skills-install.md
+  - raw/2026-07-27-llm-wiki-query-patterns.md
 related: [[second-brain]], [[wiki-self-heal-skill]], [[llm-wiki-setup-skill]]
 last_updated: 2026-07-27
 ---
@@ -52,6 +53,25 @@ No vector database. No embeddings. No chunking pipeline. The folder is the app.
 
 - `llm-wiki-setup` — installs the full vault structure in one pass
 - `wiki-self-heal` — autonomous audit + research loop; runs on a schedule or on demand
+
+## Example queries
+
+Three prompts that put the wiki to work:
+
+**Contradiction/synthesis:**
+> "Where do my sources agree and disagree about `<topic>`?"
+
+Reads all pages for the topic, surfaces agreements and conflicts, cites specific pages and their `sources:` frontmatter. Only works if pages have honest `sources:` — the guardrails pay off here.
+
+**Audit/lint:**
+> "What are the gaps in my wiki right now?"
+
+Triggers the lint workflow: orphan pages, missing cross-references, concepts referenced ≥2 times without their own page, stale claims, data gaps. Returns a severity-ranked list. For an autonomous version, run `wiki-self-heal`.
+
+**Query + file-back:**
+> "Write a comparison page for X vs Y and file it back into the wiki."
+
+Synthesizes from existing pages, writes a new analysis page (`wiki/x-vs-y-comparison.md`), adds it to `wiki/index.md` under Analyses, links it bidirectionally from both X and Y pages. Good answers compound — they don't disappear into chat history.
 
 ## Installation
 
