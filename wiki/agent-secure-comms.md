@@ -3,7 +3,7 @@ title: Agent-to-Agent Secure Communication
 tags: [security, agent-architecture, protocol, trust]
 sources:
   - raw/2026-07-27-agent-secure-comms.md
-related: [[ruflo]], [[the-council]], [[constitutional-autonomy]], [[jarvis-x]]
+related: [[ruflo]], [[the-council]], [[constitutional-autonomy]], [[jarvis-x]], [[claude-flow]]
 last_updated: 2026-07-27
 ---
 
@@ -47,6 +47,16 @@ Their Agent <-- [ Block attacks ] <-- [ Check identity ] <------+
 - **Audit trail** — both sides log every message independently
 - **Reputation** — trust score accumulates over time through observed behaviour
 - **Downgrade** — bad behaviour (injection attempts, forged messages, secret leakage) triggers immediate trust downgrade
+
+## Enabling layer: ruflo-federation
+
+The `ruflo-federation` plugin implements this protocol in [[ruflo]]:
+
+```
+/plugin install ruflo-federation@ruflo
+# or via claude-flow:
+npx claude-flow@latest plugins install @claude-flow/plugin-agent-federation
+```
 
 ## Relationship to Ruflo and Jarvis X
 

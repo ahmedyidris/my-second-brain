@@ -6,6 +6,7 @@ sources:
   - raw/2026-07-27-ruflo-install.md
   - raw/2026-07-27-ruflo-one-line-install.md
   - raw/2026-07-27-ruflo-mcp-setup.md
+  - raw/2026-07-27-ruflo-federation-plugin.md
 related: [[jarvis-x]], [[the-council]], [[self-improvement-loop]], [[universal-model-layer]], [[hermes-agent]]
 last_updated: 2026-07-27
 ---
@@ -74,16 +75,29 @@ Ruflo is plugin-based. Marketplace hosted at `ruvnet/ruflo`.
 | `ruflo-swarm@ruflo` | Swarm orchestration layer |
 | `ruflo-rag-memory@ruflo` | RAG-backed persistent memory |
 | `ruflo-neural-trader@ruflo` | Trading/market intelligence module |
+| `ruflo-federation@ruflo` | Agent-to-agent federation — enables [[agent-secure-comms]] |
 
 ```
 /plugin install ruflo-core@ruflo
 /plugin install ruflo-swarm@ruflo
 /plugin install ruflo-rag-memory@ruflo
 /plugin install ruflo-neural-trader@ruflo
+/plugin install ruflo-federation@ruflo
 ```
 
-Note: `ruflo-neural-trader` is the trading module — maps directly to [[jarvis-x-trading-module]] in intent.
-`ruflo-rag-memory` is the memory layer — maps to [[obsidian]] + ChromaDB in Jarvis X.
+Note: `ruflo-neural-trader` maps to [[jarvis-x-trading-module]].
+`ruflo-rag-memory` maps to [[obsidian]] + ChromaDB.
+`ruflo-federation` is the transport layer for [[agent-secure-comms]] — secret stripping, signing, encryption, injection blocking.
+
+### Federation via claude-flow
+
+`ruflo-federation` is also installable through **claude-flow**, a compatible project:
+
+```bash
+npx claude-flow@latest plugins install @claude-flow/plugin-agent-federation
+```
+
+Same package, two install paths. [[claude-flow]] appears to share the federation plugin ecosystem with Ruflo.
 
 ## Relationship to Jarvis X
 
