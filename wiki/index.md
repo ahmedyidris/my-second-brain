@@ -13,6 +13,7 @@ Each entry: `- [[page-name]] — one-line summary`
 
 ## Concepts
 
+- [[llm-wiki-pattern]] — Karpathy wiki pattern: compile knowledge once, query the wiki not the sources; no RAG infrastructure
 - [[universal-model-layer]] — v2 unified provider abstraction; all models behind one CLI interface
 - [[constitutional-autonomy]] — governance model: standing permissions, gated actions, kill switch
 - [[self-improvement-loop]] — Hermes meta-agent reviews its own logs and generates new skills
