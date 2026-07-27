@@ -5,6 +5,7 @@ sources:
   - raw/2026-07-27-ruflo-architecture.md
   - raw/2026-07-27-ruflo-install.md
   - raw/2026-07-27-ruflo-one-line-install.md
+  - raw/2026-07-27-ruflo-mcp-setup.md
 related: [[jarvis-x]], [[the-council]], [[self-improvement-loop]], [[universal-model-layer]], [[hermes-agent]]
 last_updated: 2026-07-27
 ---
@@ -46,6 +47,16 @@ curl -fsSL https://cdn.jsdelivr.net/gh/ruvnet/ruflo@main/scripts/install.sh | ba
 ```
 
 Windows: see Windows-specific note (not yet captured — add when available).
+
+## Claude Code integration (MCP)
+
+Add Ruflo as an MCP server so it's available as a tool inside Claude Code:
+
+```bash
+claude mcp add ruflo -- npx ruflo@latest mcp start
+```
+
+This is the canonical form from Ruflo's USERGUIDE.md. After running it, Ruflo's tools appear in Claude Code sessions automatically.
 
 ## Plugin system
 
