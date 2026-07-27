@@ -13,6 +13,12 @@ Utility: `grep "^## \[" wiki/log.md | tail -5` returns the last 5 operations.
 
 ---
 
+## [2026-07-28] update | Graphify — vault query example added
+
+Ran `graphify query "show auth flow"` on the vault. No auth code — matched wiki Workflow headings in CLAUDE.md. Added result as an example in [[graphify]] showing semantic miss behavior in a pure markdown vault.
+
+---
+
 ## [2026-07-28] update | Graphify — MCP server registered + [mcp] extra documented
 
 Installed `graphifyy[mcp]` extra (adds mcp, uvicorn, httpx). Registered graphify MCP server in `~/.claude.json` via `claude mcp add`. Updated [[graphify]] with correct install command, uv Python path, Claude Code registration command, and note that stdio servers exit immediately (expected — spawned on demand by client).

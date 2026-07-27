@@ -69,7 +69,22 @@ dist/
 !src/**
 ```
 
-## Example output
+## Example output — this vault
+
+```
+$ graphify query "show auth flow"
+Traversal: BFS depth=2 | Start: ['Workflow: Lint', 'Workflow: Query', 'Workflow: Ingest'] | 15 nodes found
+
+NODE Workflow: Lint    [src=CLAUDE.md loc=L139 community=LLM Wiki Schema]
+NODE Workflow: Query   [src=CLAUDE.md loc=L129 community=LLM Wiki Schema]
+NODE Workflow: Ingest  [src=CLAUDE.md loc=L113 community=LLM Wiki Schema]
+...
+EDGE LLM Wiki Schema --contains [EXTRACTED]--> Workflow: Ingest at=CLAUDE.md:L113
+```
+
+No auth code in the vault — "flow" matched the wiki's own `Workflow:` headings in `CLAUDE.md`. Correct behavior: graphify returns whatever the semantic match surfaces, not an empty result. For a pure markdown knowledge vault, queries about code constructs (auth, routing, middleware) will resolve to conceptual wiki content instead.
+
+## Example output — code project (FastAPI)
 
 ```
 $ graphify explain "APIRouter"
