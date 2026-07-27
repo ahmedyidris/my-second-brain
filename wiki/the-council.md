@@ -34,6 +34,8 @@ The multi-agent team architecture at the heart of [[jarvis-x]]. Each agent has a
 
 Claude Orchestrator → Claude Code / Codex CLI / Gemini CLI → PAL MCP Server → NotebookLM / Composio / Obsidian → [[hermes-agent]]
 
+All council agents operate under the standing permissions and gated actions defined in [[constitutional-autonomy]].
+
 ## PAL MCP
 
 Installed via `git clone https://github.com/BeehiveInnovations/pal-mcp-server.git && ./run-server.sh`.

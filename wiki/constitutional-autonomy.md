@@ -49,3 +49,5 @@ Anything irreversible or external:
 - **Hard limit:** fully unsupervised self-modification stays out permanently
 
 This is the honest maximum of "self-governing" that is safe on real hardware.
+
+The agents governed by this constitution form [[the-council]]. Gated actions require one-tap approval from the human before any council member can execute them.

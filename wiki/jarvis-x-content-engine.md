@@ -36,3 +36,10 @@ Free AI-music tiers don't grant commercial rights. Don't monetize music until a 
 ## The moat
 
 Egyptian Arabic is the differentiator. JARVIS X generates its own brand assets as one of its first content-engine jobs — *the system literally brands itself.*
+
+## Brand kit
+
+Defined in [[jarvis-x-app]] (§8 of the v2 plan):
+- **Mark:** arc-reactor ring forming the letter X
+- **Palette:** obsidian black + arc gold (Gothic-Arcane doctrine)
+- **Voice:** calm, precise, bilingual (EN + AR)

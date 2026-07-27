@@ -13,6 +13,16 @@ Utility: `grep "^## \[" wiki/log.md | tail -5` returns the last 5 operations.
 
 ---
 
+## [2026-07-27] update | heal pass — all 11 audit gaps fixed
+
+HIGH (broken wikilinks): Created [[second-brain]], [[wiki-self-heal-skill]], [[llm-wiki-setup-skill]].
+MEDIUM (missing pages): Created [[obsidian]], [[ollama]], [[jarvis-x-app]].
+MEDIUM (cross-refs): Added [[constitutional-autonomy]] → [[the-council]] link; [[the-council]] → [[constitutional-autonomy]] link; [[jarvis-x-hardware]] → [[universal-model-layer]] link.
+LOW: Anchored income roadmap dates to July 2026; added brand kit to [[jarvis-x-content-engine]]; cleaned template artifacts from [[wiki/index.md]].
+Updated [[wiki/index.md]] with 6 new pages + new Skills section.
+
+---
+
 ## [2026-07-27] lint | first audit pass (dry run)
 
 Scanned 15 pages. Found 11 gaps (HIGH: 3, MEDIUM: 5, LOW: 3). No wiki pages changed.

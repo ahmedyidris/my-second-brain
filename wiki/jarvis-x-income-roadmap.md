@@ -13,9 +13,11 @@ The one path: **Bilingual AI Operations Specialist** (Egyptian Arabic + English)
 
 ## Phases
 
+Plan inception: **July 2026**. All timings are relative to that anchor.
+
 | Phase | Timing | Focus | Hrs/Wk | Produces |
 |-------|--------|-------|--------|---------|
-| 1. Floor | Now – Month 3 | Mindrift + Outlier language tasks | 8–10 | Track record, first USD |
+| 1. Floor | Jul – Oct 2026 | Mindrift + Outlier language tasks | 8–10 | Track record, first USD |
 | 2. Documentation | Month 3–6 | Write evaluation logic, flag Arabic-specific errors | 8–10 | Rubric portfolio + case studies |
 | 3. Lead Push | Month 6–9 | Apply for calibration/QA-lead roles | +2–3 | First lead/QA title |
 | 4. Outreach | Month 9–12 | Pitch MENA companies with case studies | +2–3 | First consulting conversation |

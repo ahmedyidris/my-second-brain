@@ -23,7 +23,7 @@ Current body: **Lenovo Y50-70** running Pop!_OS 24.04 LTS.
 
 ## CPU-only model strategy
 
-Since GPU is undetected, all inference runs on CPU:
+Since GPU is undetected, all inference runs on CPU. This constraint directly shapes the [[universal-model-layer]] tier selection — privacy-sensitive and interactive queries must use the `local` tier:
 
 | Model | Size | Speed |
 |-------|------|-------|
