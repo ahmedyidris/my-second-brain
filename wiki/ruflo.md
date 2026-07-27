@@ -4,6 +4,7 @@ tags: [agent-architecture, self-optimizing, cli, mcp]
 sources:
   - raw/2026-07-27-ruflo-architecture.md
   - raw/2026-07-27-ruflo-install.md
+  - raw/2026-07-27-ruflo-one-line-install.md
 related: [[jarvis-x]], [[the-council]], [[self-improvement-loop]], [[universal-model-layer]], [[hermes-agent]]
 last_updated: 2026-07-27
 ---
@@ -35,6 +36,16 @@ User --> Ruflo (CLI/MCP) --> Router --> Swarm --> Agents --> Memory --> LLM Prov
 ## The key innovation: the learning loop
 
 The learning loop is what distinguishes Ruflo from a static multi-agent system. Agent outputs and memory state feed back to the router, allowing it to self-optimize — better routing, better swarm composition, better tool selection — without manual reconfiguration.
+
+## Installation
+
+One-line install (POSIX shells — Linux/macOS):
+
+```bash
+curl -fsSL https://cdn.jsdelivr.net/gh/ruvnet/ruflo@main/scripts/install.sh | bash
+```
+
+Windows: see Windows-specific note (not yet captured — add when available).
 
 ## Plugin system
 
