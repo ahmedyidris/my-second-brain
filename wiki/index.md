@@ -36,6 +36,7 @@ Each entry: `- [[page-name]] — one-line summary`
 - [[llm-wiki-setup-skill]] — installs the full Karpathy vault structure in one pass
 - [[wiki-self-heal-skill]] — autonomous audit + research loop; full or audit-only mode
 - [[agent-starter-kit]] — one-command installer: 6 skills + 6 Claude Code plugins across all agent types
+- [[graphify]] — knowledge graph tool: maps project into queryable graph (1199 nodes, 2497 edges, 109 communities)
 
 ## Sources
 
