@@ -13,6 +13,17 @@ Utility: `grep "^## \[" wiki/log.md | tail -5` returns the last 5 operations.
 
 ---
 
+## [2026-07-27] lint | first audit pass (dry run)
+
+Scanned 15 pages. Found 11 gaps (HIGH: 3, MEDIUM: 5, LOW: 3). No wiki pages changed.
+Created [[audits/audit-2026-07-27]]. Updated [[wiki/index.md]] Audits section.
+
+HIGH: 3 broken wikilinks in [[llm-wiki-pattern]] (second-brain, wiki-self-heal-skill, llm-wiki-setup-skill).
+MEDIUM: 2 missing pages (obsidian, ollama), 2 missing cross-refs (the-council↔constitutional-autonomy, hardware→universal-model-layer), 1 missing page (jarvis-x-app).
+LOW: relative dates in income roadmap, missing brand kit, template artifacts in index.
+
+---
+
 ## [2026-07-27] ingest | wiki-self-heal trigger prompt
 
 Read `raw/2026-07-27-llm-wiki-self-heal-prompt.md`. Updated [[llm-wiki-pattern]] (added autonomous self-heal to Example queries section).

@@ -37,3 +37,4 @@ Each entry: `- [[page-name]] — one-line summary`
 
 <!-- Health-check reports produced by the wiki-self-heal skill.
      Example: - [[audit-2026-04-11]] — first self-heal pass, 12 gaps found -->
+- [[audits/audit-2026-07-27]] — first audit pass; 11 gaps (HIGH: 3 broken wikilinks, MEDIUM: 5 missing pages/cross-refs, LOW: 3)
