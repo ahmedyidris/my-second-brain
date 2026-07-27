@@ -96,26 +96,38 @@ Each edge is tagged `EXTRACTED` (read directly from source) or `INFERRED` (resol
 
 Graphify can expose a graph as an MCP tool server, letting any MCP-compatible agent query it without running graphify locally.
 
+Requires the `[mcp]` extra (installs `mcp`, `uvicorn`, `httpx`, etc.):
+
 ```bash
-# stdio (default) — for local agents, IDEs
-python -m graphify.serve graphify-out/graph.json
+uv tool install "graphifyy[mcp]" --force
+```
+
+```bash
+# stdio (default) — spawned on demand by the agent
+GRAPHIFY_PY=/home/jarvis/.local/share/uv/tools/graphifyy/bin/python
+$GRAPHIFY_PY -m graphify.serve graphify-out/graph.json
+
+# register with Claude Code (persists to ~/.claude.json)
+claude mcp add graphify $GRAPHIFY_PY -- -m graphify.serve /abs/path/to/graphify-out/graph.json
 
 # register with Kimi Code
-kimi mcp add --transport stdio graphify -- python -m graphify.serve graphify-out/graph.json
+kimi mcp add --transport stdio graphify -- $GRAPHIFY_PY -m graphify.serve graphify-out/graph.json
 
 # HTTP — one server, whole team points at the URL
-python -m graphify.serve graphify-out/graph.json --transport http --port 8080
-python -m graphify.serve graphify-out/graph.json --transport http --host 0.0.0.0 --api-key "$SECRET"
+$GRAPHIFY_PY -m graphify.serve graphify-out/graph.json --transport http --port 8080
+$GRAPHIFY_PY -m graphify.serve graphify-out/graph.json --transport http --host 0.0.0.0 --api-key "$SECRET"
 ```
 
 Both the positional argument and `--graph` flag are accepted:
 
 ```bash
-python -m graphify.serve graphify-out/graph.json
-python -m graphify.serve --graph graphify-out/graph.json   # same thing
+$GRAPHIFY_PY -m graphify.serve graphify-out/graph.json
+$GRAPHIFY_PY -m graphify.serve --graph graphify-out/graph.json   # same thing
 ```
 
-For the HTTP transport: expose on `0.0.0.0` and set `--api-key` for a shared team endpoint with auth. With the default stdio transport, no network port is opened.
+For the HTTP transport: expose on `0.0.0.0` and set `--api-key` for a shared team endpoint with auth. With the default stdio transport, no network port is opened — the client spawns the server process directly.
+
+**This vault**: graphify MCP server is registered in `~/.claude.json` (project-scoped). Claude Code spawns it automatically when graph tools are called.
 
 ## Advanced queries
 
