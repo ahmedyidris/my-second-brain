@@ -37,6 +37,29 @@ graphify explain "concept"           # focused explanation of one concept
 - `graphify-out/graph.html` — interactive browser view
 - `graphify-out/GRAPH_REPORT.md` — highlights and suggested queries
 
+## Example output
+
+```
+$ graphify explain "APIRouter"
+Node: APIRouter
+  Source:    routing.py L2210
+  Community: 2
+  Degree:    47
+
+Connections (47):
+  --> RequestValidationError [uses] [INFERRED]
+  --> Dependant [uses] [INFERRED]
+  --> .get() [method] [EXTRACTED]
+  <-- __init__.py [imports] [EXTRACTED]
+  ...
+
+$ graphify path "FastAPI" "ModelField"
+Shortest path (3 hops):
+  FastAPI --uses--> DefaultPlaceholder <--references-- get_request_handler() --references--> ModelField
+```
+
+Each edge is tagged `EXTRACTED` (read directly from source) or `INFERRED` (resolved by graphify) — you can tell what was explicit vs. inferred.
+
 ## Workflow in CLAUDE.md
 
 The vault `CLAUDE.md` instructs: run `graphify query "<question>"` before broad source browsing. The graph returns a scoped subgraph — much smaller context than raw grep. After modifying code/wiki, run `graphify update .` to keep the graph current.
