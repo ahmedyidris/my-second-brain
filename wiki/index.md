@@ -6,6 +6,7 @@ Each entry: `- [[page-name]] — one-line summary`
 
 ## Entities
 
+- [[research-vault]] — second LLM wiki at ~/research-vault; separate vault for research topics
 - [[jarvis-x]] — sovereign self-improving personal AI OS; "the system that runs the house"
 - [[hermes-agent]] — local self-improving core brain (Ollama, 70+ skills, cross-session memory)
 - [[jarvis-x-hardware]] — Lenovo Y50-70 specs, CPU-only strategy, and hardware upgrade roadmap
