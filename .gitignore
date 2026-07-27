@@ -66,3 +66,6 @@ raw/logged-in.png
 raw/projects/
 raw/vault/
 raw/CLAUDE.md
+
+# Graphify — local-only outputs
+graphify-out/cost.json
