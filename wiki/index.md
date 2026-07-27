@@ -16,6 +16,7 @@ Each entry: `- [[page-name]] — one-line summary`
 - [[ruflo]] — self-learning agent architecture: CLI/MCP → Router → Swarm → Agents → Memory → LLM Providers + learning loop
 - [[agent-secure-comms]] — agent-to-agent security protocol: secret stripping, signing, encryption, injection blocking, trust scores
 - [[claude-flow]] — compatible project sharing Ruflo's federation plugin ecosystem; installs via npx claude-flow@latest
+- [[composio]] — tool connector with 1000+ app integrations; bridges Jarvis X agents to external services via MCP
 
 ## Concepts
 
