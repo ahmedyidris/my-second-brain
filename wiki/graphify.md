@@ -11,7 +11,23 @@ last_updated: 2026-07-28
 
 A knowledge graph tool that maps any project (code, docs, markdown) into a queryable graph — no embeddings, no vector store. Uses tree-sitter AST for code (free, local, deterministic) and an LLM for semantic passes on docs/images/PDFs.
 
-Installed via: `uv tool install graphifyy && graphify install`
+## Install
+
+```bash
+# Recommended (isolated env):
+uv tool install graphifyy
+# if 'graphify' not found after: uv tool update-shell
+
+# Alternatives:
+pipx install graphifyy
+pip install graphifyy   # may need PATH setup
+```
+
+Then register the skill with your AI assistant:
+
+```bash
+graphify install
+```
 
 ## Output
 
