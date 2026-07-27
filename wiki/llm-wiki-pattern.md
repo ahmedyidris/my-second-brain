@@ -3,6 +3,7 @@ title: LLM Wiki Pattern
 tags: [meta, pattern, knowledge-management, karpathy]
 sources:
   - raw/2026-07-27-llm-wiki-pattern-why.md
+  - raw/2026-07-27-llm-wiki-vault-structure.md
 related: [[second-brain]], [[wiki-self-heal-skill]], [[llm-wiki-setup-skill]]
 last_updated: 2026-07-27
 ---
@@ -14,6 +15,19 @@ The Karpathy LLM wiki pattern: instead of re-pasting context into every chat ses
 **Core insight:** most AI workflows are stateless — paste, answer, forget. The wiki pattern makes knowledge compound.
 
 No vector database. No embeddings. No chunking pipeline. The folder is the app.
+
+## Vault structure
+
+```
+<your-vault>/
+├── CLAUDE.md              # the map — AI reads this first
+├── AGENTS.md              # mirror for Codex and other agents
+├── raw/                   # immutable sources (LLM reads, never writes)
+└── wiki/                  # LLM-owned markdown
+    ├── index.md           # catalog of every page
+    ├── log.md             # chronological operation log
+    └── <pages>.md         # entity / concept / analysis pages
+```
 
 ## Three-layer mental model
 
