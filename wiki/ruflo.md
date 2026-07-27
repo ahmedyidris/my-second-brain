@@ -3,6 +3,7 @@ title: Ruflo
 tags: [agent-architecture, self-optimizing, cli, mcp]
 sources:
   - raw/2026-07-27-ruflo-architecture.md
+  - raw/2026-07-27-ruflo-install.md
 related: [[jarvis-x]], [[the-council]], [[self-improvement-loop]], [[universal-model-layer]], [[hermes-agent]]
 last_updated: 2026-07-27
 ---
@@ -34,6 +35,33 @@ User --> Ruflo (CLI/MCP) --> Router --> Swarm --> Agents --> Memory --> LLM Prov
 ## The key innovation: the learning loop
 
 The learning loop is what distinguishes Ruflo from a static multi-agent system. Agent outputs and memory state feed back to the router, allowing it to self-optimize — better routing, better swarm composition, better tool selection — without manual reconfiguration.
+
+## Plugin system
+
+Ruflo is plugin-based. Marketplace hosted at `ruvnet/ruflo`.
+
+```
+/plugin marketplace add ruvnet/ruflo
+```
+
+### Core plugins
+
+| Plugin | Function |
+|--------|----------|
+| `ruflo-core@ruflo` | Core agent runtime — install first |
+| `ruflo-swarm@ruflo` | Swarm orchestration layer |
+| `ruflo-rag-memory@ruflo` | RAG-backed persistent memory |
+| `ruflo-neural-trader@ruflo` | Trading/market intelligence module |
+
+```
+/plugin install ruflo-core@ruflo
+/plugin install ruflo-swarm@ruflo
+/plugin install ruflo-rag-memory@ruflo
+/plugin install ruflo-neural-trader@ruflo
+```
+
+Note: `ruflo-neural-trader` is the trading module — maps directly to [[jarvis-x-trading-module]] in intent.
+`ruflo-rag-memory` is the memory layer — maps to [[obsidian]] + ChromaDB in Jarvis X.
 
 ## Relationship to Jarvis X
 
