@@ -13,6 +13,12 @@ Utility: `grep "^## \[" wiki/log.md | tail -5` returns the last 5 operations.
 
 ---
 
+## [2026-07-27] ingest | Ruflo architecture diagram
+
+Read `raw/2026-07-27-ruflo-architecture.md`. Created [[ruflo]] with component table and comparison to [[jarvis-x]]. Updated [[wiki/index.md]].
+
+---
+
 ## [2026-07-27] update | heal pass — all 11 audit gaps fixed
 
 HIGH (broken wikilinks): Created [[second-brain]], [[wiki-self-heal-skill]], [[llm-wiki-setup-skill]].

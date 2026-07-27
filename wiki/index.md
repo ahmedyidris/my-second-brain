@@ -13,6 +13,7 @@ Each entry: `- [[page-name]] — one-line summary`
 - [[the-council]] — multi-agent team: Claude Orchestrator + 12 specialist agents
 - [[obsidian]] — GUI markdown second-brain layer in Jarvis X; paired with ChromaDB via brain-mcp
 - [[ollama]] — local model runtime; powers hermes-agent and the universal-model-layer local tier
+- [[ruflo]] — self-learning agent architecture: CLI/MCP → Router → Swarm → Agents → Memory → LLM Providers + learning loop
 
 ## Concepts
 
