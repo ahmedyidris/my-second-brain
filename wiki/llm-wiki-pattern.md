@@ -4,6 +4,7 @@ tags: [meta, pattern, knowledge-management, karpathy]
 sources:
   - raw/2026-07-27-llm-wiki-pattern-why.md
   - raw/2026-07-27-llm-wiki-vault-structure.md
+  - raw/2026-07-27-llm-wiki-skills-install.md
 related: [[second-brain]], [[wiki-self-heal-skill]], [[llm-wiki-setup-skill]]
 last_updated: 2026-07-27
 ---
@@ -51,3 +52,15 @@ No vector database. No embeddings. No chunking pipeline. The folder is the app.
 
 - `llm-wiki-setup` — installs the full vault structure in one pass
 - `wiki-self-heal` — autonomous audit + research loop; runs on a schedule or on demand
+
+## Installation
+
+Skills live at https://github.com/NulightJens/ai-second-brain-skills. Install once per machine:
+
+```bash
+git clone https://github.com/NulightJens/ai-second-brain-skills.git ~/ai-second-brain-skills
+ln -s ~/ai-second-brain-skills/llm-wiki-setup  ~/.claude/skills/llm-wiki-setup
+ln -s ~/ai-second-brain-skills/wiki-self-heal  ~/.claude/skills/wiki-self-heal
+```
+
+After this, `/llm-wiki-setup` and `/wiki-self-heal` are available in Claude Code.
