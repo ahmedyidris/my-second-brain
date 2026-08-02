@@ -3,7 +3,7 @@ title: Self-Improvement Loop
 tags: [jarvis-x, evolution, meta-agent, autonomy]
 sources:
   - raw/Jarvis X Resources/DeepSeek Files/DeepSeek_Jarvis_X_Master_Plan.md
-related: [[jarvis-x]], [[hermes-agent]], [[constitutional-autonomy]]
+related: [[jarvis-x]], [[hermes-agent]], [[constitutional-autonomy]], [[ruflo]]
 last_updated: 2026-07-27
 ---
 
@@ -45,6 +45,10 @@ Logs the change → Repeat
 - Automatic model upgrades
 - Portable one-click installer
 - iOS companion app
+
+## Related architectures
+
+[[ruflo]]'s comparison table maps its Learning Loop component to this self-improvement loop.
 
 ## Safety constraint
 

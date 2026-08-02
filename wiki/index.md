@@ -15,8 +15,10 @@ Each entry: `- [[page-name]] — one-line summary`
 - [[ollama]] — local model runtime; powers hermes-agent and the universal-model-layer local tier
 - [[ruflo]] — self-learning agent architecture: CLI/MCP → Router → Swarm → Agents → Memory → LLM Providers + learning loop
 - [[agent-secure-comms]] — agent-to-agent security protocol: secret stripping, signing, encryption, injection blocking, trust scores
-- [[claude-flow]] — compatible project sharing Ruflo's federation plugin ecosystem; installs via npx claude-flow@latest
+- [[claude-flow]] — original name of [[ruflo]] pre-rename; `@claude-flow/` npm namespace kept for backward compat (federation plugin); naming collision with unrelated forks
 - [[composio]] — tool connector with 1000+ app integrations; bridges Jarvis X agents to external services via MCP
+- [[chromadb]] — open-source vector database (Apache 2.0); RAG/semantic-search backbone behind Obsidian's memory layer
+- [[pal-mcp]] — Provider Abstraction Layer MCP server; `clink` tool bridges Claude Code/Gemini CLI/Codex CLI as one multi-model orchestrator
 
 ## Concepts
 
@@ -36,7 +38,7 @@ Each entry: `- [[page-name]] — one-line summary`
 - [[llm-wiki-setup-skill]] — installs the full Karpathy vault structure in one pass
 - [[wiki-self-heal-skill]] — autonomous audit + research loop; full or audit-only mode
 - [[agent-starter-kit]] — one-command installer: 6 skills + 6 Claude Code plugins across all agent types
-- [[graphify]] — knowledge graph tool: maps project into queryable graph; MCP server mode for team/agent access (805 nodes, 1974 edges, 77 communities)
+- [[graphify]] — knowledge graph tool: maps project into queryable graph; MCP server mode for team/agent access (811 nodes, 1980 edges, 63 communities)
 
 ## Sources
 
@@ -48,3 +50,4 @@ Each entry: `- [[page-name]] — one-line summary`
 ## Audits
 
 - [[audits/audit-2026-07-27]] — first audit pass; 11 gaps (HIGH: 3 broken wikilinks, MEDIUM: 5 missing pages/cross-refs, LOW: 3)
+- [[audits/audit-2026-08-02]] — weekly self-heal pass; 20 gaps found (HIGH: 3, MEDIUM: 9, LOW: 8); researched claude-flow, ChromaDB, PAL MCP; 12 mechanical fixes applied

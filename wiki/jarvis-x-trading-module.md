@@ -4,7 +4,7 @@ tags: [jarvis-x, trading, crypto, market-intelligence]
 sources:
   - raw/Jarvis X Resources/DeepSeek Files/DeepSeek_Jarvis_X_Master_Plan.md
   - raw/Jarvis X Resources/Jarvis X/Jarvis_X_v2_Ascension_Plan.md
-related: [[jarvis-x]], [[constitutional-autonomy]]
+related: [[jarvis-x]], [[constitutional-autonomy]], [[ruflo]]
 last_updated: 2026-07-27
 ---
 
@@ -35,6 +35,10 @@ Also called Market Intelligence Module. Testnet/paper-only at build time; live-c
 | Bollinger | -52.0% | -55.1% |
 
 Key insight: 64% of surviving strategies were mean-reversion.
+
+## Related architectures
+
+[[ruflo]]'s comparison table maps its `ruflo-neural-trader` plugin to this module.
 
 ## What JARVIS X will not do
 

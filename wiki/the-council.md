@@ -26,19 +26,19 @@ The multi-agent team architecture at the heart of [[jarvis-x]]. Each agent has a
 | Copilot | UI/UX Specialist | Frontend, visual design |
 | NotebookLM | Research Engine | Zero-token ingest of URLs/PDFs/videos |
 | [[hermes-agent]] | Core Agent Brain | Self-improving, skill creation |
-| Obsidian | Second Brain | Persistent knowledge, RAG |
-| Composio | Tool Connector | 1000+ app integrations |
-| PAL MCP | Team Connector | Seamless multi-model handoffs |
+| [[obsidian]] | Second Brain | Persistent knowledge, RAG |
+| [[composio]] | Tool Connector | 1000+ app integrations |
+| [[pal-mcp]] | Team Connector | Seamless multi-model handoffs |
 
 ## Integration architecture
 
-Claude Orchestrator → Claude Code / Codex CLI / Gemini CLI → PAL MCP Server → NotebookLM / Composio / Obsidian → [[hermes-agent]]
+Claude Orchestrator → Claude Code / Codex CLI / Gemini CLI → [[pal-mcp]] Server → NotebookLM / [[composio]] / [[obsidian]] → [[hermes-agent]]
 
 All council agents operate under the standing permissions and gated actions defined in [[constitutional-autonomy]].
 
 ## PAL MCP
 
-Installed via `git clone https://github.com/BeehiveInnovations/pal-mcp-server.git && ./run-server.sh`.
+See [[pal-mcp]] for full details. Installed via `git clone https://github.com/BeehiveInnovations/pal-mcp-server.git && ./run-server.sh`.
 
 Verification commands:
 - "Use pal to list available models"

@@ -86,18 +86,18 @@ Ruflo is plugin-based. Marketplace hosted at `ruvnet/ruflo`.
 ```
 
 Note: `ruflo-neural-trader` maps to [[jarvis-x-trading-module]].
-`ruflo-rag-memory` maps to [[obsidian]] + ChromaDB.
+`ruflo-rag-memory` maps to [[obsidian]] + [[chromadb]].
 `ruflo-federation` is the transport layer for [[agent-secure-comms]] — secret stripping, signing, encryption, injection blocking.
 
 ### Federation via claude-flow
 
-`ruflo-federation` is also installable through **claude-flow**, a compatible project:
+`ruflo-federation` is also installable through the `@claude-flow/` npm namespace:
 
 ```bash
 npx claude-flow@latest plugins install @claude-flow/plugin-agent-federation
 ```
 
-Same package, two install paths. [[claude-flow]] appears to share the federation plugin ecosystem with Ruflo.
+Correction (2026-08-02 audit): [[claude-flow]] is not a separate "compatible project" — per ruvnet/ruflo's own README, "Claude Flow" is the project's original name before its rename to Ruflo; the `@claude-flow/` namespace persists for backward compatibility. See [[claude-flow]] for a naming-collision warning: other unrelated repos (e.g. `kodflow/claude-flow`) also use the name for a separate fork with a different feature set.
 
 ## Relationship to Jarvis X
 
@@ -108,7 +108,7 @@ Ruflo and [[jarvis-x]] share the same design instincts but at different layers:
 | Entry point | CLI/MCP | CLI + voice + web UI |
 | Orchestration | Router + Swarm | [[the-council]] |
 | Self-improvement | Learning Loop | [[self-improvement-loop]] |
-| Memory | Memory layer | Obsidian + ChromaDB |
+| Memory | Memory layer | [[obsidian]] + [[chromadb]] |
 | Model abstraction | LLM Providers | [[universal-model-layer]] |
 
 Ruflo could serve as the orchestration backbone inside Jarvis X, with [[hermes-agent]] as the primary agent and [[universal-model-layer]] as the LLM Providers layer.

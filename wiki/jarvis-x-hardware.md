@@ -3,7 +3,7 @@ title: Jarvis X Hardware
 tags: [jarvis-x, hardware, lenovo, cpu-only]
 sources:
   - raw/Jarvis X Resources/DeepSeek Files/DeepSeek_Jarvis_X_Master_Plan.md
-related: [[jarvis-x]], [[hermes-agent]]
+related: [[jarvis-x]], [[hermes-agent]], [[ollama]]
 last_updated: 2026-07-27
 ---
 
@@ -23,7 +23,7 @@ Current body: **Lenovo Y50-70** running Pop!_OS 24.04 LTS.
 
 ## CPU-only model strategy
 
-Since GPU is undetected, all inference runs on CPU. This constraint directly shapes the [[universal-model-layer]] tier selection — privacy-sensitive and interactive queries must use the `local` tier:
+Since GPU is undetected, all inference runs on CPU. This constraint directly shapes the [[universal-model-layer]] tier selection — privacy-sensitive and interactive queries must use the `local` tier, served via [[ollama]]:
 
 | Model | Size | Speed |
 |-------|------|-------|

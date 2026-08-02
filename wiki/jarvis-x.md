@@ -21,7 +21,7 @@ Bilingual by design: Egyptian Arabic and English are both first-class citizens.
 | # | Capability | How |
 |---|-----------|------|
 | 1 | Thinks | [[hermes-agent]] as reasoning engine |
-| 2 | Remembers | Obsidian + ChromaDB second brain |
+| 2 | Remembers | [[obsidian]] + [[chromadb]] second brain |
 | 3 | Learns | Meta-agent [[self-improvement-loop]] |
 | 4 | Acts | Tool-calling, real system operations |
 | 5 | Creates | [[jarvis-x-content-engine]] |
@@ -46,4 +46,4 @@ One installer script → services up → web UI on phone & laptop → voice chat
 
 ## Related
 
-[[jarvis-x-hardware]] | [[the-council]] | [[universal-model-layer]] | [[constitutional-autonomy]] | [[jarvis-x-voice-engine]] | [[jarvis-x-content-engine]] | [[jarvis-x-trading-module]] | [[jarvis-x-income-roadmap]] | [[self-improvement-loop]]
+[[jarvis-x-hardware]] | [[the-council]] | [[universal-model-layer]] | [[constitutional-autonomy]] | [[jarvis-x-voice-engine]] | [[jarvis-x-content-engine]] | [[jarvis-x-trading-module]] | [[jarvis-x-income-roadmap]] | [[self-improvement-loop]] | [[jarvis-x-app]] | [[obsidian]] | [[chromadb]]

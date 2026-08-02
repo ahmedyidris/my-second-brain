@@ -3,7 +3,7 @@ title: Ollama
 tags: [jarvis-x, tool, local-ai, infrastructure]
 sources:
   - raw/Jarvis X Resources/DeepSeek Files/DeepSeek_Jarvis_X_Master_Plan.md
-related: [[jarvis-x]], [[hermes-agent]], [[universal-model-layer]], [[jarvis-x-hardware]]
+related: [[jarvis-x]], [[hermes-agent]], [[universal-model-layer]], [[jarvis-x-hardware]], [[chromadb]]
 last_updated: 2026-07-27
 ---
 
@@ -23,7 +23,7 @@ curl -fsSL https://ollama.com/install.sh | sh
 |-------|------|-------------|-----|
 | llama3.2:3b | ~2GB | 8–12 t/s | Primary agent |
 | qwen3:1.5b | ~1GB | 15–20 t/s | Fast alternative |
-| nomic-embed-text | ~0.5GB | Fast | Embeddings for ChromaDB/[[obsidian]] |
+| nomic-embed-text | ~0.5GB | Fast | Embeddings for [[chromadb]]/[[obsidian]] |
 | hermes3:8b | ~5.5GB | 1–3 t/s | Future — needs 16GB RAM + GPU |
 
 ```bash
@@ -37,7 +37,7 @@ ollama pull nomic-embed-text
 - Serves as the `local` tier in [[universal-model-layer]] (`jj ask --tier local`)
 - Privacy-sensitive queries always route here — nothing leaves the machine
 - [[hermes-agent]] runs on top of Ollama models
-- `nomic-embed-text` powers ChromaDB vector search in [[obsidian]]
+- `nomic-embed-text` powers [[chromadb]] vector search in [[obsidian]]
 
 ## Hardware constraint
 

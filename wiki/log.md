@@ -13,6 +13,22 @@ Utility: `grep "^## \[" wiki/log.md | tail -5` returns the last 5 operations.
 
 ---
 
+## [2026-08-02] lint | weekly self-heal
+
+Full audit + top-3 research pass. Scanned all 26 pages, confirmed 2026-07-27 audit's 11 fixes hold with no regressions, no orphans found. Wrote [[audits/audit-2026-08-02]] (20 gaps: HIGH 3, MEDIUM 9, LOW 8).
+
+Researched (≥2 sources each): created [[chromadb]] (open-source vector DB, Apache 2.0, backs Obsidian's memory layer), [[claude-flow]] (clarified: original pre-rename name of [[ruflo]], not a separate "compatible project" as previously recorded — corrected that framing in [[ruflo]]; flagged naming collision with unrelated `kodflow/claude-flow` fork), [[pal-mcp]] (Provider Abstraction Layer MCP server, `clink` multi-CLI orchestration, split out of a subsection in [[the-council]]).
+
+Backfilled [[chromadb]] wikilinks into [[obsidian]], [[ollama]], [[ruflo]], [[second-brain]], [[source-deepseek-jarvis-x-master-plan]], [[jarvis-x]]. Backfilled [[pal-mcp]] into [[the-council]], [[agent-secure-comms]].
+
+Mechanical fixes (no research needed): synced graphify stats in [[wiki/index.md]] (805/1974/77 → 811/1980/63, matches [[graphify]] and graph.json on disk). Added missing cross-refs: [[jarvis-x]] → [[jarvis-x-app]] + [[obsidian]]; [[the-council]] → [[obsidian]] + [[composio]]; [[jarvis-x-hardware]] → [[ollama]]; [[source-jarvis-x-v2-ascension-plan]] → [[jarvis-x-app]]; [[jarvis-x-trading-module]] ↔ [[ruflo]]; [[self-improvement-loop]] ↔ [[ruflo]]; [[universal-model-layer]] ↔ [[ruflo]].
+
+Skipped: `n8n` missing-page (capped at 3 research gaps), jarvis-x-app Tauri-timeline possible stale claim (needs raw-source re-read, not web-researchable — flagged for human review), 3 LOW data-gap pages (thin tables, functional as-is), Gemini/Kimi naming (human judgment on whether it warrants a page).
+
+Updated [[wiki/index.md]] with 2 new Entities ([[chromadb]], [[pal-mcp]]), corrected [[claude-flow]]'s one-liner, and new Audits entry.
+
+---
+
 ## [2026-07-28] update | Graphify — vault query example added
 
 Ran `graphify query "show auth flow"` on the vault. No auth code — matched wiki Workflow headings in CLAUDE.md. Added result as an example in [[graphify]] showing semantic miss behavior in a pure markdown vault.

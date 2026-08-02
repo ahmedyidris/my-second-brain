@@ -3,7 +3,7 @@ title: Source — Jarvis X v2 Ascension Plan
 tags: [source, jarvis-x, v2]
 sources:
   - raw/Jarvis X Resources/Jarvis X/Jarvis_X_v2_Ascension_Plan.md
-related: [[jarvis-x]], [[universal-model-layer]], [[constitutional-autonomy]], [[jarvis-x-voice-engine]], [[jarvis-x-content-engine]], [[source-deepseek-jarvis-x-master-plan]]
+related: [[jarvis-x]], [[universal-model-layer]], [[constitutional-autonomy]], [[jarvis-x-voice-engine]], [[jarvis-x-content-engine]], [[jarvis-x-app]], [[source-deepseek-jarvis-x-master-plan]]
 last_updated: 2026-07-27
 ---
 
@@ -21,7 +21,7 @@ The v2 update to [[jarvis-x]]. Overrides [[source-deepseek-jarvis-x-master-plan]
 | Autonomy | Approval gates | [[constitutional-autonomy]] |
 | Income | Outlier + n8n gigs | + [[jarvis-x-content-engine]] as stream #3 |
 | Trading | Excluded | [[jarvis-x-trading-module]] (testnet/paper) |
-| Delivery | Scripts + CLI | The JARVIS X App (FastAPI + PWA + Tauri) |
+| Delivery | Scripts + CLI | [[jarvis-x-app]] (FastAPI + PWA + Tauri) |
 
 ## 12-week overlay
 

@@ -3,7 +3,7 @@ title: Universal Model Layer
 tags: [jarvis-x, v2, architecture, models]
 sources:
   - raw/Jarvis X Resources/Jarvis X/Jarvis_X_v2_Ascension_Plan.md
-related: [[jarvis-x]], [[the-council]]
+related: [[jarvis-x]], [[the-council]], [[ruflo]]
 last_updated: 2026-07-27
 ---
 
@@ -36,6 +36,10 @@ jj ask "..." --tier local|fast|smart|long
 - Fast loops → Groq
 - Fallback chain on quota errors
 - Per-provider daily counters in SQLite
+
+## Related architectures
+
+[[ruflo]]'s comparison table maps its LLM Providers component to this universal model layer.
 
 ## Key constraint
 

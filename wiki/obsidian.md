@@ -3,13 +3,13 @@ title: Obsidian
 tags: [jarvis-x, tool, second-brain, knowledge-management]
 sources:
   - raw/Jarvis X Resources/DeepSeek Files/DeepSeek_Jarvis_X_Master_Plan.md
-related: [[jarvis-x]], [[second-brain]], [[hermes-agent]], [[jarvis-x-hardware]]
+related: [[jarvis-x]], [[second-brain]], [[hermes-agent]], [[jarvis-x-hardware]], [[chromadb]]
 last_updated: 2026-07-27
 ---
 
 # Obsidian
 
-The GUI markdown editor and second-brain layer in [[jarvis-x]]'s memory stack. Paired with ChromaDB for vector search, and connected to [[hermes-agent]] via `brain-mcp`.
+The GUI markdown editor and second-brain layer in [[jarvis-x]]'s memory stack. Paired with [[chromadb]] for vector search, and connected to [[hermes-agent]] via `brain-mcp`.
 
 ## Role in Jarvis X
 
