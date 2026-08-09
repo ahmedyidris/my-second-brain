@@ -7,8 +7,8 @@ sources:
   - raw/2026-07-27-llm-wiki-skills-install.md
   - raw/2026-07-27-llm-wiki-query-patterns.md
   - raw/2026-07-27-llm-wiki-self-heal-prompt.md
-related: [[second-brain]], [[wiki-self-heal-skill]], [[llm-wiki-setup-skill]]
-last_updated: 2026-07-27
+related: [[second-brain]], [[wiki-self-heal-skill]], [[llm-wiki-setup-skill]], [[graphify]]
+last_updated: 2026-08-09
 ---
 
 # LLM Wiki Pattern
@@ -49,6 +49,8 @@ No vector database. No embeddings. No chunking pipeline. The folder is the app.
 ## Why it works at scale
 
 `wiki/index.md` replaces RAG at small-to-moderate scale (hundreds of pages). Naming conventions replace a database. The routing table in `CLAUDE.md` replaces a search index. No infrastructure to maintain — the folder is the app.
+
+Past hundreds of pages, [[graphify]] complements the pattern rather than replacing it: it builds a queryable knowledge graph (god nodes, communities, cross-file edges) over the same wiki files, useful for "what connects to what" questions the index's flat catalog doesn't answer directly.
 
 ## Skills
 

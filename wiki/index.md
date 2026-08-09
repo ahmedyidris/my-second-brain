@@ -15,8 +15,9 @@ Each entry: `- [[page-name]] — one-line summary`
 - [[ollama]] — local model runtime; powers hermes-agent and the universal-model-layer local tier
 - [[ruflo]] — self-learning agent architecture: CLI/MCP → Router → Swarm → Agents → Memory → LLM Providers + learning loop
 - [[agent-secure-comms]] — agent-to-agent security protocol: secret stripping, signing, encryption, injection blocking, trust scores
-- [[claude-flow]] — compatible project sharing Ruflo's federation plugin ecosystem; installs via npx claude-flow@latest
 - [[composio]] — tool connector with 1000+ app integrations; bridges Jarvis X agents to external services via MCP
+- [[pal-mcp]] — Provider Abstraction Layer MCP server; lets Claude Code/Codex/Gemini CLI delegate to other AI models mid-conversation
+- [[brain-mcp]] — local MCP server turning an Obsidian vault into a searchable knowledge base (Chroma + Ollama embeddings)
 
 ## Concepts
 
@@ -36,7 +37,7 @@ Each entry: `- [[page-name]] — one-line summary`
 - [[llm-wiki-setup-skill]] — installs the full Karpathy vault structure in one pass
 - [[wiki-self-heal-skill]] — autonomous audit + research loop; full or audit-only mode
 - [[agent-starter-kit]] — one-command installer: 6 skills + 6 Claude Code plugins across all agent types
-- [[graphify]] — knowledge graph tool: maps project into queryable graph; MCP server mode for team/agent access (805 nodes, 1974 edges, 77 communities)
+- [[graphify]] — knowledge graph tool: maps project into queryable graph; MCP server mode for team/agent access (811 nodes, 1980 edges, 63 communities, per graphify-out/GRAPH_REPORT.md)
 
 ## Sources
 
@@ -48,3 +49,4 @@ Each entry: `- [[page-name]] — one-line summary`
 ## Audits
 
 - [[audits/audit-2026-07-27]] — first audit pass; 11 gaps (HIGH: 3 broken wikilinks, MEDIUM: 5 missing pages/cross-refs, LOW: 3)
+- [[audits/audit-2026-08-09]] — weekly self-heal; 8 gaps found (HIGH: 3, MEDIUM: 4, LOW: 1); 3 researched (claude-flow/Ruflo rename correction, [[pal-mcp]], [[brain-mcp]]) + cross-ref/stale-stat cleanup

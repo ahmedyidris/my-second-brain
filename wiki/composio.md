@@ -3,7 +3,7 @@ title: Composio
 tags: [tool-connector, integrations, council, mcp]
 sources:
   - raw/2026-07-27-composio-setup.md
-related: [[the-council]], [[jarvis-x]], [[ruflo]], [[agent-secure-comms]]
+related: [[the-council]], [[jarvis-x]], [[ruflo]], [[agent-secure-comms]], [[pal-mcp]]
 last_updated: 2026-07-27
 ---
 

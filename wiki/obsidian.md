@@ -3,7 +3,7 @@ title: Obsidian
 tags: [jarvis-x, tool, second-brain, knowledge-management]
 sources:
   - raw/Jarvis X Resources/DeepSeek Files/DeepSeek_Jarvis_X_Master_Plan.md
-related: [[jarvis-x]], [[second-brain]], [[hermes-agent]], [[jarvis-x-hardware]]
+related: [[jarvis-x]], [[second-brain]], [[hermes-agent]], [[jarvis-x-hardware]], [[brain-mcp]]
 last_updated: 2026-07-27
 ---
 
@@ -16,7 +16,7 @@ The GUI markdown editor and second-brain layer in [[jarvis-x]]'s memory stack. P
 - Persistent knowledge store (Book V of the master plan: "The Memory")
 - Provides RAG over the vault via plugins
 - Connected to [[the-council]] as "Second Brain" member
-- MCP interface via `brain-mcp` exposes `hybrid_search_tool`, `read_note_tool`, `create_note_tool`
+- MCP interface via [[brain-mcp]] — 9 tools including `hybrid_search_tool`, `read_note_tool`, `create_note_tool` (full list on that page)
 
 ## Key plugins
 
@@ -37,15 +37,9 @@ The GUI markdown editor and second-brain layer in [[jarvis-x]]'s memory stack. P
 }
 ```
 
-## brain-mcp setup
+## brain-mcp
 
-```bash
-git clone https://github.com/irahulstomar/brain-mcp
-cd brain-mcp && python -m venv .venv && source .venv/bin/activate
-pip install -r requirements.txt
-ollama pull nomic-embed-text
-python brain_cli.py setup
-```
+See [[brain-mcp]] for the full tool list, technical stack (Chroma + Ollama embeddings + SQLite FTS5), and setup steps.
 
 ## Relationship to the LLM wiki pattern
 

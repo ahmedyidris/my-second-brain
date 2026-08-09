@@ -4,7 +4,7 @@ tags: [jarvis-x, multi-agent, architecture]
 sources:
   - raw/Jarvis X Resources/DeepSeek Files/DeepSeek_Jarvis_X_Master_Plan.md
   - raw/Jarvis X Resources/Jarvis X/Jarvis_X_v2_Ascension_Plan.md
-related: [[jarvis-x]], [[hermes-agent]], [[universal-model-layer]]
+related: [[jarvis-x]], [[hermes-agent]], [[universal-model-layer]], [[obsidian]], [[composio]], [[pal-mcp]]
 last_updated: 2026-07-27
 ---
 
@@ -26,9 +26,9 @@ The multi-agent team architecture at the heart of [[jarvis-x]]. Each agent has a
 | Copilot | UI/UX Specialist | Frontend, visual design |
 | NotebookLM | Research Engine | Zero-token ingest of URLs/PDFs/videos |
 | [[hermes-agent]] | Core Agent Brain | Self-improving, skill creation |
-| Obsidian | Second Brain | Persistent knowledge, RAG |
-| Composio | Tool Connector | 1000+ app integrations |
-| PAL MCP | Team Connector | Seamless multi-model handoffs |
+| [[obsidian]] | Second Brain | Persistent knowledge, RAG |
+| [[composio]] | Tool Connector | 1000+ app integrations |
+| [[pal-mcp]] | Team Connector | Seamless multi-model handoffs |
 
 ## Integration architecture
 
@@ -38,9 +38,7 @@ All council agents operate under the standing permissions and gated actions defi
 
 ## PAL MCP
 
-Installed via `git clone https://github.com/BeehiveInnovations/pal-mcp-server.git && ./run-server.sh`.
-
-Verification commands:
+The "Team Connector" row above is [[pal-mcp]] — see that page for install steps, supported providers, and license. Verification commands once installed:
 - "Use pal to list available models"
 - "clink with codex to review this function"
 - "clink with gemini to summarise the structure of this repo"

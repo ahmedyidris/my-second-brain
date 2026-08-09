@@ -7,6 +7,7 @@ sources:
   - raw/2026-07-27-ruflo-one-line-install.md
   - raw/2026-07-27-ruflo-mcp-setup.md
   - raw/2026-07-27-ruflo-federation-plugin.md
+  - https://github.com/ruvnet/ruflo (README, accessed 2026-08-09)
 related: [[jarvis-x]], [[the-council]], [[self-improvement-loop]], [[universal-model-layer]], [[hermes-agent]]
 last_updated: 2026-07-27
 ---
@@ -89,15 +90,17 @@ Note: `ruflo-neural-trader` maps to [[jarvis-x-trading-module]].
 `ruflo-rag-memory` maps to [[obsidian]] + ChromaDB.
 `ruflo-federation` is the transport layer for [[agent-secure-comms]] — secret stripping, signing, encryption, injection blocking.
 
-### Federation via claude-flow
+### Federation via claude-flow (legacy name)
 
-`ruflo-federation` is also installable through **claude-flow**, a compatible project:
+**Correction (2026-08-09):** earlier notes here described `claude-flow` as a separate "compatible project" sharing Ruflo's federation plugin ecosystem. Research against the project's own README shows this is wrong — `claude-flow` is Ruflo's **former name**. The creator (`rUv`, github.com/ruvnet) renamed the project to Ruflo; the README states it plainly: *"Claude Flow is now Ruflo."* The rebrand carried the underlying agentic architecture forward (now described as powered by Cognitum.One) rather than forking a sibling project. Independent secondary coverage (a dev.to retrospective, a Medium quickstart guide) corroborates the same rename timeline.
+
+The old install path below still works during the migration — it is the same `ruflo-federation` plugin under its pre-rename package name, not a second project:
 
 ```bash
 npx claude-flow@latest plugins install @claude-flow/plugin-agent-federation
 ```
 
-Same package, two install paths. [[claude-flow]] appears to share the federation plugin ecosystem with Ruflo.
+Same package, one project, two names — `claude-flow` is legacy naming, not a distinct wiki entity. (This corrects the `[[claude-flow]]` stub previously listed in `wiki/index.md`; see `wiki/log.md` 2026-08-09 entry.)
 
 ## Relationship to Jarvis X
 

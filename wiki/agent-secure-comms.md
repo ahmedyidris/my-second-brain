@@ -3,7 +3,7 @@ title: Agent-to-Agent Secure Communication
 tags: [security, agent-architecture, protocol, trust]
 sources:
   - raw/2026-07-27-agent-secure-comms.md
-related: [[ruflo]], [[the-council]], [[constitutional-autonomy]], [[jarvis-x]], [[claude-flow]]
+related: [[ruflo]], [[the-council]], [[constitutional-autonomy]], [[jarvis-x]], [[pal-mcp]]
 last_updated: 2026-07-27
 ---
 
@@ -54,7 +54,7 @@ The `ruflo-federation` plugin implements this protocol in [[ruflo]]:
 
 ```
 /plugin install ruflo-federation@ruflo
-# or via claude-flow:
+# or via the pre-rename package name (claude-flow is Ruflo's former name, see [[ruflo]]):
 npx claude-flow@latest plugins install @claude-flow/plugin-agent-federation
 ```
 
@@ -62,4 +62,4 @@ npx claude-flow@latest plugins install @claude-flow/plugin-agent-federation
 
 In [[ruflo]]'s architecture, this protocol governs how the Swarm agents communicate with external agents or services. In [[jarvis-x]], [[constitutional-autonomy]] handles the governance side (what agents may do), while this protocol handles the transport side (how agents communicate safely). The audit trail requirement mirrors the append-only audit log in [[constitutional-autonomy]].
 
-The [[the-council]] members (Claude, Codex, Gemini, etc.) communicating via PAL MCP would benefit from this pattern — identity verification prevents a compromised sub-agent from injecting malicious instructions into the orchestrator.
+The [[the-council]] members (Claude, Codex, Gemini, etc.) communicating via [[pal-mcp]] would benefit from this pattern — identity verification prevents a compromised sub-agent from injecting malicious instructions into the orchestrator.

@@ -3,8 +3,8 @@ title: Second Brain
 tags: [meta, knowledge-management, pattern]
 sources:
   - raw/2026-07-27-llm-wiki-pattern-why.md
-related: [[llm-wiki-pattern]], [[jarvis-x]], [[research-vault]], [[obsidian]]
-last_updated: 2026-07-27
+related: [[llm-wiki-pattern]], [[jarvis-x]], [[research-vault]], [[obsidian]], [[graphify]]
+last_updated: 2026-08-09
 ---
 
 # Second Brain
@@ -29,3 +29,5 @@ A second brain breaks that loop: knowledge is compiled once from sources and kep
 The [[llm-wiki-pattern]] is the specific implementation used here: no vector database, no embeddings — just markdown files, `[[wikilinks]]`, and a routing table in `CLAUDE.md`. The folder is the app.
 
 [[obsidian]] is an alternative/complementary tool: a GUI markdown editor with plugin ecosystem, used as the second-brain layer in [[jarvis-x]]'s memory stack alongside ChromaDB.
+
+[[graphify]] is a third angle: instead of a flat markdown catalog, it derives a knowledge graph from the same files — useful for relationship queries across a large second brain.

@@ -21,7 +21,7 @@ Bilingual by design: Egyptian Arabic and English are both first-class citizens.
 | # | Capability | How |
 |---|-----------|------|
 | 1 | Thinks | [[hermes-agent]] as reasoning engine |
-| 2 | Remembers | Obsidian + ChromaDB second brain |
+| 2 | Remembers | [[obsidian]] + ChromaDB second brain |
 | 3 | Learns | Meta-agent [[self-improvement-loop]] |
 | 4 | Acts | Tool-calling, real system operations |
 | 5 | Creates | [[jarvis-x-content-engine]] |

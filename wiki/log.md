@@ -13,6 +13,37 @@ Utility: `grep "^## \[" wiki/log.md | tail -5` returns the last 5 operations.
 
 ---
 
+## [2026-08-09] lint | weekly self-heal
+
+Full autonomous heal pass on branch `wiki-heal/2026-08-09`. Audit: 8 gaps (HIGH: 3,
+MEDIUM: 4, LOW: 1) written to [[audits/audit-2026-08-09]]. Researched and fixed 3
+gaps (WebSearch + WebFetch, ≥2 independent sources each):
+
+1. **Contradiction correction** — `claude-flow` was recorded as a "compatible
+   project" sharing Ruflo's federation plugins, with a broken `[[claude-flow]]`
+   wikilink in [[index]] and [[agent-secure-comms]]. Primary-source check
+   (github.com/ruvnet/ruflo README) plus independent secondary coverage confirmed
+   `claude-flow` is Ruflo's **former name** (rebranded by rUv), not a sibling
+   project. Corrected in [[ruflo]]; removed the false entity from the index and
+   from [[agent-secure-comms]]'s `related:`.
+2. Created [[pal-mcp]] (BeehiveInnovations/pal-mcp-server — Apache 2.0 multi-model
+   MCP orchestrator), previously referenced twice with no page. Linked from
+   [[the-council]] and [[agent-secure-comms]].
+3. Created [[brain-mcp]] (irahulstomar/brain-mcp — MIT, 9 MCP tools, Chroma +
+   Ollama embeddings + SQLite FTS5), correcting an incomplete 3-tool description
+   inline in [[obsidian]]. Trimmed [[obsidian]]'s section to a pointer.
+
+Also applied low-cost, no-research fixes found in the same audit: corrected stale
+graphify stats in [[index]] (was 805/1974/77, ground truth per graphify-out/
+GRAPH_REPORT.md and [[graphify]] is 811/1980/63); added missing cross-references
+[[the-council]] → [[obsidian]]/[[composio]]/[[pal-mcp]], [[jarvis-x]] → [[obsidian]],
+and [[llm-wiki-pattern]]/[[second-brain]] → [[graphify]].
+
+Skipped (logged, not addressed): remaining graphify↔jarvis-x/the-council backlinks
+(mechanical, no research need — deferred to next pass).
+
+---
+
 ## [2026-07-28] update | Graphify — vault query example added
 
 Ran `graphify query "show auth flow"` on the vault. No auth code — matched wiki Workflow headings in CLAUDE.md. Added result as an example in [[graphify]] showing semantic miss behavior in a pure markdown vault.
