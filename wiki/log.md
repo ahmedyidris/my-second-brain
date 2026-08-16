@@ -13,6 +13,22 @@ Utility: `grep "^## \[" wiki/log.md | tail -5` returns the last 5 operations.
 
 ---
 
+## [2026-08-16] lint | weekly self-heal
+
+Branch `wiki-heal/2026-08-16`. Scanned 26 pages. Found 9 gaps (HIGH: 3, MEDIUM: 5, LOW: 1). Created [[audits/audit-2026-08-16]]. Updated [[wiki/index.md]] Audits section.
+
+**Context:** found 2 prior heal branches (`wiki-heal/2026-08-02`, `wiki-heal/2026-08-09`) still unmerged on `origin` — `master` never picked up either, so both had independently re-fixed the same `claude-flow`/`PAL MCP` gaps against a stale base. Did not re-research those a third time; flagged as confirmed-but-deferred and recommended the human merge one of the pending branches.
+
+Researched and fixed (3, all new ground vs. the pending branches): (1) HIGH contradiction — [[jarvis-x-voice-engine]]'s "Porcupine / openWakeWord" wake-word row treated them as interchangeable; research found Porcupine requires an online Picovoice AccessKey while openWakeWord needs none, which conflicts with [[jarvis-x]]'s "zero cloud keys" sovereignty principle — flagged with a recommendation (openWakeWord as default), not silently resolved. (2) MEDIUM stale-claim — same page's Piper citation was outdated: `rhasspy/piper` is archived, successor `OHF-Voice/piper1-gpl` is GPL-3.0 (was MIT). (3) MEDIUM missing-pages — created [[chromadb]] (referenced in 7 pages) and [[n8n]] (referenced in 2), with bidirectional wikilinks.
+
+Mechanical fixes (no research needed): corrected graphify vault stats in [[wiki/index.md]] (805/1974/77 → 811/1980/63, matching `graphify-out/GRAPH_REPORT.md` and [[graphify]]); wikilinked Obsidian/Composio in [[the-council]]'s Members table and Obsidian/ChromaDB in [[jarvis-x]]'s capability table; added reciprocal [[graphify]] backlinks to [[llm-wiki-pattern]] and [[second-brain]]; corrected [[jarvis-x-app]]'s Wk 7-8 timeline claim ("Tauri Windows build") against a direct re-read of `raw/Jarvis X Resources/Jarvis X/Jarvis_X_v2_Ascension_Plan.md` (actually "Windows run-through"; installer is Wk 11-12).
+
+Skipped: universal-model-layer provider rate-limit depth (Groq/OpenRouter/NVIDIA NIM/Mistral) — official docs domains blocked by network egress in this environment, only SEO-aggregator secondary sources reachable, failed quality gate. Kimi/Gemini/DeepSeek/Copilot/NotebookLM dedicated pages — human-judgment call, no vault-specific angle, consistent with prior audit.
+
+Updated: [[chromadb]] (new), [[n8n]] (new), [[jarvis-x-voice-engine]], [[jarvis-x-app]], [[obsidian]], [[ollama]], [[jarvis-x]], [[ruflo]], [[second-brain]], [[source-deepseek-jarvis-x-master-plan]], [[source-jarvis-x-v2-ascension-plan]], [[jarvis-x-income-roadmap]], [[the-council]], [[llm-wiki-pattern]], [[wiki/index.md]].
+
+---
+
 ## [2026-07-28] update | Graphify — vault query example added
 
 Ran `graphify query "show auth flow"` on the vault. No auth code — matched wiki Workflow headings in CLAUDE.md. Added result as an example in [[graphify]] showing semantic miss behavior in a pure markdown vault.

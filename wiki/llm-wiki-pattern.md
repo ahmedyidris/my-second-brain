@@ -7,8 +7,8 @@ sources:
   - raw/2026-07-27-llm-wiki-skills-install.md
   - raw/2026-07-27-llm-wiki-query-patterns.md
   - raw/2026-07-27-llm-wiki-self-heal-prompt.md
-related: [[second-brain]], [[wiki-self-heal-skill]], [[llm-wiki-setup-skill]]
-last_updated: 2026-07-27
+related: [[second-brain]], [[wiki-self-heal-skill]], [[llm-wiki-setup-skill]], [[graphify]]
+last_updated: 2026-08-16
 ---
 
 # LLM Wiki Pattern
@@ -45,6 +45,10 @@ No vector database. No embeddings. No chunking pipeline. The folder is the app.
 - **Ingest** — read source → extract entities and concepts → write wiki pages → update index → log
 - **Query** — read index → find relevant pages → synthesize with citations → offer to file good answers back
 - **Lint** — scan for contradictions, orphans, missing pages, stale claims, data gaps → propose fixes
+
+## Relationship to graphify
+
+[[graphify]] targets the same "compile knowledge once, don't re-derive it" goal from a different angle: a queryable graph (nodes + typed edges + communities) instead of prose pages. This vault's own `CLAUDE.md` already tells Claude to run `graphify query` before broad codebase browsing — the two tools coexist, graph for structural/codebase questions, `wiki/index.md` for the vault's own curated knowledge.
 
 ## Why it works at scale
 

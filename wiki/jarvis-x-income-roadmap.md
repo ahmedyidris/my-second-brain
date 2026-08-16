@@ -3,7 +3,7 @@ title: Jarvis X Income Roadmap
 tags: [jarvis-x, income, career, bilingual-ai]
 sources:
   - raw/Jarvis X Resources/DeepSeek Files/DeepSeek_Jarvis_X_Master_Plan.md
-related: [[jarvis-x]], [[jarvis-x-content-engine]]
+related: [[jarvis-x]], [[jarvis-x-content-engine]], [[n8n]]
 last_updated: 2026-07-27
 ---
 
@@ -21,7 +21,7 @@ Plan inception: **July 2026**. All timings are relative to that anchor.
 | 2. Documentation | Month 3–6 | Write evaluation logic, flag Arabic-specific errors | 8–10 | Rubric portfolio + case studies |
 | 3. Lead Push | Month 6–9 | Apply for calibration/QA-lead roles | +2–3 | First lead/QA title |
 | 4. Outreach | Month 9–12 | Pitch MENA companies with case studies | +2–3 | First consulting conversation |
-| Background | Ongoing | n8n skill-building, Jarvis polish | 2 | Live demo, automation |
+| Background | Ongoing | [[n8n]] skill-building, Jarvis polish | 2 | Live demo, automation |
 
 ## Active income platforms
 

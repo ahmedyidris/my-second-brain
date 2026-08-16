@@ -7,8 +7,8 @@ sources:
   - raw/2026-07-27-ruflo-one-line-install.md
   - raw/2026-07-27-ruflo-mcp-setup.md
   - raw/2026-07-27-ruflo-federation-plugin.md
-related: [[jarvis-x]], [[the-council]], [[self-improvement-loop]], [[universal-model-layer]], [[hermes-agent]]
-last_updated: 2026-07-27
+related: [[jarvis-x]], [[the-council]], [[self-improvement-loop]], [[universal-model-layer]], [[hermes-agent]], [[chromadb]]
+last_updated: 2026-08-16
 ---
 
 # Ruflo
@@ -86,7 +86,7 @@ Ruflo is plugin-based. Marketplace hosted at `ruvnet/ruflo`.
 ```
 
 Note: `ruflo-neural-trader` maps to [[jarvis-x-trading-module]].
-`ruflo-rag-memory` maps to [[obsidian]] + ChromaDB.
+`ruflo-rag-memory` maps to [[obsidian]] + [[chromadb]].
 `ruflo-federation` is the transport layer for [[agent-secure-comms]] — secret stripping, signing, encryption, injection blocking.
 
 ### Federation via claude-flow

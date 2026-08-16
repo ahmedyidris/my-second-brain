@@ -4,8 +4,8 @@ tags: [jarvis-x, ai-os, sovereign, entity]
 sources:
   - raw/Jarvis X Resources/DeepSeek Files/DeepSeek_Jarvis_X_Master_Plan.md
   - raw/Jarvis X Resources/Jarvis X/Jarvis_X_v2_Ascension_Plan.md
-related: [[the-council]], [[hermes-agent]], [[constitutional-autonomy]], [[jarvis-x-hardware]], [[universal-model-layer]], [[self-improvement-loop]]
-last_updated: 2026-07-27
+related: [[the-council]], [[hermes-agent]], [[constitutional-autonomy]], [[jarvis-x-hardware]], [[universal-model-layer]], [[self-improvement-loop]], [[obsidian]], [[chromadb]]
+last_updated: 2026-08-16
 ---
 
 # Jarvis X
@@ -21,7 +21,7 @@ Bilingual by design: Egyptian Arabic and English are both first-class citizens.
 | # | Capability | How |
 |---|-----------|------|
 | 1 | Thinks | [[hermes-agent]] as reasoning engine |
-| 2 | Remembers | Obsidian + ChromaDB second brain |
+| 2 | Remembers | [[obsidian]] + [[chromadb]] second brain |
 | 3 | Learns | Meta-agent [[self-improvement-loop]] |
 | 4 | Acts | Tool-calling, real system operations |
 | 5 | Creates | [[jarvis-x-content-engine]] |

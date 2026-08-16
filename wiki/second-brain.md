@@ -3,8 +3,8 @@ title: Second Brain
 tags: [meta, knowledge-management, pattern]
 sources:
   - raw/2026-07-27-llm-wiki-pattern-why.md
-related: [[llm-wiki-pattern]], [[jarvis-x]], [[research-vault]], [[obsidian]]
-last_updated: 2026-07-27
+related: [[llm-wiki-pattern]], [[jarvis-x]], [[research-vault]], [[obsidian]], [[chromadb]], [[graphify]]
+last_updated: 2026-08-16
 ---
 
 # Second Brain
@@ -28,4 +28,8 @@ A second brain breaks that loop: knowledge is compiled once from sources and kep
 
 The [[llm-wiki-pattern]] is the specific implementation used here: no vector database, no embeddings — just markdown files, `[[wikilinks]]`, and a routing table in `CLAUDE.md`. The folder is the app.
 
-[[obsidian]] is an alternative/complementary tool: a GUI markdown editor with plugin ecosystem, used as the second-brain layer in [[jarvis-x]]'s memory stack alongside ChromaDB.
+[[obsidian]] is an alternative/complementary tool: a GUI markdown editor with plugin ecosystem, used as the second-brain layer in [[jarvis-x]]'s memory stack alongside [[chromadb]].
+
+## Related tooling: graphify
+
+[[graphify]] is a complementary but distinct approach to the same "externalise your knowledge" goal: instead of the LLM-wiki pattern's markdown-first, `[[wikilinks]]`-navigated store, graphify builds an explicit AST/LLM-extracted knowledge *graph* (nodes, typed edges, communities) and answers queries by traversing it. Both reject vector-database RAG for a small-to-moderate corpus; they differ in whether the persistent structure is prose (this vault's approach) or a graph (graphify's).

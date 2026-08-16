@@ -4,7 +4,7 @@ tags: [jarvis-x, v2, delivery, pwa, app]
 sources:
   - raw/Jarvis X Resources/Jarvis X/Jarvis_X_v2_Ascension_Plan.md
 related: [[jarvis-x]], [[jarvis-x-hardware]], [[universal-model-layer]], [[constitutional-autonomy]]
-last_updated: 2026-07-27
+last_updated: 2026-08-16
 ---
 
 # Jarvis X App
@@ -41,4 +41,6 @@ One installer script → services up → web UI on phone & laptop → voice chat
 
 ## Timeline
 
-Built in Wk 5–6 of the 12-week overlay: PWA-ready web UI shell after voice engine. Tauri Windows build in Wk 7–8.
+Built in Wk 5–6 of the 12-week overlay: PWA-ready web UI shell after voice engine.
+
+**Correction (2026-08-16 heal pass):** this page previously said "Tauri Windows build in Wk 7–8," which overstated the raw source. Re-reading `raw/Jarvis X Resources/Jarvis X/Jarvis_X_v2_Ascension_Plan.md` directly: Wk 7–8 is "[[jarvis-x-content-engine]] v1 → first 5 bilingual pieces; **Windows run-through**" (a test pass on Windows, not necessarily a packaged Tauri build), and the installer itself doesn't land until **Wk 11–12** ("brand kit, installer, docs → tag v2.0"), per [[source-jarvis-x-v2-ascension-plan]]'s 12-week overlay. Flagged as a possible stale claim needing a raw-source re-read by a prior (unmerged) heal pass; resolved here directly from the raw source.

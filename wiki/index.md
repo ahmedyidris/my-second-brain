@@ -15,8 +15,10 @@ Each entry: `- [[page-name]] — one-line summary`
 - [[ollama]] — local model runtime; powers hermes-agent and the universal-model-layer local tier
 - [[ruflo]] — self-learning agent architecture: CLI/MCP → Router → Swarm → Agents → Memory → LLM Providers + learning loop
 - [[agent-secure-comms]] — agent-to-agent security protocol: secret stripping, signing, encryption, injection blocking, trust scores
-- [[claude-flow]] — compatible project sharing Ruflo's federation plugin ecosystem; installs via npx claude-flow@latest
+- [[claude-flow]] — **broken link, unresolved 3 weeks running** — research (2026-08-02, 2026-08-09 heal branches, unmerged) says this is Ruflo's former name, not a separate project; see [[audits/audit-2026-08-16]]
 - [[composio]] — tool connector with 1000+ app integrations; bridges Jarvis X agents to external services via MCP
+- [[chromadb]] — open-source AI-native vector database; stores/queries embeddings for RAG; powers [[obsidian]]'s semantic search via `nomic-embed-text`
+- [[n8n]] — fair-code workflow automation platform; 1500+ integrations; visual + code; income-roadmap automation tool
 
 ## Concepts
 
@@ -36,7 +38,7 @@ Each entry: `- [[page-name]] — one-line summary`
 - [[llm-wiki-setup-skill]] — installs the full Karpathy vault structure in one pass
 - [[wiki-self-heal-skill]] — autonomous audit + research loop; full or audit-only mode
 - [[agent-starter-kit]] — one-command installer: 6 skills + 6 Claude Code plugins across all agent types
-- [[graphify]] — knowledge graph tool: maps project into queryable graph; MCP server mode for team/agent access (805 nodes, 1974 edges, 77 communities)
+- [[graphify]] — knowledge graph tool: maps project into queryable graph; MCP server mode for team/agent access (811 nodes, 1980 edges, 63 communities)
 
 ## Sources
 
@@ -48,3 +50,4 @@ Each entry: `- [[page-name]] — one-line summary`
 ## Audits
 
 - [[audits/audit-2026-07-27]] — first audit pass; 11 gaps (HIGH: 3 broken wikilinks, MEDIUM: 5 missing pages/cross-refs, LOW: 3)
+- [[audits/audit-2026-08-16]] — weekly self-heal; 9 gaps found; 3 researched (chromadb, n8n, voice-engine data-gap incl. Porcupine/sovereignty contradiction); flags 2 unmerged prior heal branches piling up
