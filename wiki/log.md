@@ -13,6 +13,22 @@ Utility: `grep "^## \[" wiki/log.md | tail -5` returns the last 5 operations.
 
 ---
 
+## [2026-09-24] ingest | Jarvis X / StarNet technical handoff (2026-09-24)
+
+Read `raw/2026-09-24-jarvis-x-starnet-handoff.md` (full session handoff: working state, landed fixes, open bugs, launch commands, environment facts, gotchas).
+
+Created: [[starnet]] (new entity — multi-agent platform, config, Bug A/Bug C, launch command, strategic "don't clone it" direction), [[ipv6-dns-truncation-crostini]] (new concept — Crostini IPv6/Cloudflare truncation bug and the Node c-ares gap).
+
+Updated: [[jarvis-x]] (current working state: latest commit, service table, model tier table, hardware discrepancy flag, restart command, StarNet relationship), [[jarvis-x-app]] (OpenAI-compatible `/v1/chat/completions` + `/v1/models` adapter now live, tier-to-model mapping, proposed Station tab), [[jarvis-x-hardware]] (**flagged unresolved contradiction** — page says Lenovo Y50-70/Pop!_OS, handoff source says ASUS Chromebook/Crostini; documented both, did not silently overwrite, need human to confirm which machine is current), [[ollama]] (systemd `OLLAMA_MODELS` permission fix, models observed on Crostini), [[hermes-agent]] (operational status under supervisord, CLI + Aider usage).
+
+Added cross-links: [[jarvis-x]] ↔ [[starnet]], [[jarvis-x-app]] ↔ [[starnet]], [[jarvis-x-hardware]] ↔ [[ipv6-dns-truncation-crostini]], [[ollama]] ↔ [[starnet]].
+
+Flag for human: hardware contradiction above needs a decision — is the Crostini Chromebook a new/current machine replacing the Lenovo Y50-70, or a separate environment? Left both documented, current Crostini facts marked as operationally authoritative for now since they come from live service behavior rather than a plan doc.
+
+Updated [[wiki/index.md]] with 2 new entries (starnet under Entities, ipv6-dns-truncation-crostini under Concepts).
+
+---
+
 ## [2026-07-28] update | Graphify — vault query example added
 
 Ran `graphify query "show auth flow"` on the vault. No auth code — matched wiki Workflow headings in CLAUDE.md. Added result as an example in [[graphify]] showing semantic miss behavior in a pure markdown vault.

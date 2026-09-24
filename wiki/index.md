@@ -17,6 +17,7 @@ Each entry: `- [[page-name]] — one-line summary`
 - [[agent-secure-comms]] — agent-to-agent security protocol: secret stripping, signing, encryption, injection blocking, trust scores
 - [[claude-flow]] — compatible project sharing Ruflo's federation plugin ecosystem; installs via npx claude-flow@latest
 - [[composio]] — tool connector with 1000+ app integrations; bridges Jarvis X agents to external services via MCP
+- [[starnet]] — separate multi-agent chat platform (androoAGI/starnet); Ollama-only stable, Groq crashes the sidecar
 
 ## Concepts
 
@@ -30,6 +31,7 @@ Each entry: `- [[page-name]] — one-line summary`
 - [[jarvis-x-trading-module]] — market intelligence, paper-trading; hard gates before live
 - [[jarvis-x-income-roadmap]] — bilingual AI operations specialist path; platforms + certifications
 - [[jarvis-x-app]] — v2 delivery: FastAPI + PWA + Tauri; Linux → Windows → mobile → macOS
+- [[ipv6-dns-truncation-crostini]] — Crostini resolves IPv6 first, truncating POSTs to Cloudflare-fronted APIs; Node's https/c-ares ignores the usual fix
 
 ## Skills
 

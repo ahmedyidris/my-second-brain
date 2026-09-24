@@ -3,8 +3,9 @@ title: Hermes Agent
 tags: [jarvis-x, component, agent, local-ai]
 sources:
   - raw/Jarvis X Resources/DeepSeek Files/DeepSeek_Jarvis_X_Master_Plan.md
-related: [[jarvis-x]], [[the-council]], [[self-improvement-loop]]
-last_updated: 2026-07-27
+  - raw/2026-09-24-jarvis-x-starnet-handoff.md
+related: [[jarvis-x]], [[the-council]], [[self-improvement-loop]], [[ollama]]
+last_updated: 2026-09-24
 ---
 
 # Hermes Agent
@@ -38,3 +39,24 @@ curl -fsSL https://hermes-agent.nousresearch.com/install.sh | bash
 ## Role in the system
 
 Part of [[the-council]] as "Core Agent Brain". Powers the [[self-improvement-loop]] — analyzes its own daily logs, generates improved prompts and new tools, auto-implements with safety checks.
+
+## Operational status (2026-09-24)
+
+Running as `hermes-agent` under `supervisord` (systemd unit `jarvis-supervisord.service`), alongside `hermes-api` (uvicorn, port 8000) and `tts-worker`. Also available as a standalone CLI:
+
+```bash
+set -a && source ~/.jarvis-x/.env && set +a
+hermes
+```
+
+Requires `~/.bashrc` to have `export PATH="$HOME/venv-ai/bin:$PATH"`.
+
+Also usable as a coding agent via Aider, pointed at the `smart` tier:
+
+```bash
+set -a && source ~/.jarvis-x/.env && set +a
+cd ~/jarvis-x
+aider --model groq/openai/gpt-oss-120b --no-show-model-warnings
+```
+
+Gotcha: inside Aider's prompt, only `/commands` or natural language are safe — never paste raw shell commands there, they get sent to the model as a question instead of executing.

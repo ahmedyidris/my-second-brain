@@ -4,8 +4,9 @@ tags: [jarvis-x, ai-os, sovereign, entity]
 sources:
   - raw/Jarvis X Resources/DeepSeek Files/DeepSeek_Jarvis_X_Master_Plan.md
   - raw/Jarvis X Resources/Jarvis X/Jarvis_X_v2_Ascension_Plan.md
-related: [[the-council]], [[hermes-agent]], [[constitutional-autonomy]], [[jarvis-x-hardware]], [[universal-model-layer]], [[self-improvement-loop]]
-last_updated: 2026-07-27
+  - raw/2026-09-24-jarvis-x-starnet-handoff.md
+related: [[the-council]], [[hermes-agent]], [[constitutional-autonomy]], [[jarvis-x-hardware]], [[universal-model-layer]], [[self-improvement-loop]], [[jarvis-x-app]], [[starnet]], [[ollama]], [[ipv6-dns-truncation-crostini]]
+last_updated: 2026-09-24
 ---
 
 # Jarvis X
@@ -35,6 +36,44 @@ Bilingual by design: Egyptian Arabic and English are both first-class citizens.
 - **Open-source** — every component is free and auditable
 - **Portable** — entire system can be replicated and backed up
 - **Zero-subscription** — must boot and function with zero cloud keys
+
+## Current working state (2026-09-24)
+
+Repo: https://github.com/ahmedyidris/jarvis-x, branch `master`. Latest commit `99652aa` — OpenAI-compatible `/v1/chat/completions` + `/v1/models` (see [[jarvis-x-app]]).
+
+Services managed by `supervisord` under systemd unit `jarvis-supervisord.service`:
+
+| Service | Status |
+|---|---|
+| hermes-agent | RUNNING |
+| hermes-api (uvicorn, port 8000) | RUNNING |
+| tts-worker | RUNNING — degraded, chatterbox model absent, `/synthesize` returns 500 |
+
+Model tiers, all verified working via `POST /api/ask`:
+
+| tier | provider | model |
+|---|---|---|
+| local | ollama | qwen2.5:3b |
+| fast | groq | openai/gpt-oss-20b |
+| smart | groq | openai/gpt-oss-120b |
+| quality | gemini | gemini-3.6-flash |
+| frontier | gemini | gemini-3.6-flash |
+
+Note: `gemini-3.6-flash` does not appear in Google's models-list endpoint (stale listing) but works when called directly — do not "correct" it to a listed model.
+
+**Hardware discrepancy flagged 2026-09-24:** [[jarvis-x-hardware]] describes the machine as a Lenovo Y50-70 running Pop!_OS. The 2026-09-24 handoff source describes the actual working environment as an ASUS Chromebook running Crostini (Debian 13 trixie) — 14GB RAM, 11th Gen i5, no GPU, 72GB disk. These are two different machines/environments. Not silently resolved — see the note in [[jarvis-x-hardware]] for detail. Treat the Crostini facts as current for day-to-day operational work as of this date.
+
+Restart command:
+
+```bash
+sudo systemctl restart jarvis-supervisord.service
+sleep 8
+supervisorctl -c ~/jarvis-x/config/supervisord.conf status
+```
+
+Gotcha: systemd units don't inherit shell exports, so `jarvis-supervisord.service` needed an explicit `EnvironmentFile=/home/ahmedyidris/.jarvis-x/.env` drop-in (`/etc/systemd/system/jarvis-supervisord.service.d/env.conf`) plus `NODE_OPTIONS=--dns-result-order=ipv4first` — see [[ipv6-dns-truncation-crostini]].
+
+A separate, parallel multi-agent platform, [[starnet]], is also under active development in this environment. Explicit direction: do not build StarNet out into a full Jarvis X clone — add a lighter "Station" view to Jarvis X's own frontend instead (see [[jarvis-x-app]]).
 
 ## v2 identity notes
 
