@@ -9,7 +9,66 @@ Format:
 
 Operations: `ingest`, `query`, `lint`, `update`, `init`.
 
-Utility: `grep "^## \[" wiki/log.md | head -5` returns the 5 most recent operations.
+Utility: `grep "^## \[[0-9]" wiki/log.md | head -5` returns the 5 most recent operations.
+
+---
+
+## [2026-09-25] lint | Audit after the handoff ingest and rulings
+
+Script checks over all 44 pages: links, frontmatter, source paths, titles and filenames, index coverage, orphans and secrets. Wrote [[audits/audit-2026-09-25]].
+
+Fixed:
+- 4 broken `[[claude-flow]]` links: created [[claude-flow]].
+- Two title/filename mismatches: [[agent-secure-comms]] and [[ipv6-dns-truncation-crostini]] retitled; files not renamed.
+- Two orphans: [[graphify]] and [[agent-starter-kit]] now have reciprocal links.
+- The [[ollama]] Phase 1 error.
+- Schema: the log is newest-first (`head -5`), and `Skills` is now a valid index category (`CLAUDE.md`, `AGENTS.md`, log header).
+
+Flagged, not fixed:
+- search-excerpt confidence on the model research;
+- legacy wiki text not in its raw source;
+- two skill pages citing gitignored sources;
+- the open questions for the human.
+
+No broken wikilinks remain, apart from the `[[page-name]]` format example in the index header.
+
+---
+
+## [2026-09-25] update | Apply the human's 2026-09-25 rulings (Chromebook current; model priority) with web research
+
+Sources added:
+- `raw/2026-09-25-ahmed-rulings-machine-and-model-priority.md` (verbatim ruling);
+- `raw/2026-09-25-model-landscape-research.md` (web research, with [F]/[S] confidence marks);
+- `raw/2026-09-25-graphify-update-cloud-test.md` (recorded tool output).
+
+Created:
+- [[jarvis-x-model-priority]]: the ruling's ladder — local and free open-source first, then Google free, then Anthropic, then OpenAI, with Kimi in the paid slot — plus concrete options per slot and a recommended Chromebook stack, labelled as inference;
+- [[chinese-open-source-models]];
+- [[source-model-landscape-research]].
+
+Updated for the machine ruling:
+- [[jarvis-x-hardware]]: the Chromebook first; the Lenovo kept as the earlier plan machine.
+- "Resolved" lines on [[crostini]], [[jarvis-x]], [[jarvis-x-runtime]], [[jarvis-x-app]], [[jarvis-x-plan-vs-reality]], [[source-deepseek-jarvis-x-master-plan]], [[source-jarvis-x-v2-ascension-plan]] and [[source-jarvis-x-starnet-handoff]].
+
+Updated for the model ruling and the research:
+- [[ollama]] (reworked around the Chromebook);
+- [[hermes-agent]], [[free-api-tiers]], [[groq]], [[gemini]], [[openrouter]], [[universal-model-layer]];
+- [[the-council]] (a seat-by-slot table; Kimi in the paid slot);
+- [[jarvis-x]], [[jarvis-x-plan-vs-reality]] (new "Rulings since the handoff" section), [[source-jarvis-x-v2-ascension-plan]];
+- [[obsidian]], [[aider]];
+- single cross-links on [[self-improvement-loop]], [[ruflo]] and [[jarvis-x-content-engine]].
+
+Also updated [[graphify]] and `CLAUDE.md`: `graphify update .` is code-only and shrank the graph in a cloud checkout.
+
+Kept open for the human:
+- gpt-oss: slot 1 or slot 4?
+- Gemma: slot 1, slot 2 or both?
+- Kimi's order within the paid slot, and whether a live OpenRouter `:free` route moves it up.
+- Tier names.
+- The Lenovo roadmap.
+- The stream:false adapter question.
+- Whether $0/month still binds.
+- `gemini-3.6-flash` vs the Flash-Lite models.
 
 ---
 

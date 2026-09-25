@@ -1,13 +1,13 @@
 ---
-title: IPv6 DNS Truncation on Crostini
+title: IPv6 DNS Truncation (Crostini)
 tags: [jarvis-x, starnet, infrastructure, gotcha, networking]
 sources:
   - raw/2026-09-24-jarvis-x-starnet-handoff.md
 related: [[jarvis-x-hardware]], [[jarvis-x]], [[starnet]], [[crostini]], [[groq]], [[openrouter]], [[jarvis-x-runtime]], [[source-jarvis-x-starnet-handoff]]
-last_updated: 2026-09-24
+last_updated: 2026-09-25
 ---
 
-# IPv6 DNS Truncation on Crostini
+# IPv6 DNS Truncation (Crostini)
 
 Environment-level networking bug affecting both [[jarvis-x]] and [[starnet]] on Crostini (Debian 13 trixie, ChromeOS Linux container). For the environment as a whole (RAM, disk, the other gotchas), see [[crostini]].
 

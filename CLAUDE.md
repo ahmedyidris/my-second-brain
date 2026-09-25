@@ -106,7 +106,7 @@ Read raw/2026-04-11-karpathy-llm-wiki.md. Created [[llm-wiki-pattern]],
 with wiki approach. Added wikilink from [[obsidian]] to [[llm-wiki-pattern]].
 ```
 
-Utility: `grep "^## \[" wiki/log.md | head -5` returns the 5 most recent operations (the log is newest-first).
+Utility: `grep "^## \[[0-9]" wiki/log.md | head -5` returns the 5 most recent operations (the log is newest-first).
 
 ---
 
@@ -166,7 +166,7 @@ For autonomous auditing plus quality-gated web research to fill gaps, use the `w
 
 ```bash
 # Last 5 operations (the log is newest-first)
-grep "^## \[" wiki/log.md | head -5
+grep "^## \[[0-9]" wiki/log.md | head -5
 
 # All lint passes
 grep "^## \[.*lint" wiki/log.md

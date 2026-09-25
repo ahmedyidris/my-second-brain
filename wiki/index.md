@@ -40,6 +40,7 @@ Each entry: `- [[page-name]] — one-line summary`
 - [[jarvis-x-app]] — v2 delivery: FastAPI + PWA + Tauri; Linux → Windows → mobile → macOS
 - [[jarvis-x-station-view]] — planned "Station" tab in Jarvis X's React UI; the recommended path instead of a StarNet clone
 - [[jarvis-x-model-priority]] — the human's 2026-09-25 ladder: local + free open-source (incl. Chinese open models via Ollama) → Google free → Anthropic → OpenAI; Kimi in the paid slot
+- [[chinese-open-source-models]] — Qwen, DeepSeek, GLM, Kimi, MiniMax, MiniCPM: what fits the Chromebook via Ollama, what's cloud-only, where it's free-hosted
 - [[free-api-tiers]] — consumer AI subscriptions don't grant API access; what is actually free (Gemini flash, Groq gpt-oss, OpenRouter)
 - [[ipv6-dns-truncation-crostini]] — Crostini resolves IPv6 first, truncating POSTs to Cloudflare-fronted APIs; Node's https/c-ares ignores the usual fix
 
@@ -55,6 +56,7 @@ Each entry: `- [[page-name]] — one-line summary`
 - [[source-deepseek-jarvis-x-master-plan]] — comprehensive 12-book Jarvis X reference (DeepSeek, July 2026)
 - [[source-jarvis-x-v2-ascension-plan]] — v2 Ascension Plan; overrides master plan where they conflict
 - [[source-jarvis-x-starnet-handoff]] — 2026-09-24 technical handoff: as-built Jarvis X + StarNet state, 10 fixes, 5 open bugs, priorities
+- [[source-model-landscape-research]] — 2026-09-25 web research on local, free and paid model options for the Chromebook; [F]/[S] confidence marks
 
 ## Analyses
 
@@ -63,3 +65,4 @@ Each entry: `- [[page-name]] — one-line summary`
 ## Audits
 
 - [[audits/audit-2026-07-27]] — first audit pass; 11 gaps (HIGH: 3 broken wikilinks, MEDIUM: 5 missing pages/cross-refs, LOW: 3)
+- [[audits/audit-2026-09-25]] — lint after the handoff and rulings: 8 fixed (claude-flow page, schema log order, Phase 1 error, titles, orphans, machine question, graphify advice), 5 flagged (research confidence, legacy unsourced text, open questions)

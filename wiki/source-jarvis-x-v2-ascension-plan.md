@@ -5,7 +5,7 @@ sources:
   - raw/2026-09-25-ahmed-rulings-machine-and-model-priority.md
   - raw/Jarvis X Resources/Jarvis X/Jarvis_X_v2_Ascension_Plan.md
   - raw/2026-09-24-jarvis-x-starnet-handoff.md
-related: [[jarvis-x]], [[universal-model-layer]], [[constitutional-autonomy]], [[jarvis-x-voice-engine]], [[jarvis-x-content-engine]], [[source-deepseek-jarvis-x-master-plan]], [[source-jarvis-x-starnet-handoff]], [[jarvis-x-plan-vs-reality]], [[jarvis-x-runtime]], [[jarvis-x-app]], [[crostini]], [[free-api-tiers]], [[starnet]]
+related: [[jarvis-x]], [[universal-model-layer]], [[constitutional-autonomy]], [[jarvis-x-voice-engine]], [[jarvis-x-content-engine]], [[source-deepseek-jarvis-x-master-plan]], [[source-jarvis-x-starnet-handoff]], [[jarvis-x-plan-vs-reality]], [[jarvis-x-runtime]], [[jarvis-x-app]], [[crostini]], [[free-api-tiers]], [[starnet]], [[jarvis-x-model-priority]]
 last_updated: 2026-09-25
 ---
 
@@ -51,3 +51,5 @@ The v2 update to [[jarvis-x]]. Overrides [[source-deepseek-jarvis-x-master-plan]
 > **Disagreement (2026-09-24 handoff vs Jarvis X v2 Ascension Plan):** the plan's binding constraints (§10) name a "CPU-only Y50-70", and the same §10 prompt asks for scripts "for a fresh Pop!_OS terminal". The handoff's machine is an ASUS Chromebook running Crostini (Debian 13 trixie). The handoff doesn't say whether the Y50-70 was retired or is still the target.
 
 > **Resolved by the human (2026-09-25):** the Chromebook is the current machine ("Current machine is chrome boo[k]"). See [[jarvis-x-hardware]]. The plan's other constraints ($0/month, 6–10 hrs/wk, Egypt/Payoneer, income-first 60/40) are not affected by the ruling.
+
+**Provider order (human ruling, 2026-09-25):** the ruling reorders providers ([[jarvis-x-model-priority]]). The plan registers Anthropic "while sub lives, then optional API" (§3), and [[universal-model-layer]]'s provider table puts it on the `smart` tier. That tier assignment is this wiki's compilation, not the plan's text (see the note on [[universal-model-layer]]). The ruling puts Anthropic in slot 3, after local and free open-source models (slot 1) and the most free Google options (slot 2), with OpenAI in slot 4.

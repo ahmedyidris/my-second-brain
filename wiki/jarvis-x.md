@@ -6,7 +6,7 @@ sources:
   - raw/2026-09-24-jarvis-x-starnet-handoff.md
   - raw/Jarvis X Resources/DeepSeek Files/DeepSeek_Jarvis_X_Master_Plan.md
   - raw/Jarvis X Resources/Jarvis X/Jarvis_X_v2_Ascension_Plan.md
-related: [[the-council]], [[hermes-agent]], [[constitutional-autonomy]], [[jarvis-x-hardware]], [[universal-model-layer]], [[self-improvement-loop]], [[jarvis-x-runtime]], [[jarvis-x-openai-compatible-api]], [[jarvis-x-app]], [[starnet]], [[jarvis-x-station-view]], [[jarvis-x-plan-vs-reality]], [[source-jarvis-x-starnet-handoff]], [[ipv6-dns-truncation-crostini]], [[free-api-tiers]], [[crostini]], [[aider]], [[ollama]], [[groq]], [[gemini]]
+related: [[the-council]], [[hermes-agent]], [[constitutional-autonomy]], [[jarvis-x-hardware]], [[universal-model-layer]], [[self-improvement-loop]], [[jarvis-x-runtime]], [[jarvis-x-openai-compatible-api]], [[jarvis-x-app]], [[starnet]], [[jarvis-x-station-view]], [[jarvis-x-plan-vs-reality]], [[source-jarvis-x-starnet-handoff]], [[ipv6-dns-truncation-crostini]], [[free-api-tiers]], [[crostini]], [[aider]], [[ollama]], [[groq]], [[gemini]], [[jarvis-x-model-priority]]
 last_updated: 2026-09-25
 ---
 
@@ -47,6 +47,8 @@ What actually exists, as of the 2026-09-24 handoff ([[source-jarvis-x-starnet-ha
 - **Multi-agent:** a separate, parallel app, [[starnet]], is under active development in this environment. The explicit direction is not to build StarNet out into a full Jarvis X clone, but to add a "Station" tab to Jarvis X's own frontend instead ([[jarvis-x-station-view]]).
 - **Coding agent:** [[aider]], launched from `~/jarvis-x` with `aider --model groq/openai/gpt-oss-120b --no-show-model-warnings`.
 - **Plan vs as-built:** [[jarvis-x-plan-vs-reality]].
+- **Model priority (human ruling, 2026-09-25):** [[jarvis-x-model-priority]] sets the order for plans: local models and free open-source tiers first (including top-tier Chinese open-source models via [[ollama]]), then the most free options from Google, then Anthropic, then OpenAI. Kimi goes in the paid slot if it isn't free.
+- **Observation (this wiki's reading):** the ruling is consistent with the Sovereignty principles above. Putting local and free open-source models first fits **Local-first**, and putting free tiers ahead of paid ones fits **Zero-subscription**. It doesn't by itself settle the local-first vs cloud-tiers Disagreement below, because slot 1 also covers free open-source *tiers*, which [[jarvis-x-model-priority]] reads as including free hosted tiers such as Groq's gpt-oss.
 
 Services managed by `supervisord` under systemd unit `jarvis-supervisord.service`:
 
@@ -94,4 +96,4 @@ One installer script → services up → web UI on phone & laptop → voice chat
 
 ## Related
 
-[[jarvis-x-hardware]] | [[the-council]] | [[universal-model-layer]] | [[constitutional-autonomy]] | [[jarvis-x-voice-engine]] | [[jarvis-x-content-engine]] | [[jarvis-x-trading-module]] | [[jarvis-x-income-roadmap]] | [[self-improvement-loop]] | [[jarvis-x-runtime]] | [[jarvis-x-openai-compatible-api]] | [[jarvis-x-app]] | [[starnet]] | [[jarvis-x-station-view]] | [[jarvis-x-plan-vs-reality]] | [[crostini]] | [[ipv6-dns-truncation-crostini]] | [[aider]] | [[free-api-tiers]] | [[source-jarvis-x-starnet-handoff]]
+[[jarvis-x-hardware]] | [[the-council]] | [[universal-model-layer]] | [[constitutional-autonomy]] | [[jarvis-x-voice-engine]] | [[jarvis-x-content-engine]] | [[jarvis-x-trading-module]] | [[jarvis-x-income-roadmap]] | [[self-improvement-loop]] | [[jarvis-x-runtime]] | [[jarvis-x-openai-compatible-api]] | [[jarvis-x-app]] | [[starnet]] | [[jarvis-x-station-view]] | [[jarvis-x-plan-vs-reality]] | [[crostini]] | [[ipv6-dns-truncation-crostini]] | [[aider]] | [[free-api-tiers]] | [[source-jarvis-x-starnet-handoff]] | [[jarvis-x-model-priority]]

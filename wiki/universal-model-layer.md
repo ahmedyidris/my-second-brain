@@ -5,15 +5,17 @@ sources:
   - raw/2026-09-24-jarvis-x-starnet-handoff.md
   - raw/Jarvis X Resources/Jarvis X/Jarvis_X_v2_Ascension_Plan.md
   - raw/Jarvis X Resources/DeepSeek Files/DeepSeek_Jarvis_X_Master_Plan.md
-related: [[jarvis-x]], [[the-council]], [[jarvis-x-runtime]], [[jarvis-x-openai-compatible-api]], [[ollama]], [[groq]], [[gemini]], [[openrouter]], [[free-api-tiers]], [[hermes-agent]], [[source-jarvis-x-v2-ascension-plan]], [[source-jarvis-x-starnet-handoff]], [[jarvis-x-plan-vs-reality]]
-last_updated: 2026-09-24
+  - raw/2026-09-25-ahmed-rulings-machine-and-model-priority.md
+  - raw/2026-09-25-model-landscape-research.md
+related: [[jarvis-x]], [[the-council]], [[jarvis-x-runtime]], [[jarvis-x-openai-compatible-api]], [[ollama]], [[groq]], [[gemini]], [[openrouter]], [[free-api-tiers]], [[hermes-agent]], [[source-jarvis-x-v2-ascension-plan]], [[source-jarvis-x-starnet-handoff]], [[jarvis-x-plan-vs-reality]], [[jarvis-x-model-priority]], [[chinese-open-source-models]], [[source-model-landscape-research]]
+last_updated: 2026-09-25
 ---
 
 # Universal Model Layer
 
 A v2 addition to [[jarvis-x]]. One `providers/` interface, one config — every model provider behind a single abstraction with hot-swapping and free-tier fallbacks.
 
-The sections from "CLI usage" to "Key constraint" describe the v2 plan ([[source-jarvis-x-v2-ascension-plan]]). "Implemented state" describes what the 2026-09-24 handoff shows was built ([[source-jarvis-x-starnet-handoff]]).
+The sections from "CLI usage" to "Key constraint" describe the v2 plan ([[source-jarvis-x-v2-ascension-plan]]). "Implemented state" describes what the 2026-09-24 handoff shows was built ([[source-jarvis-x-starnet-handoff]]). "Provider priority" records the human's 2026-09-25 ruling on which providers plans should prefer ([[jarvis-x-model-priority]]).
 
 ## CLI usage
 
@@ -123,11 +125,46 @@ Their as-built state is unknown.
 > - OpenRouter, Anthropic, NVIDIA NIM and Mistral are not in the as-built table
 >
 > Unknown: whether `quality`/`frontier` replaced `long`; whether the missing providers were dropped, deferred, or sit behind the fallback chain; and why `frontier` duplicates `quality`. Left for the human to resolve.
+>
+> The human's 2026-09-25 priority ruling puts Anthropic in slot 3 and Google's free tier in slot 2; the as-built routing (local Qwen, then free Groq gpt-oss, then free Gemini flash) already follows that order. The ruling settles provider order only. The tier-names question (the plan's `long` vs the as-built `quality`/`frontier`, and why `frontier` duplicates `quality`) is still open. See [[jarvis-x-model-priority]].
 
 > **Disagreement (2026-09-24 handoff vs Jarvis X v2 Ascension Plan):** the plan's interface is a CLI, `jj ask "..." --tier ...`. The handoff shows HTTP interfaces (`POST /api/ask`, `GET /v1/models`, `POST /v1/chat/completions`) and a `hermes` CLI, but it doesn't mention `jj` at all, so whether the `jj ask` CLI exists is unknown. Left for the human to resolve.
 
-Possibly relevant to the choice of cloud models (the handoff doesn't draw this connection itself): see [[free-api-tiers]]. Bug E says consumer subscriptions don't give API access, and the free API list is Gemini `gemini-3.6-flash`, Groq `openai/gpt-oss-20b`/`-120b`, and OpenRouter's rate-limited free models. [[openrouter]] is on that list but not in the tier table.
+Possibly relevant to the choice of cloud models (the handoff doesn't draw this connection itself): see [[free-api-tiers]]. Bug E says consumer subscriptions don't give API access, and the free API list is Gemini `gemini-3.6-flash`, Groq `openai/gpt-oss-20b`/`-120b`, and OpenRouter's rate-limited free models. [[openrouter]] is on that list but not in the tier table. The 2026-09-25 research ([[source-model-landscape-research]]) puts numbers on these free tiers and adds more free routes. See [[free-api-tiers]].
+
+## Provider priority (ruling, 2026-09-25)
+
+The human ruled on the order in which Jarvis X plans should prefer providers ([[jarvis-x-model-priority]], from `raw/2026-09-25-ahmed-rulings-machine-and-model-priority.md`). The same ruling names the Chromebook as the current machine.
+
+| Priority | Slot | In the ruling's words |
+|----------|------|-----------------------|
+| 1 | Local and free open-source | "local models and free open source tiers that could work on any machine specially chrome os", and "include top tier Chinese open source models in local first, ollama" |
+| 2 | Google, free | "most free available from google" |
+| 3 | Anthropic | "then Anthropic" |
+| 4 | OpenAI | "then open ai" |
+| Paid | Paid subscriptions | "if kimi is not free treat as a paid subscription and put in paid tiers slot" |
+
+How the plan's registered providers (table above) line up. This is interpretation: the ruling names only Google, Anthropic, OpenAI and Kimi.
+
+| Provider | Slot under the ruling | Note |
+|----------|-----------------------|------|
+| Ollama (local) | 1 | Local-first. This also matches the key constraint: boot with zero cloud keys. Chinese open models: [[chinese-open-source-models]] |
+| Groq | 1 | A free hosted tier for open-weight models. Its gpt-oss models are made by OpenAI, and [[jarvis-x-model-priority]] files them under slot 1 as interpretation (its question (a)). See [[groq]] |
+| OpenRouter | 1 | `:free` open models, availability unverified. See [[openrouter]] |
+| Gemini CLI/API | 2 | Free API tier and the Gemini CLI quota. See [[gemini]] |
+| Anthropic | 3 | Was `smart` in this wiki's compilation of the plan. No ongoing free API tier, only "a small amount of free credits" for new users ([[free-api-tiers]]) |
+| NVIDIA NIM, Mistral | Not placed | The ruling doesn't name them, and the 2026-09-25 research doesn't cover them |
+| OpenAI | 4 | Not in the plan's provider table. Its open-weight gpt-oss reaches Jarvis through Groq |
+| Kimi | Paid | Not in the plan's provider table. It sits on [[the-council]]. Its API is paid, per a search excerpt in the research |
+
+Observation: the as-built tiers (see "Tier table" above) use only slot-1 and slot-2 routes. They are local Qwen on Ollama, then free Groq gpt-oss, then free Gemini flash.
+
+Still open after the ruling:
+
+- the tier names (`long` vs `quality`/`frontier`), per the disagreement above;
+- where Kimi sits relative to Anthropic and OpenAI inside the paid group ([[jarvis-x-model-priority]]);
+- whether the v2 plan's "$0/month" still holds, given that the ruling mentions a "paid tiers slot" ([[free-api-tiers]]).
 
 ## Related
 
-[[jarvis-x]] | [[the-council]] | [[jarvis-x-runtime]] | [[jarvis-x-openai-compatible-api]] | [[ollama]] | [[groq]] | [[gemini]] | [[openrouter]] | [[free-api-tiers]] | [[hermes-agent]] | [[source-jarvis-x-v2-ascension-plan]] | [[source-jarvis-x-starnet-handoff]] | [[jarvis-x-plan-vs-reality]]
+[[jarvis-x]] | [[the-council]] | [[jarvis-x-runtime]] | [[jarvis-x-openai-compatible-api]] | [[ollama]] | [[groq]] | [[gemini]] | [[openrouter]] | [[free-api-tiers]] | [[hermes-agent]] | [[source-jarvis-x-v2-ascension-plan]] | [[source-jarvis-x-starnet-handoff]] | [[jarvis-x-plan-vs-reality]] | [[jarvis-x-model-priority]] | [[chinese-open-source-models]] | [[source-model-landscape-research]]

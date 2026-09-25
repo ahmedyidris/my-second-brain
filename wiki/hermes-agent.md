@@ -4,8 +4,10 @@ tags: [jarvis-x, component, agent, local-ai]
 sources:
   - raw/2026-09-24-jarvis-x-starnet-handoff.md
   - raw/Jarvis X Resources/DeepSeek Files/DeepSeek_Jarvis_X_Master_Plan.md
-related: [[jarvis-x]], [[the-council]], [[self-improvement-loop]], [[jarvis-x-runtime]], [[aider]], [[jarvis-x-voice-engine]], [[jarvis-x-openai-compatible-api]], [[ollama]], [[groq]], [[gemini]], [[source-jarvis-x-starnet-handoff]], [[jarvis-x-plan-vs-reality]]
-last_updated: 2026-09-24
+  - raw/2026-09-25-ahmed-rulings-machine-and-model-priority.md
+  - raw/2026-09-25-model-landscape-research.md
+related: [[jarvis-x]], [[the-council]], [[self-improvement-loop]], [[jarvis-x-runtime]], [[aider]], [[jarvis-x-voice-engine]], [[jarvis-x-openai-compatible-api]], [[ollama]], [[jarvis-x-model-priority]], [[chinese-open-source-models]], [[jarvis-x-hardware]], [[groq]], [[gemini]], [[source-jarvis-x-starnet-handoff]], [[source-model-landscape-research]], [[jarvis-x-plan-vs-reality]]
+last_updated: 2026-09-25
 ---
 
 # Hermes Agent
@@ -27,6 +29,17 @@ The core reasoning brain of [[jarvis-x]]. A self-improving local agent with 70+ 
 | llama3.2:3b | Primary (CPU) | 8–12 t/s |
 | qwen3:1.5b | Fast alternative | 15–20 t/s |
 | hermes3:8b | Future (GPU/16GB RAM) | 1–3 t/s |
+
+These are the master plan's picks, written for the Lenovo Y50-70. See the next section for the current machine.
+
+## Local models under the 2026-09-25 ruling
+
+Under the human's 2026-09-25 ruling, Hermes's local model choices follow [[jarvis-x-model-priority]] (local and free open-source first, including Chinese open models via Ollama) and [[ollama]] (what fits the current machine).
+
+- **The plan's `hermes3:8b` is Lenovo-era.** The master plan marks it "Future (GPU/16GB RAM)". The Chromebook ([[jarvis-x-hardware]]) has 14GB RAM and no GPU. Implication: it meets neither part of that condition.
+- **Is a `hermes3` tag still on the Ollama library?** Not covered by the research ([[source-model-landscape-research]]).
+- **As built,** the Jarvis `local` tier runs `qwen2.5:3b` ([[jarvis-x-runtime]]).
+- **Candidates:** see "Recommended local-first stack for the Chromebook (inference)" on [[jarvis-x-model-priority]], and [[chinese-open-source-models]] for what else fits. That stack is the researcher's recommendation, not a tested choice, and it doesn't pick a model for Hermes specifically.
 
 ## Installation
 
@@ -79,7 +92,9 @@ The handoff launches [[aider]] with `--model groq/openai/gpt-oss-120b`, which is
 > **Disagreement (2026-09-24 handoff vs DeepSeek Jarvis X Master Plan):** this page says Hermes "runs entirely on local hardware via Ollama" and is "Local-first: no cloud dependency". The handoff shows the `registry:` tiers in `hermes.py` routed to cloud providers — `fast`/`smart` on [[groq]] and `quality`/`frontier` on [[gemini]] — with only the `local` tier on [[ollama]]. The handoff does not say whether Hermes can still run with the cloud tiers unavailable. Left for the human to resolve.
 
 > **Disagreement (2026-09-24 handoff vs DeepSeek Jarvis X Master Plan):** the Models table above lists `llama3.2:3b`, `qwen3:1.5b` and `hermes3:8b`. The as-built `local` tier is `qwen2.5:3b`, and none of the three planned models appear in the handoff's list of Ollama models present (`qwen2.5:7b`, `qwen2.5:3b`, `qwen2.5-coder:7b`, `qwen2.5-coder:3b`, `nomic-embed-text`). The handoff does not say why the model choice changed. Left for the human to resolve.
+>
+> **Resolved by the human (2026-09-25), machine part only:** the Chromebook is current, so the handoff's machine is the one to plan for. The model choice itself stays open: the ruling sets a priority order ([[jarvis-x-model-priority]]), not specific models for Hermes.
 
 ## Related
 
-[[jarvis-x]] | [[jarvis-x-runtime]] | [[aider]] | [[jarvis-x-openai-compatible-api]] | [[the-council]] | [[self-improvement-loop]] | [[ollama]] | [[groq]] | [[gemini]] | [[source-jarvis-x-starnet-handoff]] | [[jarvis-x-plan-vs-reality]]
+[[jarvis-x]] | [[jarvis-x-runtime]] | [[aider]] | [[jarvis-x-openai-compatible-api]] | [[the-council]] | [[self-improvement-loop]] | [[ollama]] | [[jarvis-x-model-priority]] | [[chinese-open-source-models]] | [[jarvis-x-hardware]] | [[groq]] | [[gemini]] | [[source-jarvis-x-starnet-handoff]] | [[source-model-landscape-research]] | [[jarvis-x-plan-vs-reality]]

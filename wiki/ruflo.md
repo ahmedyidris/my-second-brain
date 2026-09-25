@@ -7,8 +7,9 @@ sources:
   - raw/2026-07-27-ruflo-one-line-install.md
   - raw/2026-07-27-ruflo-mcp-setup.md
   - raw/2026-07-27-ruflo-federation-plugin.md
-related: [[jarvis-x]], [[the-council]], [[self-improvement-loop]], [[universal-model-layer]], [[hermes-agent]]
-last_updated: 2026-07-27
+  - raw/2026-09-25-ahmed-rulings-machine-and-model-priority.md
+related: [[jarvis-x]], [[the-council]], [[self-improvement-loop]], [[universal-model-layer]], [[hermes-agent]], [[jarvis-x-model-priority]]
+last_updated: 2026-09-25
 ---
 
 # Ruflo
@@ -111,4 +112,4 @@ Ruflo and [[jarvis-x]] share the same design instincts but at different layers:
 | Memory | Memory layer | Obsidian + ChromaDB |
 | Model abstraction | LLM Providers | [[universal-model-layer]] |
 
-Ruflo could serve as the orchestration backbone inside Jarvis X, with [[hermes-agent]] as the primary agent and [[universal-model-layer]] as the LLM Providers layer.
+Ruflo could serve as the orchestration backbone inside Jarvis X, with [[hermes-agent]] as the primary agent and [[universal-model-layer]] as the LLM Providers layer. Inside Jarvis X, model and provider choice for that layer follows [[jarvis-x-model-priority]], the human's 2026-09-25 ruling.
