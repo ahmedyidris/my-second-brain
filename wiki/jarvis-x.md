@@ -2,11 +2,12 @@
 title: Jarvis X
 tags: [jarvis-x, ai-os, sovereign, entity]
 sources:
+  - raw/2026-09-25-ahmed-rulings-machine-and-model-priority.md
   - raw/2026-09-24-jarvis-x-starnet-handoff.md
   - raw/Jarvis X Resources/DeepSeek Files/DeepSeek_Jarvis_X_Master_Plan.md
   - raw/Jarvis X Resources/Jarvis X/Jarvis_X_v2_Ascension_Plan.md
 related: [[the-council]], [[hermes-agent]], [[constitutional-autonomy]], [[jarvis-x-hardware]], [[universal-model-layer]], [[self-improvement-loop]], [[jarvis-x-runtime]], [[jarvis-x-openai-compatible-api]], [[jarvis-x-app]], [[starnet]], [[jarvis-x-station-view]], [[jarvis-x-plan-vs-reality]], [[source-jarvis-x-starnet-handoff]], [[ipv6-dns-truncation-crostini]], [[free-api-tiers]], [[crostini]], [[aider]], [[ollama]], [[groq]], [[gemini]]
-last_updated: 2026-09-24
+last_updated: 2026-09-25
 ---
 
 # Jarvis X
@@ -67,7 +68,7 @@ Model tiers, all verified working via `POST /api/ask` (see [[universal-model-lay
 
 Note: `gemini-3.6-flash` does not appear in Google's models-list endpoint (the handoff calls the listing stale), but it works when called directly. Do not "correct" it to a listed model.
 
-**Hardware discrepancy (flagged 2026-09-24):** [[jarvis-x-hardware]] describes the machine as a Lenovo Y50-70 running Pop!_OS. The handoff describes the working environment as an ASUS Chromebook running Crostini (Debian 13 trixie), with 14GB RAM, an 11th Gen i5, no GPU and a 72GB disk. They may be two different machines; the handoff doesn't say. This is not silently resolved; see the callout in [[jarvis-x-hardware]]. Working assumption until the human decides: treat the Crostini facts as current for day-to-day operational work.
+**Hardware discrepancy (flagged 2026-09-24):** [[jarvis-x-hardware]] describes the machine as a Lenovo Y50-70 running Pop!_OS. The handoff describes the working environment as an ASUS Chromebook running Crostini (Debian 13 trixie), with 14GB RAM, an 11th Gen i5, no GPU and a 72GB disk. **Resolved by the human on 2026-09-25:** the Chromebook is the current machine. The Lenovo stays on [[jarvis-x-hardware]] as the plans' record.
 
 Restart command:
 

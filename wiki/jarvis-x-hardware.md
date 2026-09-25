@@ -1,29 +1,55 @@
 ---
 title: Jarvis X Hardware
-tags: [jarvis-x, hardware, lenovo, chromebook, crostini, cpu-only, contradiction]
+tags: [jarvis-x, hardware, chromebook, crostini, cpu-only, lenovo]
 sources:
+  - raw/2026-09-25-ahmed-rulings-machine-and-model-priority.md
   - raw/2026-09-24-jarvis-x-starnet-handoff.md
   - raw/Jarvis X Resources/DeepSeek Files/DeepSeek_Jarvis_X_Master_Plan.md
   - raw/Jarvis X Resources/Jarvis X/Jarvis_X_v2_Ascension_Plan.md
-related: [[jarvis-x]], [[hermes-agent]], [[crostini]], [[ipv6-dns-truncation-crostini]], [[ollama]], [[universal-model-layer]], [[jarvis-x-runtime]], [[starnet]], [[source-deepseek-jarvis-x-master-plan]], [[source-jarvis-x-starnet-handoff]], [[jarvis-x-plan-vs-reality]]
-last_updated: 2026-09-24
+related: [[jarvis-x]], [[crostini]], [[ipv6-dns-truncation-crostini]], [[jarvis-x-model-priority]], [[ollama]], [[hermes-agent]], [[universal-model-layer]], [[jarvis-x-runtime]], [[starnet]], [[source-deepseek-jarvis-x-master-plan]], [[source-jarvis-x-starnet-handoff]], [[jarvis-x-plan-vs-reality]]
+last_updated: 2026-09-25
 ---
 
 # Jarvis X Hardware
 
-Current body: **Lenovo Y50-70** running Pop!_OS 24.04 LTS.
+Current body: an **ASUS Chromebook** running Linux under [[crostini]] (Debian 13 trixie). CPU-only, with no GPU.
 
-That line is the July 2026 master plan's description. The 2026-09-24 handoff ([[source-jarvis-x-starnet-handoff]]) describes a different machine: an ASUS Chromebook running [[crostini]]. See "Machine in the 2026-09-24 handoff" below.
+> **Resolved by the human (2026-09-25):** "Current machine is chrome boo[k]." The July plans described a Lenovo Y50-70 on Pop!_OS, and the 2026-09-24 handoff described this Chromebook. The ruling settles which one is current. The Lenovo specs are kept below as the plans' record ("Earlier plan machine").
 
-> **Disagreement (2026-09-24 handoff vs DeepSeek Jarvis X Master Plan and Jarvis X v2 Ascension Plan):** the earlier plans describe a **Lenovo Y50-70 on Pop!_OS 24.04 LTS** (i7-4710HQ, 7.7GB RAM, 953GB SSD). The v2 plan's execution prompt still assumes a "CPU-only Y50-70" and "a fresh Pop!_OS terminal". The 2026-09-24 handoff describes an **ASUS Chromebook running Crostini (Debian 13 trixie)** (11th Gen i5, no GPU, 14GB RAM, 72GB disk). The wiki does not know whether the Lenovo was replaced, retired, or is a second machine. The handoff doesn't mention it. Both descriptions are kept. Left for the human to resolve.
+## Current machine (Chromebook)
 
-> **Working assumption until the human decides (interpretation, not a resolution):** for day-to-day operational work, use the Chromebook/Crostini facts, because they come from a live operational handoff rather than a plan document. The Lenovo specs below stay as the plans' record.
+From the handoff's PART 5 ("Environment facts"), as of 2026-09-24:
 
-## Current specs
+| Component | Spec |
+|-----------|------|
+| Hardware | ASUS Chromebook |
+| OS | Crostini (Debian 13 trixie). See [[crostini]] |
+| CPU | 11th Gen i5, no GPU |
+| RAM | 14GB total, ~9–10GB free after Chrome |
+| Disk | 72GB total, ~11GB free (after cleanup) |
+| Python | 3.11 in `~/venv-ai` (uv-managed) |
+| Node | 20.x (system), 22.x (bundled for Tauri) |
 
-The Lenovo Y50-70, from the July 2026 master plan.
+### What this machine means for models
 
-| Component | Spec | Status |
+- All local inference runs on the CPU. The handoff's StarNet agent Raqib runs `qwen2.5:7b` at "~10 tok/s", which it calls "slow". The Jarvis `local` tier runs `qwen2.5:3b`.
+- The human's priority for plans puts local models and free open-source tiers that "could work on any machine specially chrome os" first. See [[jarvis-x-model-priority]] for the ladder, and [[ollama]] for which local models fit this machine.
+- The cloud tiers run off the machine, on [[groq]] and [[gemini]]. See [[universal-model-layer]].
+
+### Resource gotchas (from the handoff)
+
+- **Chrome RAM (gotcha 7):** "Chrome tabs eat 10GB of your 14GB. Before any heavy build, close them. free -h should show 6GB+ available."
+- **Tauri build (gotcha 8):** "The Tauri build is 30-60 min and needs 8GB disk + 6GB RAM. It's rebuildable but not useful for daily work on this hardware." PART 8: "Do not build the Tauri desktop shell for daily use. Web UI is faster and identical in function." See [[starnet]] and [[jarvis-x-app]].
+- **Disk:** ~11GB free after cleanup. The Ollama models present add up to about 13.5GB (arithmetic; see [[ollama]]). The Chatterbox checkpoint for the voice pipeline is ~5GB (Bug D, [[jarvis-x-voice-engine]]). Implication: every new local model has to fit in that ~11GB.
+- **Networking:** Crostini's IPv6-first resolution truncates POST bodies to Cloudflare-fronted APIs. See [[crostini]] and [[ipv6-dns-truncation-crostini]].
+
+See [[crostini]] for one inconsistency inside the handoff: "~9-10GB free after Chrome" vs "Chrome tabs eat 10GB of your 14GB". For what runs on this machine, see [[jarvis-x-runtime]].
+
+## Earlier plan machine (Lenovo Y50-70)
+
+This is how the July master plan described the body. It is kept as the plans' record; the 2026-09-25 ruling makes the Chromebook current. The ruling doesn't say what happened to the Lenovo.
+
+| Component | Spec | Status (per the master plan) |
 |-----------|------|--------|
 | CPU | Intel i7-4710HQ (4C/8T, Haswell) | Active |
 | GPU | NVIDIA GTX 860M (2GB) | Currently undetected |
@@ -31,20 +57,20 @@ The Lenovo Y50-70, from the July 2026 master plan.
 | Storage | 953 GB SATA SSD | Active |
 | OS | Pop!_OS 24.04 LTS | Active |
 
-## CPU-only model strategy
+### The plan's CPU-only model strategy (Lenovo)
 
-Since GPU is undetected, all inference runs on CPU. This constraint directly shapes the [[universal-model-layer]] tier selection — privacy-sensitive and interactive queries must use the `local` tier:
+Since the GPU was undetected, the plan ran all inference on the CPU. That constraint shaped the [[universal-model-layer]] tier selection: privacy-sensitive and interactive queries use the `local` tier.
 
-| Model | Size | Speed |
+| Model | Size | Speed (per the plan) |
 |-------|------|-------|
 | llama3.2:3b | ~2GB | 8–12 t/s (good) |
 | qwen3:1.5b | ~1GB | 15–20 t/s (fast) |
 | nomic-embed-text | ~0.5GB | Fast |
 | hermes3:8b | ~5.5GB | 1–3 t/s (slow) |
 
-The models on the handoff's machine are different: the `qwen2.5` family plus `nomic-embed-text`. See [[ollama]].
+The Chromebook runs a different set: the `qwen2.5` family plus `nomic-embed-text` ([[ollama]]).
 
-## Upgrade roadmap
+### The plan's upgrade roadmap (Lenovo)
 
 | Phase | Upgrade | Cost | Priority |
 |-------|---------|------|----------|
@@ -52,34 +78,20 @@ The models on the handoff's machine are different: the `qwen2.5` family plus `no
 | 2 | ADT-Link R43SG eGPU + 850W PSU | ~$135 | Medium |
 | 3 | NVIDIA RTX 3090 (24GB VRAM) | ~$440 | Future |
 
-The handoff says nothing about this roadmap. Its status is unknown.
+This roadmap was written for the Lenovo. Neither the handoff nor the ruling says whether any of it still applies now that the Chromebook is current. Open question for the human.
 
-## GPU fix commands
+### GPU fix commands (Lenovo only)
 
 ```bash
 sudo prime-select nvidia   # force NVIDIA
 sudo prime-select intel    # fallback if black screen
 ```
 
-Implication: these commands target the Lenovo's NVIDIA GPU under Pop!_OS. The handoff's machine has "no GPU", so they don't apply there.
-
-## Machine in the 2026-09-24 handoff
-
-From PART 5 ("Environment facts"), as of the 2026-09-24 handoff:
-
-| Component | Spec |
-|-----------|------|
-| Hardware | ASUS Chromebook |
-| OS | Crostini (Debian 13 trixie) — see [[crostini]] |
-| RAM | 14GB total, ~9-10GB free after Chrome |
-| CPU | 11th Gen i5, no GPU |
-| Disk | 72GB total, ~11GB free (after cleanup) |
-| Python | 3.11 in `~/venv-ai` (uv-managed) |
-| Node | 20.x (system), 22.x (bundled for Tauri) |
+These target the Lenovo's NVIDIA GPU under Pop!_OS. The Chromebook has "no GPU", so they don't apply to it.
 
 ### Side by side
 
-| | Earlier plans | 2026-09-24 handoff |
+| | Earlier plan (Lenovo) | Current (Chromebook) |
 |---|---|---|
 | Machine | Lenovo Y50-70 | ASUS Chromebook |
 | OS | Pop!_OS 24.04 LTS | Crostini (Debian 13 trixie) |
@@ -88,17 +100,8 @@ From PART 5 ("Environment facts"), as of the 2026-09-24 handoff:
 | RAM | 7.7 GB DDR3L | 14GB |
 | Storage | 953 GB SATA SSD | 72GB, ~11GB free |
 
-**What still holds:** local inference is CPU-only on both machines. (The cloud tiers on Groq and Gemini run off the machine; see [[universal-model-layer]].) The Lenovo is CPU-only because its GPU is undetected. The Chromebook has no GPU. The local [[ollama]] tier on the Chromebook runs `qwen2.5:3b`. StarNet's Raqib runs `qwen2.5:7b` at "~10 tok/s", which the handoff calls "slow".
-
-### Resource gotchas (from the handoff)
-
-- **Chrome RAM (gotcha 7):** "Chrome tabs eat 10GB of your 14GB. Before any heavy build, close them. free -h should show 6GB+ available."
-- **Tauri build (gotcha 8):** "The Tauri build is 30-60 min and needs 8GB disk + 6GB RAM. It's rebuildable but not useful for daily work on this hardware." PART 8: "Do not build the Tauri desktop shell for daily use. Web UI is faster and identical in function." See [[starnet]].
-- **Disk:** ~11GB free after cleanup. The Ollama models present add up to about 13.5GB (arithmetic, see [[ollama]]). The chatterbox checkpoint for the voice pipeline is ~5GB (Bug D).
-- **Networking:** Crostini's IPv6-first resolution truncates POST bodies to Cloudflare-fronted APIs. See [[crostini]] and [[ipv6-dns-truncation-crostini]].
-
-See [[crostini]] for one inconsistency inside the handoff: "~9-10GB free after Chrome" vs "Chrome tabs eat 10GB of your 14GB". For what runs on this machine, see [[jarvis-x-runtime]].
+**What still holds:** local inference is CPU-only on both.
 
 ## Related
 
-[[jarvis-x]] | [[hermes-agent]] | [[crostini]] | [[ipv6-dns-truncation-crostini]] | [[ollama]] | [[universal-model-layer]] | [[jarvis-x-runtime]] | [[starnet]] | [[source-deepseek-jarvis-x-master-plan]] | [[source-jarvis-x-starnet-handoff]] | [[jarvis-x-plan-vs-reality]]
+[[jarvis-x]] | [[crostini]] | [[ipv6-dns-truncation-crostini]] | [[jarvis-x-model-priority]] | [[ollama]] | [[hermes-agent]] | [[universal-model-layer]] | [[jarvis-x-runtime]] | [[starnet]] | [[source-deepseek-jarvis-x-master-plan]] | [[source-jarvis-x-starnet-handoff]] | [[jarvis-x-plan-vs-reality]]

@@ -47,7 +47,7 @@ Claude navigates this wiki by name. There is no database, no vector store — na
 - **Wiki pages**: `kebab-case.md` matching the page title. Example: `wiki/mechanical-tension.md`, `wiki/andrej-karpathy.md`.
 - **Source files in `raw/`**: `YYYY-MM-DD-source-title.<ext>`. Example: `raw/2026-04-11-karpathy-llm-wiki.md`. The date prefix makes recent sources easy to find with `ls raw/ | sort -r | head`.
 - **Audit files**: `wiki/audits/audit-YYYY-MM-DD.md`.
-- **Index categories**: use the exact headers in `wiki/index.md` — `Entities`, `Concepts`, `Sources`, `Analyses`, `Audits`. Don't invent new categories without updating this schema file.
+- **Index categories**: use the exact headers in `wiki/index.md` — `Entities`, `Concepts`, `Skills`, `Sources`, `Analyses`, `Audits`. Don't invent new categories without updating this schema file.
 
 A missing or inconsistent name is worse than a missing page — it breaks routing.
 
@@ -76,7 +76,7 @@ Rules:
 
 ## `wiki/index.md` — the catalog
 
-Content-oriented catalog. Organized by category (Entities, Concepts, Sources, Analyses, Audits). Each entry is one line:
+Content-oriented catalog. Organized by category (Entities, Concepts, Skills, Sources, Analyses, Audits). Each entry is one line:
 
 ```
 - [[page-name]] — one-line summary
@@ -88,7 +88,7 @@ Update the index on every ingest. A page that exists in `wiki/` but not in `inde
 
 ## `wiki/log.md` — the timeline
 
-Chronological, append-only. Every operation appends exactly one entry with this grep-friendly prefix:
+Newest first, add-only: never edit or delete past entries. Every operation adds exactly one entry at the top (just under the header), with this grep-friendly prefix:
 
 ```
 ## [YYYY-MM-DD] <op> | <title>
@@ -106,7 +106,7 @@ Read raw/2026-04-11-karpathy-llm-wiki.md. Created [[llm-wiki-pattern]],
 with wiki approach. Added wikilink from [[obsidian]] to [[llm-wiki-pattern]].
 ```
 
-Utility: `grep "^## \[" wiki/log.md | tail -5` returns the last 5 operations.
+Utility: `grep "^## \[" wiki/log.md | head -5` returns the 5 most recent operations (the log is newest-first).
 
 ---
 
@@ -165,8 +165,8 @@ For autonomous auditing plus quality-gated web research to fill gaps, use the `w
 ## Navigation quick reference
 
 ```bash
-# Last 5 operations
-grep "^## \[" wiki/log.md | tail -5
+# Last 5 operations (the log is newest-first)
+grep "^## \[" wiki/log.md | head -5
 
 # All lint passes
 grep "^## \[.*lint" wiki/log.md
@@ -199,3 +199,4 @@ Rules:
 - If graphify-out/wiki/index.md exists, use it for broad navigation instead of raw source browsing.
 - Read graphify-out/GRAPH_REPORT.md only for broad architecture review or when query/path/explain do not surface enough context.
 - After modifying code, run `graphify update .` to keep the graph current (AST-only, no API cost).
+- `graphify update .` re-extracts code only. After changing wiki/markdown pages, run `/graphify . --update` (semantic, incremental) instead. Never run `graphify update .` from a checkout that lacks the gitignored local-only files, such as a cloud session: it shrinks the graph (see [[graphify]]).

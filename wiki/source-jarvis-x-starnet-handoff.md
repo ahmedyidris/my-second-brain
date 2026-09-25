@@ -2,9 +2,10 @@
 title: Source — Jarvis X StarNet Handoff
 tags: [source, jarvis-x, starnet, handoff, as-built]
 sources:
+  - raw/2026-09-25-ahmed-rulings-machine-and-model-priority.md
   - raw/2026-09-24-jarvis-x-starnet-handoff.md
 related: [[jarvis-x]], [[jarvis-x-runtime]], [[jarvis-x-openai-compatible-api]], [[starnet]], [[jarvis-x-station-view]], [[aider]], [[crostini]], [[ipv6-dns-truncation-crostini]], [[groq]], [[gemini]], [[openrouter]], [[free-api-tiers]], [[ollama]], [[hermes-agent]], [[jarvis-x-voice-engine]], [[jarvis-x-app]], [[jarvis-x-hardware]], [[universal-model-layer]], [[the-council]], [[constitutional-autonomy]], [[jarvis-x-plan-vs-reality]], [[source-jarvis-x-v2-ascension-plan]], [[source-deepseek-jarvis-x-master-plan]]
-last_updated: 2026-09-24
+last_updated: 2026-09-25
 ---
 
 # Source — Jarvis X StarNet Handoff
@@ -59,7 +60,7 @@ A technical handoff for [[jarvis-x]] and [[starnet]], dated 2026-09-24. The auth
 As of the 2026-09-24 handoff:
 
 - **Jarvis X is running.** supervisord, under the systemd unit `jarvis-supervisord.service`, runs `hermes-agent`, `hermes-api` (uvicorn, port 8000) and a degraded `tts-worker`. Five model tiers are verified via `POST /api/ask`, and an OpenAI-compatible `/v1` adapter is live. The latest commit is `99652aa`. See [[jarvis-x-runtime]] and [[jarvis-x-openai-compatible-api]].
-- **The machine is not the one in the plans.** It is an ASUS Chromebook under Crostini (Debian 13 trixie), with an 11th Gen i5, no GPU, 14GB RAM and ~11GB free disk. Crostini resolves to IPv6 first, and on the IPv6 path, POST bodies to Cloudflare-fronted APIs (Groq, OpenRouter) get truncated. The fixes work system-wide and for Node, but not for Node's c-ares resolver. See [[crostini]] and [[jarvis-x-plan-vs-reality]].
+- **The machine is not the one in the plans.** (On 2026-09-25 the human confirmed it as the current machine; see [[jarvis-x-hardware]].) It is an ASUS Chromebook under Crostini (Debian 13 trixie), with an 11th Gen i5, no GPU, 14GB RAM and ~11GB free disk. Crostini resolves to IPv6 first, and on the IPv6 path, POST bodies to Cloudflare-fronted APIs (Groq, OpenRouter) get truncated. The fixes work system-wide and for Node, but not for Node's c-ares resolver. See [[crostini]] and [[jarvis-x-plan-vs-reality]].
 - **Free API access is narrow (Bug E).** Consumer AI subscriptions don't give API access. The body names Google AI Pro and says it's the "Same for most consumer subscriptions". What's free on the API: [[gemini]] `gemini-3.6-flash`, [[groq]] `openai/gpt-oss-20b` and `openai/gpt-oss-120b`, and [[openrouter]] free models with shared-pool rate limits. The as-built cloud tiers use the Gemini and Groq models from that list. See [[free-api-tiers]].
 - **StarNet works only with Ollama.** Groq runs kill its sidecar (Bug A, not diagnosed). The handoff's verdict is not to chase a StarNet clone and to add a "Station" tab to Jarvis instead (Priority 3). See [[starnet]] and [[jarvis-x-station-view]].
 - **Observation: several failures gave no clear error.** In fix 1, every provider "rejected silently" the quoted keys. In fix 2, `fast`/`smart`/`frontier` all answered "I am Qwen" because the system prompt was dropped. Bug A, still open, has the same shape: the sidecar dies with no error in `/tmp/starnet.log`.

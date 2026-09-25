@@ -3,8 +3,9 @@ title: Graphify
 tags: [tooling, knowledge-graph, codebase, navigation]
 sources:
   - raw/2026-07-28-graphify-output-structure.md
+  - raw/2026-09-25-graphify-update-cloud-test.md
 related: [[llm-wiki-pattern]], [[second-brain]], [[jarvis-x]], [[the-council]]
-last_updated: 2026-07-28
+last_updated: 2026-09-25
 ---
 
 # Graphify
@@ -41,11 +42,17 @@ graphify-out/
 ## Commands
 
 ```bash
-graphify update .                    # rebuild graph (AST-only, free)
+graphify update .                    # rebuild graph (AST-only, free): re-extracts CODE only
 graphify query "how does X work"     # scoped subgraph for a question
 graphify path "concept-A" "concept-B"  # relationship path between two nodes
 graphify explain "concept"           # focused explanation of one concept
 ```
+
+## `update` vs `--update` (gotcha, tested 2026-09-25)
+
+- `graphify update .` re-extracts **code files only**, with no LLM. In the words of its own output (graphify 0.9.67): "Code graph updated. For doc/paper/image changes run /graphify --update in your AI assistant." This vault is almost all markdown, so wiki edits need `/graphify . --update`, the skill's incremental semantic pass.
+- **Don't run `graphify update .` from a checkout that lacks your local-only files**, such as a cloud session. The committed graph was built from files that are gitignored (for example `raw/Apps Downloaded/...`). In a test on a copy of this vault, it rewrote `graph.json` from 811 nodes down to 585, even without `--force`. It did back up the old graph to `graphify-out/2026-09-25/` first.
+- Safe routine: after pulling wiki changes on the machine that holds the full vault, run `/graphify . --update` in Claude Code.
 
 ## This vault (~/my-second-brain)
 
@@ -153,4 +160,4 @@ graphify query "what connects DigestAuth to Response?" --graph graphify-out/grap
 
 ## Workflow in CLAUDE.md
 
-The vault `CLAUDE.md` instructs: run `graphify query "<question>"` before broad source browsing. The graph returns a scoped subgraph — much smaller context than raw grep. After modifying code/wiki, run `graphify update .` to keep the graph current.
+The vault `CLAUDE.md` instructs: run `graphify query "<question>"` before broad source browsing. The graph returns a scoped subgraph — much smaller context than raw grep. After modifying code/wiki, run `graphify update .` to keep the graph current. Caveat: that only re-extracts code. For wiki pages use `/graphify . --update`, and run it on the machine that holds the full vault (see the gotcha above).

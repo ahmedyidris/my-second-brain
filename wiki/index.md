@@ -9,7 +9,7 @@ Each entry: `- [[page-name]] — one-line summary`
 - [[research-vault]] — second LLM wiki at ~/research-vault; separate vault for research topics
 - [[jarvis-x]] — sovereign self-improving personal AI OS; "the system that runs the house"
 - [[hermes-agent]] — local self-improving core brain (Ollama, 70+ skills, cross-session memory)
-- [[jarvis-x-hardware]] — Lenovo Y50-70 specs, CPU-only strategy, and hardware upgrade roadmap
+- [[jarvis-x-hardware]] — current machine: ASUS Chromebook (Crostini, CPU-only, 14GB); the Lenovo Y50-70 kept as the earlier plan machine
 - [[the-council]] — multi-agent team: Claude Orchestrator + 12 specialist agents
 - [[obsidian]] — GUI markdown second-brain layer in Jarvis X; paired with ChromaDB via brain-mcp
 - [[ollama]] — local model runtime; powers hermes-agent and the universal-model-layer local tier
@@ -39,6 +39,7 @@ Each entry: `- [[page-name]] — one-line summary`
 - [[jarvis-x-income-roadmap]] — bilingual AI operations specialist path; platforms + certifications
 - [[jarvis-x-app]] — v2 delivery: FastAPI + PWA + Tauri; Linux → Windows → mobile → macOS
 - [[jarvis-x-station-view]] — planned "Station" tab in Jarvis X's React UI; the recommended path instead of a StarNet clone
+- [[jarvis-x-model-priority]] — the human's 2026-09-25 ladder: local + free open-source (incl. Chinese open models via Ollama) → Google free → Anthropic → OpenAI; Kimi in the paid slot
 - [[free-api-tiers]] — consumer AI subscriptions don't grant API access; what is actually free (Gemini flash, Groq gpt-oss, OpenRouter)
 - [[ipv6-dns-truncation-crostini]] — Crostini resolves IPv6 first, truncating POSTs to Cloudflare-fronted APIs; Node's https/c-ares ignores the usual fix
 

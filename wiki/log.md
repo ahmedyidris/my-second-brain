@@ -1,6 +1,6 @@
 # Wiki Log
 
-Chronological, append-only. One entry per operation.
+Newest first, add-only: new entries go at the top, and past entries are never edited or deleted. One entry per operation.
 
 Format:
 ```
@@ -9,7 +9,7 @@ Format:
 
 Operations: `ingest`, `query`, `lint`, `update`, `init`.
 
-Utility: `grep "^## \[" wiki/log.md | tail -5` returns the last 5 operations.
+Utility: `grep "^## \[" wiki/log.md | head -5` returns the 5 most recent operations.
 
 ---
 

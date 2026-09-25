@@ -2,11 +2,12 @@
 title: Jarvis X Runtime
 tags: [jarvis-x, runtime, deployment, entity, as-built]
 sources:
+  - raw/2026-09-25-ahmed-rulings-machine-and-model-priority.md
   - raw/2026-09-24-jarvis-x-starnet-handoff.md
   - raw/Jarvis X Resources/Jarvis X/Jarvis_X_v2_Ascension_Plan.md
   - raw/Jarvis X Resources/DeepSeek Files/DeepSeek_Jarvis_X_Master_Plan.md
 related: [[jarvis-x]], [[jarvis-x-openai-compatible-api]], [[hermes-agent]], [[jarvis-x-voice-engine]], [[jarvis-x-app]], [[universal-model-layer]], [[ollama]], [[groq]], [[gemini]], [[crostini]], [[jarvis-x-hardware]], [[constitutional-autonomy]], [[source-jarvis-x-starnet-handoff]], [[jarvis-x-plan-vs-reality]], [[jarvis-x-station-view]], [[free-api-tiers]], [[aider]], [[starnet]], [[openrouter]]
-last_updated: 2026-09-24
+last_updated: 2026-09-25
 ---
 
 # Jarvis X Runtime
@@ -145,7 +146,9 @@ The handoff's [[aider]] launch command also runs from `~/jarvis-x`.
 
 The machine is an ASUS Chromebook running Crostini (Debian 13 trixie) — see [[crostini]] for its network and memory quirks and [[jarvis-x-hardware]] for the hardware.
 
-> **Disagreement (2026-09-24 handoff vs DeepSeek Jarvis X Master Plan):** [[jarvis-x-hardware]] describes the body as a Lenovo Y50-70 on Pop!_OS 24.04 LTS. The handoff's environment is an ASUS Chromebook (11th Gen i5, no GPU, 14GB RAM) under Crostini. The handoff does not say whether the Lenovo was retired or is still part of the plan. Left for the human to resolve.
+> **Disagreement (2026-09-24 handoff vs DeepSeek Jarvis X Master Plan):** [[jarvis-x-hardware]] describes the body as a Lenovo Y50-70 on Pop!_OS 24.04 LTS. The handoff's environment is an ASUS Chromebook (11th Gen i5, no GPU, 14GB RAM) under Crostini. The handoff does not say whether the Lenovo was retired or is still part of the plan.
+
+> **Resolved by the human (2026-09-25):** the Chromebook is the current machine ("Current machine is chrome boo[k]"). See [[jarvis-x-hardware]].
 
 | Item | Value (as of the 2026-09-24 handoff) |
 |------|--------------------------------------|

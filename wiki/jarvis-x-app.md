@@ -2,10 +2,11 @@
 title: Jarvis X App
 tags: [jarvis-x, v2, delivery, pwa, app]
 sources:
+  - raw/2026-09-25-ahmed-rulings-machine-and-model-priority.md
   - raw/2026-09-24-jarvis-x-starnet-handoff.md
   - raw/Jarvis X Resources/Jarvis X/Jarvis_X_v2_Ascension_Plan.md
 related: [[jarvis-x]], [[jarvis-x-hardware]], [[universal-model-layer]], [[constitutional-autonomy]], [[jarvis-x-runtime]], [[jarvis-x-openai-compatible-api]], [[jarvis-x-station-view]], [[starnet]], [[crostini]], [[source-jarvis-x-starnet-handoff]], [[jarvis-x-plan-vs-reality]]
-last_updated: 2026-09-24
+last_updated: 2026-09-25
 ---
 
 # Jarvis X App
@@ -56,6 +57,8 @@ As of the 2026-09-24 handoff ([[source-jarvis-x-starnet-handoff]]):
 
 > **Disagreement (2026-09-24 handoff vs Jarvis X v2 Ascension Plan):** this page's timeline has a Tauri Windows build in Wk 7–8 (the plan's Wk 7–8 line reads "content engine v1 → first 5 bilingual pieces; Windows run-through" and does not mention Tauri; its architecture section says the UI is wrapped with Tauri "later for Windows/macOS desktop builds"). The handoff says the Tauri build is 30–60 min and needs 8GB disk + 6GB RAM, and is "rebuildable but not useful for daily work on this hardware"; StarNet's Tauri shell was built once and then deleted (slow, no benefit over web); and PART 8 says "Do not build the Tauri desktop shell for daily use. Web UI is faster and identical in function." The only Tauri build the handoff records is StarNet's, so it is not stated whether the build figures and the PART 8 rule refer to StarNet's shell, a Jarvis shell, or both. Either way, this concerns daily use on the current machine and does not necessarily cancel a Tauri build for distribution (the plan's Windows target). Whether the Tauri step stays in the roadmap is for the human to decide.
 
-> **Disagreement (2026-09-24 handoff vs Jarvis X v2 Ascension Plan):** this page's rollout table lists ① Linux (Pop!_OS) as "Native, already running". The raw v2 plan's platform order reads "① Linux (native, first)". "Pop!_OS" comes from the plan's v1 platform column ("Pop!_OS only") and its execution prompt ("a fresh Pop!_OS terminal"), and the plan text does not contain "already running". The handoff's Jarvis runs on Crostini (Debian 13 trixie) on an ASUS Chromebook ([[crostini]]). The handoff does not say whether Pop!_OS is still a target. The table wording is kept as it was. Left for the human to resolve.
+> **Disagreement (2026-09-24 handoff vs Jarvis X v2 Ascension Plan):** this page's rollout table lists ① Linux (Pop!_OS) as "Native, already running". The raw v2 plan's platform order reads "① Linux (native, first)". "Pop!_OS" comes from the plan's v1 platform column ("Pop!_OS only") and its execution prompt ("a fresh Pop!_OS terminal"), and the plan text does not contain "already running". The handoff's Jarvis runs on Crostini (Debian 13 trixie) on an ASUS Chromebook ([[crostini]]). The handoff does not say whether Pop!_OS is still a target. The table wording is kept as it was.
+
+> **Partly resolved by the human (2026-09-25):** the Chromebook, which runs Linux under Crostini, is the current machine ([[jarvis-x-hardware]]). So step ① "Linux (native, first)" now means Debian 13 on Crostini, and "Pop!_OS" in the table is the plans' wording. Whether Pop!_OS stays a target isn't ruled on.
 
 Note: the handoff lists Node 22.x as "bundled for Tauri" alongside the system Node 20.x.

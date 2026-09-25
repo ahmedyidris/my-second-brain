@@ -15,7 +15,7 @@ Frontmatter: `title`, `tags`, `sources`, `related`, `last_updated`. Use `[[wikil
 
 ## Log format
 
-Every operation appends one entry:
+Every operation adds one entry at the top of `wiki/log.md` (the log is newest-first; past entries are never edited):
 
 ```
 ## [YYYY-MM-DD] <op> | <title>

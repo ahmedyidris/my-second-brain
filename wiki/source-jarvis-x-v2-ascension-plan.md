@@ -2,10 +2,11 @@
 title: Source — Jarvis X v2 Ascension Plan
 tags: [source, jarvis-x, v2]
 sources:
+  - raw/2026-09-25-ahmed-rulings-machine-and-model-priority.md
   - raw/Jarvis X Resources/Jarvis X/Jarvis_X_v2_Ascension_Plan.md
   - raw/2026-09-24-jarvis-x-starnet-handoff.md
 related: [[jarvis-x]], [[universal-model-layer]], [[constitutional-autonomy]], [[jarvis-x-voice-engine]], [[jarvis-x-content-engine]], [[source-deepseek-jarvis-x-master-plan]], [[source-jarvis-x-starnet-handoff]], [[jarvis-x-plan-vs-reality]], [[jarvis-x-runtime]], [[jarvis-x-app]], [[crostini]], [[free-api-tiers]], [[starnet]]
-last_updated: 2026-09-24
+last_updated: 2026-09-25
 ---
 
 # Source — Jarvis X v2 Ascension Plan
@@ -47,4 +48,6 @@ The v2 update to [[jarvis-x]]. Overrides [[source-deepseek-jarvis-x-master-plan]
 - **App (§8):** the plan wraps the web UI with Tauri "later for Windows/macOS desktop builds". The handoff says "Do not build the Tauri desktop shell for daily use. Web UI is faster and identical in function." But the only Tauri shell the handoff records is StarNet's (built, then deleted), so it doesn't say whether this rule covers a Jarvis Tauri wrapper, or a build for distribution rather than daily use ([[jarvis-x-app]], [[starnet]]).
 - **Subscriptions:** the plan uses Claude/Gemini "while subs live". The handoff reports that consumer AI subscriptions don't give API access (Bug E) ([[free-api-tiers]]).
 
-> **Disagreement (2026-09-24 handoff vs Jarvis X v2 Ascension Plan):** the plan's binding constraints (§10) name a "CPU-only Y50-70", and the same §10 prompt asks for scripts "for a fresh Pop!_OS terminal". The handoff's machine is an ASUS Chromebook running Crostini (Debian 13 trixie). The handoff doesn't say whether the Y50-70 was retired or is still the target. Left for the human to resolve.
+> **Disagreement (2026-09-24 handoff vs Jarvis X v2 Ascension Plan):** the plan's binding constraints (§10) name a "CPU-only Y50-70", and the same §10 prompt asks for scripts "for a fresh Pop!_OS terminal". The handoff's machine is an ASUS Chromebook running Crostini (Debian 13 trixie). The handoff doesn't say whether the Y50-70 was retired or is still the target.
+
+> **Resolved by the human (2026-09-25):** the Chromebook is the current machine ("Current machine is chrome boo[k]"). See [[jarvis-x-hardware]]. The plan's other constraints ($0/month, 6–10 hrs/wk, Egypt/Payoneer, income-first 60/40) are not affected by the ruling.
