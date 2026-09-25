@@ -56,7 +56,10 @@ graphify explain "concept"           # focused explanation of one concept
 
 ## This vault (~/my-second-brain)
 
-- **811 nodes**, **1,980 edges**, **63 communities** (as of 2026-07-28, after .graphifyignore applied)
+- **1,119 nodes**, **2,514 edges**, **103 communities** (as of the 2026-09-25 refresh).
+  - The 47 files changed since the 2026-07-28 build were re-extracted structurally and merged into the existing graph with pruning off.
+  - The 411 nodes from local-only files were kept, and `manifest.json` was left unchanged, so the next local `--update` still sees the true local state. Details: `graphify-out/GRAPH_REPORT.md`, "Graph Freshness".
+- Before that: **811 nodes**, **1,980 edges**, **63 communities** (as of 2026-07-28, after .graphifyignore applied)
 - `graphify-out/graph.html` — interactive browser view
 - `graphify-out/GRAPH_REPORT.md` — highlights and suggested queries
 

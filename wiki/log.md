@@ -13,6 +13,24 @@ Utility: `grep "^## \[[0-9]" wiki/log.md | head -5` returns the 5 most recent op
 
 ---
 
+## [2026-09-25] update | Graphify refresh (structural, merge-only)
+
+The committed graph was purely structural (all 811 nodes had `_origin: ast`). 411 of its nodes come from gitignored files that exist only on the human's machine.
+
+In a scratch copy:
+- re-extracted the 47 files changed since `df27757` with graphify's structural extractor;
+- merged them into the existing graph with `build_merge` and pruning off;
+- re-clustered;
+- kept community names where at least 40% of the members overlap an old community, and named new communities after their main file;
+- re-signed `.graphify_labels.json.sig`;
+- regenerated `graph.html` and `GRAPH_REPORT.md`.
+
+Result: 1,119 nodes, 2,514 edges, 103 communities. All 411 local-only nodes were kept, and the health check found 0 dangling edges.
+
+`manifest.json` and the cache were left unchanged, so the human's next `/graphify . --update` on the Chromebook sees the real local state. Updated the stats on [[graphify]] and in the index.
+
+---
+
 ## [2026-09-25] lint | Audit after the handoff ingest and rulings
 
 Script checks over all 44 pages: links, frontmatter, source paths, titles and filenames, index coverage, orphans and secrets. Wrote [[audits/audit-2026-09-25]].
