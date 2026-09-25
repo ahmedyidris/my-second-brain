@@ -2,6 +2,7 @@
 title: Free API Tiers
 tags: [concept, providers, free-tier, api-access, cost, jarvis-x]
 sources:
+  - raw/2026-09-25-ahmed-rulings-2-providers-tiers-direction.md
   - raw/2026-09-24-jarvis-x-starnet-handoff.md
   - raw/Jarvis X Resources/Jarvis X/Jarvis_X_v2_Ascension_Plan.md
   - raw/Jarvis X Resources/DeepSeek Files/DeepSeek_Jarvis_X_Master_Plan.md
@@ -73,6 +74,12 @@ Notes on the table:
 
 ### How this maps to the 2026-09-25 ruling
 
+Follow-up rulings (2026-09-25, second reply, `raw/2026-09-25-ahmed-rulings-2-providers-tiers-direction.md`):
+
+- **Free counts as free.** A model that is 100% free is in the free tier under its official name, even an OpenAI-named one.
+- **List free models by provider.** A free model is listed under every provider that serves it free. The full catalog, laid out this way, is on [[jarvis-x-model-priority]].
+- **Budget:** "Still zero but leave it as an option". Paid routes, including OpenRouter's one-time $10, stay listed as options only.
+
 The human's ruling ([[jarvis-x-model-priority]]) sets the order for plans:
 
 1. Local models and free open-source tiers "that could work on any machine specially chrome os", including "top tier Chinese open source models" via Ollama.
@@ -87,10 +94,10 @@ The ruling names only Google, Anthropic, OpenAI and Kimi, so the slot for every 
 | Free route | Slot (interpretation) | Why |
 |------------|-----------------------|-----|
 | Local [[ollama]] models (Qwen, DeepSeek, GLM and small Gemma tags that fit the Chromebook) | 1 | Local and open. They have to fit a CPU-only machine with ~11GB free disk. The research note's fit judgments assume 6–9GB RAM free ([[jarvis-x-hardware]]). See [[chinese-open-source-models]] |
-| [[groq]] free tier | 1 | A free hosted tier for open-weight models. But gpt-oss is made by OpenAI, which is slot 4 as a maker. [[jarvis-x-model-priority]] files it under slot 1, as interpretation; see its question (a) |
+| [[groq]] free tier | 1 | A free hosted tier for open-weight models. But gpt-oss is made by OpenAI, which is slot 4 as a maker. Resolved by follow-up ruling 1: free counts as free, so it stays in slot 1 under its official name ([[jarvis-x-model-priority]]) |
 | [[openrouter]] `:free` models | 1 | Free hosted open models, including Chinese families and Kimi `:free` listings* |
 | [[ollama]] cloud free plan | 1, probably | Free, but the starter model set is unverified and anything beyond it is billed per token |
-| Gemma open models (local via Ollama, or `:free` on OpenRouter*) | 1 (also 2) | Open and runnable locally, so slot 1. Also "from google", so slot 2. Where plans should list them is question (b) on [[jarvis-x-model-priority]] |
+| Gemma open models (local via Ollama, or `:free` on OpenRouter*) | 1 (also 2) | Open and runnable locally, so slot 1. Also "from google", so slot 2. Resolved by follow-up ruling 2: "if it fits both let it be in both" ([[jarvis-x-model-priority]]) |
 | [[gemini]] API free tier; Gemini CLI free quota | 2 | "the most free available from google" |
 | Anthropic new-user credits | 3 | A small one-time amount; no ongoing free tier |
 | OpenAI "Free" usage tier* | 4 | Which models it covers is unverified |

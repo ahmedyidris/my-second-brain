@@ -13,6 +13,29 @@ Utility: `grep "^## \[[0-9]" wiki/log.md | head -5` returns the 5 most recent op
 
 ---
 
+## [2026-09-25] update | Apply the human's follow-up rulings (free vs paid, by-provider catalog, tier names, direction)
+
+Source added: `raw/2026-09-25-ahmed-rulings-2-providers-tiers-direction.md` (verbatim reply to the eight open questions).
+
+Resolved:
+- **gpt-oss:** free counts as free, under its official name, so it's slot 1.
+- **Gemma:** listed in both slot 1 and slot 2.
+- **Kimi:** each paid Kimi model is a standalone paid entry. Free models are listed under every provider that serves them.
+- **Tier names:** they stay as they are, picked StarNet-style (local, or a provider's API).
+- **Lenovo roadmap:** parked.
+- **Budget:** $0/month still binds, with paid routes as options.
+- **Tokens:** "we need more tokens". Recommended adding Gemini Flash-Lite and spreading load across the free providers; not yet made in Jarvis.
+
+Still open: which adapter the stream:false warning means (the human: "I don't know").
+
+New direction, recorded on [[starnet]], [[jarvis-x-station-view]] and [[jarvis-x]]: complete both StarNet and Jarvis and merge them. It is kept alongside the handoff's "do not chase a StarNet clone" as an explicit Disagreement. What "merge" means concretely, and in which repo, is left for the human.
+
+Pages touched:
+- [[jarvis-x-model-priority]]: restructured into a catalog by access route (Local/Ollama, Groq, OpenRouter, Ollama cloud, Google, then paid standalone Anthropic, OpenAI and Kimi); a new "Getting more tokens" section.
+- [[universal-model-layer]], [[free-api-tiers]], [[groq]], [[openrouter]], [[gemini]], [[the-council]], [[aider]], [[chinese-open-source-models]], [[jarvis-x-hardware]], [[jarvis-x-plan-vs-reality]].
+
+---
+
 ## [2026-09-25] update | Graphify refresh (structural, merge-only)
 
 The committed graph was purely structural (all 811 nodes had `_origin: ast`). 411 of its nodes come from gitignored files that exist only on the human's machine.

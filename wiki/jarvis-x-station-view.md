@@ -2,11 +2,12 @@
 title: Jarvis X Station View
 tags: [jarvis-x, multi-agent, frontend, planned]
 sources:
+  - raw/2026-09-25-ahmed-rulings-2-providers-tiers-direction.md
   - raw/2026-09-24-jarvis-x-starnet-handoff.md
   - raw/Jarvis X Resources/Jarvis X/Jarvis_X_v2_Ascension_Plan.md
   - raw/Jarvis X Resources/DeepSeek Files/DeepSeek_Jarvis_X_Master_Plan.md
 related: [[jarvis-x]], [[starnet]], [[the-council]], [[jarvis-x-app]], [[jarvis-x-runtime]], [[jarvis-x-openai-compatible-api]], [[source-jarvis-x-starnet-handoff]], [[jarvis-x-plan-vs-reality]]
-last_updated: 2026-09-24
+last_updated: 2026-09-25
 ---
 
 # Jarvis X Station View
@@ -35,6 +36,10 @@ The handoff's plan, as written (PART 7, Priority 3): "Instead of a StarNet clone
 | Workers | One background worker per agent |
 
 > This is a real weekend project. StarNet is the ambition; a station tab in Jarvis is achievable.
+
+## Direction update (2026-09-25)
+
+The human now wants to "complete both and merge": finish StarNet and Jarvis, and bring them together ([[starnet]], "Direction from the human"). The station tab was proposed in the handoff as an alternative to building out StarNet. Implication (interpretation): it may instead become the merge point, where StarNet's agents show up inside Jarvis's frontend. What "merge" means concretely is still for the human to confirm.
 
 ## Why a station tab instead of StarNet
 

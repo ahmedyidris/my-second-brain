@@ -2,9 +2,10 @@
 title: StarNet
 tags: [starnet, ai-os, multi-agent, entity, sidecar, node, jarvis-x]
 sources:
+  - raw/2026-09-25-ahmed-rulings-2-providers-tiers-direction.md
   - raw/2026-09-24-jarvis-x-starnet-handoff.md
 related: [[jarvis-x]], [[jarvis-x-station-view]], [[jarvis-x-openai-compatible-api]], [[jarvis-x-runtime]], [[ollama]], [[groq]], [[gemini]], [[openrouter]], [[crostini]], [[ipv6-dns-truncation-crostini]], [[the-council]], [[constitutional-autonomy]], [[source-jarvis-x-starnet-handoff]], [[jarvis-x-app]], [[jarvis-x-hardware]], [[jarvis-x-plan-vs-reality]], [[free-api-tiers]]
-last_updated: 2026-09-24
+last_updated: 2026-09-25
 ---
 
 # StarNet
@@ -162,6 +163,30 @@ Then send a message and watch the terminal. The exit reason will appear there. A
 ## Safety note
 
 "Do not run YOLO-mode agents on this machine. The venv and StarNet workspace have both been destroyed by that pattern." See [[constitutional-autonomy]].
+
+## Direction from the human (2026-09-25)
+
+Source: `raw/2026-09-25-ahmed-rulings-2-providers-tiers-direction.md`.
+
+> "I was actually trying to set up Starnet and merge with Jarvis, then I was thinking of building Jarvis using Starnet but it didn't work with me then I thought it could be built as part of Jarvis, now I want to complete both and merge in this repo in a meaning that I want to continue working on Jarvis when I setup Starnet"
+
+In order, the attempts were:
+
+1. set StarNet up and merge it with Jarvis;
+2. build Jarvis using StarNet, which didn't work;
+3. build StarNet's ideas as part of Jarvis (the handoff's [[jarvis-x-station-view]]).
+
+The goal now is to **complete both and merge them**, so that setting up StarNet also moves Jarvis forward.
+
+> **Disagreement (2026-09-24 handoff PART 8 vs the human's 2026-09-25 direction):** the handoff says "Do not chase a StarNet clone... Add a station view to Jarvis instead." The human now wants both StarNet and Jarvis completed and merged. The newer statement is the human's own decision. The handoff's advice is kept as the record of what was tried.
+>
+> Not yet defined:
+> - what "merge" means concretely: StarNet using Jarvis as its model gateway, StarNet's code moved into the jarvis-x repo, or the Station view absorbing StarNet;
+> - which repo "this repo" refers to.
+>
+> Left for the human to confirm.
+
+Implication (interpretation): the smallest step that serves both is the handoff's own Priority 2, routing StarNet through Jarvis's [[jarvis-x-openai-compatible-api]]. That gives StarNet Jarvis's working providers, and would sidestep Bug A if that bug is on the Groq path. Every StarNet run then also exercises Jarvis.
 
 ## Verdict (PART 8)
 

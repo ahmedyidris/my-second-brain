@@ -2,6 +2,7 @@
 title: The Council
 tags: [jarvis-x, multi-agent, architecture]
 sources:
+  - raw/2026-09-25-ahmed-rulings-2-providers-tiers-direction.md
   - raw/2026-09-24-jarvis-x-starnet-handoff.md
   - raw/Jarvis X Resources/DeepSeek Files/DeepSeek_Jarvis_X_Master_Plan.md
   - raw/Jarvis X Resources/Jarvis X/Jarvis_X_v2_Ascension_Plan.md
@@ -101,5 +102,5 @@ The free-or-paid column comes from the 2026-09-25 research ([[source-model-lands
 Notes on the table:
 
 - **Chinese open models in slot 1:** two seats are Chinese families, Kimi (Moonshot) and DeepSeek; the research lists both among the Chinese open-source families on Ollama. Kimi has no slot-1 route that the research could verify (too big for local use, paid API), which leaves DeepSeek. The local R1 tags are a different model line from V4, with 128K context [S] (the research suggests `deepseek-r1:8b` for reasoning, as its own inference), so whether they can fill the V4 seats' roles (terminal automation with "1M context"; boilerplate and parallel bulk work) isn't in any source. The as-built `local` tier already runs a Chinese open model, Alibaba's `qwen2.5:3b` ([[jarvis-x-model-priority]]).
-- **Kimi's place in the paid slot:** the ruling ranks Anthropic above OpenAI, but it doesn't say where Kimi sits relative to them. Open question for the human.
-- **gpt-oss:** [[jarvis-x-model-priority]] reads the as-built Groq tiers (`openai/gpt-oss-20b`, `openai/gpt-oss-120b`) as slot 1, free hosted tiers. They're OpenAI's open-weight models, so whether they count as slot 1 or slot 4 is an open question for the human. The handoff doesn't tie them to the Codex CLI seat (see "What is actually running" above).
+- **Kimi's place in the paid slot:** this was open. **Resolved (2026-09-25, follow-up ruling 3):** "Kimi is Kimi". Each paid Kimi model is a standalone paid entry, and any free Kimi route is listed under the provider that serves it (e.g. OpenRouter `moonshotai/kimi-k2.6:free`, if live). See [[jarvis-x-model-priority]].
+- **gpt-oss:** [[jarvis-x-model-priority]] reads the as-built Groq tiers (`openai/gpt-oss-20b`, `openai/gpt-oss-120b`) as slot 1, free hosted tiers. They're OpenAI's open-weight models, so their slot was an open question. **Resolved (2026-09-25, follow-up ruling 1):** free counts as free, keeping the official name, so Groq's free `openai/gpt-oss-*` models are in the free tier (slot 1). The handoff doesn't tie them to the Codex CLI seat (see "What is actually running" above).

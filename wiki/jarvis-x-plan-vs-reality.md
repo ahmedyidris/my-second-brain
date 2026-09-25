@@ -2,6 +2,7 @@
 title: Jarvis X Plan vs Reality
 tags: [analysis, jarvis-x, as-built, plans]
 sources:
+  - raw/2026-09-25-ahmed-rulings-2-providers-tiers-direction.md
   - raw/2026-09-25-ahmed-rulings-machine-and-model-priority.md
   - raw/2026-09-25-model-landscape-research.md
   - raw/2026-09-24-jarvis-x-starnet-handoff.md
@@ -65,11 +66,18 @@ The human answered part of the handoff's open questions on 2026-09-25 (`raw/2026
 
 **Still open:**
 
-- The "do not re-enable stream: false" warning: does it refer to StarNet's adapter or to Jarvis's `/v1` adapter? The ruling didn't answer it.
-- The tier names: did `quality`/`frontier` replace the plan's `long`?
-- The Lenovo upgrade roadmap: does it still apply?
-- Kimi's order within the paid slot, relative to Anthropic and OpenAI.
-- Whether gpt-oss (OpenAI's open-weight model, served free on Groq) counts as slot 1 or slot 4.
+- The "do not re-enable stream: false" warning: does it refer to StarNet's adapter or to Jarvis's `/v1` adapter? Still unknown (the human: "I don't know").
+
+**Resolved by the follow-up ruling (2026-09-25, second reply; `raw/2026-09-25-ahmed-rulings-2-providers-tiers-direction.md`):**
+
+- Tier names stay as they are (`local`, `fast`, `smart`, `quality`, `frontier`), chosen StarNet-style: local, or a provider's API.
+- The Lenovo upgrade roadmap is parked ("ignore it for now").
+- Kimi: each paid Kimi model is a standalone paid entry, and free Kimi routes are listed under their provider.
+- gpt-oss: free counts as free, under its official name, so it's slot 1.
+- Gemma: listed in both slot 1 and slot 2.
+- Budget: still $0/month, with paid routes kept as options.
+- Tokens: "we need more tokens". Recommendation: add Gemini Flash-Lite and spread load across the free providers ([[jarvis-x-model-priority]]).
+- Direction: complete both StarNet and Jarvis, and bring them together. See [[starnet]] and [[jarvis-x-station-view]].
 
 The other open questions in the table are unchanged.
 

@@ -2,6 +2,7 @@
 title: Universal Model Layer
 tags: [jarvis-x, v2, architecture, models, as-built]
 sources:
+  - raw/2026-09-25-ahmed-rulings-2-providers-tiers-direction.md
   - raw/2026-09-24-jarvis-x-starnet-handoff.md
   - raw/Jarvis X Resources/Jarvis X/Jarvis_X_v2_Ascension_Plan.md
   - raw/Jarvis X Resources/DeepSeek Files/DeepSeek_Jarvis_X_Master_Plan.md
@@ -126,7 +127,9 @@ Their as-built state is unknown.
 >
 > Unknown: whether `quality`/`frontier` replaced `long`; whether the missing providers were dropped, deferred, or sit behind the fallback chain; and why `frontier` duplicates `quality`. Left for the human to resolve.
 >
-> The human's 2026-09-25 priority ruling puts Anthropic in slot 3 and Google's free tier in slot 2; the as-built routing (local Qwen, then free Groq gpt-oss, then free Gemini flash) already follows that order. The ruling settles provider order only. The tier-names question (the plan's `long` vs the as-built `quality`/`frontier`, and why `frontier` duplicates `quality`) is still open. See [[jarvis-x-model-priority]].
+> The human's 2026-09-25 priority ruling puts Anthropic in slot 3 and Google's free tier in slot 2; the as-built routing (local Qwen, then free Groq gpt-oss, then free Gemini flash) already follows that order. The ruling settles provider order only. The tier-names question (the plan's `long` vs the as-built `quality`/`frontier`) was open.
+>
+> **Resolved (2026-09-25, follow-up ruling 4):** "Tier names should be as they are, copy Starnet way, it should be either by provider using api or local". The as-built names `local`, `fast`, `smart`, `quality` and `frontier` stay. Each tier is a route, either local (Ollama) or a provider's API, the way StarNet picks "provider → model". Why `frontier` currently duplicates `quality` is not addressed. See [[jarvis-x-model-priority]].
 
 > **Disagreement (2026-09-24 handoff vs Jarvis X v2 Ascension Plan):** the plan's interface is a CLI, `jj ask "..." --tier ...`. The handoff shows HTTP interfaces (`POST /api/ask`, `GET /v1/models`, `POST /v1/chat/completions`) and a `hermes` CLI, but it doesn't mention `jj` at all, so whether the `jj ask` CLI exists is unknown. Left for the human to resolve.
 
@@ -149,7 +152,7 @@ How the plan's registered providers (table above) line up. This is interpretatio
 | Provider | Slot under the ruling | Note |
 |----------|-----------------------|------|
 | Ollama (local) | 1 | Local-first. This also matches the key constraint: boot with zero cloud keys. Chinese open models: [[chinese-open-source-models]] |
-| Groq | 1 | A free hosted tier for open-weight models. Its gpt-oss models are made by OpenAI, and [[jarvis-x-model-priority]] files them under slot 1 as interpretation (its question (a)). See [[groq]] |
+| Groq | 1 | A free hosted tier for open-weight models. Its gpt-oss models are made by OpenAI, and They're free, so they're in slot 1 under their official names (follow-up ruling 1). See [[groq]] |
 | OpenRouter | 1 | `:free` open models, availability unverified. See [[openrouter]] |
 | Gemini CLI/API | 2 | Free API tier and the Gemini CLI quota. See [[gemini]] |
 | Anthropic | 3 | Was `smart` in this wiki's compilation of the plan. No ongoing free API tier, only "a small amount of free credits" for new users ([[free-api-tiers]]) |
@@ -161,9 +164,11 @@ Observation: the as-built tiers (see "Tier table" above) use only slot-1 and slo
 
 Still open after the ruling:
 
-- the tier names (`long` vs `quality`/`frontier`), per the disagreement above;
-- where Kimi sits relative to Anthropic and OpenAI inside the paid group ([[jarvis-x-model-priority]]);
-- whether the v2 plan's "$0/month" still holds, given that the ruling mentions a "paid tiers slot" ([[free-api-tiers]]).
+- ~~the tier names~~: resolved, they stay as they are (ruling 4, above);
+- ~~where Kimi sits in the paid group~~: resolved, paid Kimi models are standalone paid entries (ruling 3, [[jarvis-x-model-priority]]);
+- ~~whether "$0/month" still holds~~: resolved, "Still zero but leave it as an option" (ruling 7);
+- why `frontier` duplicates `quality`: not addressed;
+- a Flash-Lite tier or fallback for more free tokens: recommended after ruling 8 ("we need more tokens"), not yet made (see [[jarvis-x-model-priority]], "Getting more tokens").
 
 ## Related
 

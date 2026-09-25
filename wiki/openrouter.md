@@ -2,6 +2,7 @@
 title: OpenRouter
 tags: [provider, model-provider, cloud, free-tier, jarvis-x, entity]
 sources:
+  - raw/2026-09-25-ahmed-rulings-2-providers-tiers-direction.md
   - raw/2026-09-24-jarvis-x-starnet-handoff.md
   - raw/Jarvis X Resources/Jarvis X/Jarvis_X_v2_Ascension_Plan.md
   - raw/2026-09-25-model-landscape-research.md
@@ -73,7 +74,7 @@ The ruling's slot 1 is "local models and free open source tiers that could work 
 - **Slot 1.** OpenRouter's `:free` models are free hosted open models. They need no local RAM or disk. Classing them as slot 1 is how [[jarvis-x-model-priority]] and this wiki read "free open source tiers".
 - **Chinese families.** DeepSeek, Qwen, Kimi, GLM and MiniMax all have `:free` listings*. See [[chinese-open-source-models]].
 - **Kimi.** The ruling says: "if kimi is not free treat as a paid subscription and put in paid tiers slot". The Kimi API itself is paid*, and Groq has deprecated its Kimi model* ([[groq]]). The research note's verdict, which is its own inference, is that the Kimi `:free` listings here (`moonshotai/kimi-k2.6:free`, `moonshotai/kimi-k2:free`) are the only possible free route, and only if still live. This bears on the Kimi K2.6 seat in [[the-council]]. Checking whether `moonshotai/kimi-k2.6:free` still answers would settle whether Kimi has a free route.
-- **gpt-oss `:free`.** These are OpenAI-made. They raise the same classification question as Groq's gpt-oss: slot 1 as a free open-weight tier, or slot 4 as OpenAI. See question (a) on [[jarvis-x-model-priority]], and [[groq]].
+- **gpt-oss `:free`.** These are OpenAI-made. They raised the same question as Groq's gpt-oss. **Resolved (2026-09-25, follow-up ruling 1):** free counts as free, keeping the official name, so OpenRouter's free `openai/gpt-oss-*:free` models are in the free tier (slot 1). Per ruling 3, they're listed under both OpenRouter and Groq ([[jarvis-x-model-priority]]).
 - **Gemma `:free`.** These are Google-made open models. See [[gemini]] for how Gemma fits the ladder.
 
 ## In StarNet

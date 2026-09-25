@@ -2,6 +2,7 @@
 title: Chinese Open-Source Models
 tags: [concept, models, open-weights, local-ai, chinese-models, ollama, jarvis-x]
 sources:
+  - raw/2026-09-25-ahmed-rulings-2-providers-tiers-direction.md
   - raw/2026-09-25-model-landscape-research.md
   - raw/2026-09-25-ahmed-rulings-machine-and-model-priority.md
   - raw/2026-09-24-jarvis-x-starnet-handoff.md
@@ -105,7 +106,7 @@ Every Kimi model on Ollama is cloud-only, so nothing runs locally on the Chromeb
 - **Groq:** `moonshotai/kimi-k2-instruct-0905` is deprecated (announced Mar 23, 2026, replaced by gpt-oss-120b)*.
 - **OpenRouter `:free`:** `moonshotai/kimi-k2.6:free`, `moonshotai/kimi-k2:free`, `moonshotai/kimi-dev-72b:free`*. Availability unverified.
 
-Under the ruling, Kimi goes in the paid slot because its API is not free. The one possible free route is OpenRouter `:free`, if still live ([[jarvis-x-model-priority]]).
+Under the follow-up ruling ("Kimi is Kimi"), each paid Kimi API model (K3, K2.6, K2.7 Code) is listed as a standalone paid model. Kimi's free routes are listed under the provider that serves them, currently OpenRouter's `moonshotai/kimi-k2.6:free`, `kimi-k2:free` and `kimi-dev-72b:free`* if still live ([[jarvis-x-model-priority]]).
 
 ## MiniMax
 

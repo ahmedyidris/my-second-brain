@@ -2,6 +2,7 @@
 title: Jarvis X
 tags: [jarvis-x, ai-os, sovereign, entity]
 sources:
+  - raw/2026-09-25-ahmed-rulings-2-providers-tiers-direction.md
   - raw/2026-09-25-ahmed-rulings-machine-and-model-priority.md
   - raw/2026-09-24-jarvis-x-starnet-handoff.md
   - raw/Jarvis X Resources/DeepSeek Files/DeepSeek_Jarvis_X_Master_Plan.md
@@ -81,6 +82,8 @@ supervisorctl -c ~/jarvis-x/config/supervisord.conf status
 ```
 
 Gotcha: systemd units don't inherit shell exports. So `jarvis-supervisord.service` needed an explicit `EnvironmentFile=/home/ahmedyidris/.jarvis-x/.env` drop-in (`/etc/systemd/system/jarvis-supervisord.service.d/env.conf`), plus `NODE_OPTIONS=--dns-result-order=ipv4first`. See [[jarvis-x-runtime]] and [[ipv6-dns-truncation-crostini]].
+
+**Direction (2026-09-25):** the human wants to complete both Jarvis and [[starnet]] and merge them, so that work on StarNet also moves Jarvis forward. The details are still to be confirmed ([[starnet]], "Direction from the human").
 
 Cloud tiers on Groq and Gemini are in active use alongside the local Ollama tier. Their models (`openai/gpt-oss-20b`, `openai/gpt-oss-120b`, `gemini-3.6-flash`) are the ones the handoff lists under free API access (Bug E; see [[free-api-tiers]]). The handoff does not say whether the system boots and functions with zero cloud keys (the "Zero-subscription" principle above), and reports no test of it.
 

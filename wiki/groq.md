@@ -2,6 +2,7 @@
 title: Groq
 tags: [provider, model-provider, cloud, free-tier, jarvis-x, entity]
 sources:
+  - raw/2026-09-25-ahmed-rulings-2-providers-tiers-direction.md
   - raw/2026-09-24-jarvis-x-starnet-handoff.md
   - raw/Jarvis X Resources/Jarvis X/Jarvis_X_v2_Ascension_Plan.md
   - raw/2026-09-25-model-landscape-research.md
@@ -76,7 +77,7 @@ Implication: if Jarvis's `smart` tier and [[aider]] use the same Groq key, they 
 The ruling's order is: (1) local models and free open-source tiers that "could work on any machine specially chrome os"; (2) Google, free; (3) Anthropic; (4) OpenAI. See [[jarvis-x-model-priority]].
 
 - **Groq's free tier is slot 1**, as a free hosted tier for open-weight models. It uses no local RAM or disk, and both gpt-oss tiers were verified working through Jarvis on the Chromebook (StarNet's Bug A is a separate problem).
-- **The gpt-oss caveat.** `gpt-oss-20b` and `gpt-oss-120b` are OpenAI-made open-weight models. The ruling ranks OpenAI last among the named providers (slot 4). [[jarvis-x-model-priority]] files Groq's free gpt-oss under slot 1 "as a free hosted tier", and that classification is interpretation. It is open for the human to confirm (question (a) on that page). If the human meant anything from OpenAI, the as-built `fast` and `smart` tiers move to slot 4.
+- **The gpt-oss caveat.** `gpt-oss-20b` and `gpt-oss-120b` are OpenAI-made open-weight models. The ruling ranks OpenAI last among the named providers (slot 4). The classification was an open question. **Resolved (2026-09-25, follow-up ruling 1):** free counts as free, keeping the official name, so Groq's free `openai/gpt-oss-*` models are in the free tier (slot 1). The as-built `fast` and `smart` tiers stay in slot 1 ([[jarvis-x-model-priority]]).
 - **Chinese open models.** `qwen/qwen3.8-27b` is a Chinese open model on Groq, but the research found only a paid price for it and its free limits are unverified. Too big to run locally: the smallest Ollama `qwen3.8` tag is about 18GB*. See [[chinese-open-source-models]].
 
 ## Fix 3 — fast model 404

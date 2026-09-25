@@ -2,6 +2,7 @@
 title: Gemini
 tags: [provider, model-provider, cloud, google, free-tier, jarvis-x, entity]
 sources:
+  - raw/2026-09-25-ahmed-rulings-2-providers-tiers-direction.md
   - raw/2026-09-24-jarvis-x-starnet-handoff.md
   - raw/Jarvis X Resources/Jarvis X/Jarvis_X_v2_Ascension_Plan.md
   - raw/Jarvis X Resources/DeepSeek Files/DeepSeek_Jarvis_X_Master_Plan.md
@@ -86,7 +87,9 @@ Google's open Gemma models are on the [[ollama]] library and on [[openrouter]] a
 
 Full tag details are on [[ollama]].
 
-Under the ruling, Gemma run locally fits slot 1 ("local models ... that could work on any machine specially chrome os"). It is also "from google", which is slot 2. Where plans should list it is question (b) on [[jarvis-x-model-priority]], and any placement is interpretation. Slot 1 outranks slot 2, so in practice a local Gemma is picked at slot-1 priority either way.
+Under the ruling, Gemma run locally fits slot 1 ("local models ... that could work on any machine specially chrome os"). It is also "from google", which is slot 2. **Tokens (2026-09-25, follow-up ruling 8):** "Yes we need more tokens". Recommendation (interpretation): add a Flash-Lite model for volume or as a fallback, keeping `gemini-3.6-flash` for quality, because Flash-Lite reportedly has ~500 RPD free against ~20 RPD for Flash*. That's a change to Jarvis's registry, to be tested on the Chromebook first (gotcha 4). See [[jarvis-x-model-priority]], "Getting more tokens".
+
+**Resolved (2026-09-25, follow-up ruling 2):** "if it fits both let it be in both", so Gemma is listed under both. Slot 1 outranks slot 2, so in practice a local Gemma is picked at slot-1 priority either way.
 
 ## Under the 2026-09-25 ruling
 

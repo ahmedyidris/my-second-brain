@@ -2,6 +2,7 @@
 title: Jarvis X Hardware
 tags: [jarvis-x, hardware, chromebook, crostini, cpu-only, lenovo]
 sources:
+  - raw/2026-09-25-ahmed-rulings-2-providers-tiers-direction.md
   - raw/2026-09-25-ahmed-rulings-machine-and-model-priority.md
   - raw/2026-09-24-jarvis-x-starnet-handoff.md
   - raw/Jarvis X Resources/DeepSeek Files/DeepSeek_Jarvis_X_Master_Plan.md
@@ -78,7 +79,9 @@ The Chromebook runs a different set: the `qwen2.5` family plus `nomic-embed-text
 | 2 | ADT-Link R43SG eGPU + 850W PSU | ~$135 | Medium |
 | 3 | NVIDIA RTX 3090 (24GB VRAM) | ~$440 | Future |
 
-This roadmap was written for the Lenovo. Neither the handoff nor the ruling says whether any of it still applies now that the Chromebook is current. Open question for the human.
+This roadmap was written for the Lenovo. Neither the handoff nor the first ruling says whether any of it still applies now that the Chromebook is current.
+
+> **Parked by the human (2026-09-25):** "which Lenovo ignore it for now". The roadmap stays here as the plans' record, and nothing should be planned around it.
 
 ### GPU fix commands (Lenovo only)
 

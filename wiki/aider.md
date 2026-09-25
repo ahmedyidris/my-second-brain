@@ -2,6 +2,7 @@
 title: Aider
 tags: [tool, coding-agent, jarvis-x, groq]
 sources:
+  - raw/2026-09-25-ahmed-rulings-2-providers-tiers-direction.md
   - raw/2026-09-24-jarvis-x-starnet-handoff.md
   - raw/Jarvis X Resources/DeepSeek Files/DeepSeek_Jarvis_X_Master_Plan.md
   - raw/2026-09-25-ahmed-rulings-machine-and-model-priority.md
@@ -55,7 +56,7 @@ The human's 2026-09-25 ruling puts local models and free open-source tiers first
 
 - **Local option:** a local slot-1 coding option on the Chromebook is Ollama's `qwen2.5-coder:3b` or `qwen2.5-coder:7b` (Alibaba's Qwen, a Chinese open model), already installed per the handoff. Per the 2026-09-25 research there's no small qwen3-coder: its smallest tag is `qwen3-coder:30b` at 19GB (search excerpt, medium confidence). The research's own suggestion is to keep `qwen2.5-coder:3b` / `:7b` for coding; that's its inference, not a fact ([[chinese-open-source-models]], [[source-model-landscape-research]]).
 - **Pointing Aider at Ollama:** no source in this vault gives a command for it, so running Aider on a local Ollama model is possible in principle but unverified here.
-- **As built:** the launch above uses Groq's free `openai/gpt-oss-120b`. [[jarvis-x-model-priority]] reads it as slot 1, a free hosted tier. It's OpenAI's open-weight model, so whether it counts as slot 1 or slot 4 (OpenAI) is an open question for the human. The research gives Groq's free-tier limits for it as 30 RPM, 1,000 RPD, 8,000 TPM and 200,000 TPD per organization, measured Sept 14, 2026 (fetched).
+- **As built:** the launch above uses Groq's free `openai/gpt-oss-120b`. [[jarvis-x-model-priority]] reads it as slot 1, a free hosted tier. It's OpenAI's open-weight model, so its slot was an open question. **Resolved (2026-09-25, follow-up ruling 1):** free counts as free, keeping the official name, so Groq's free `openai/gpt-oss-*` models are in the free tier (slot 1). The research gives Groq's free-tier limits for it as 30 RPM, 1,000 RPD, 8,000 TPM and 200,000 TPD per organization, measured Sept 14, 2026 (fetched).
 
 ## Place in the Council
 
