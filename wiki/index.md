@@ -17,6 +17,14 @@ Each entry: `- [[page-name]] — one-line summary`
 - [[agent-secure-comms]] — agent-to-agent security protocol: secret stripping, signing, encryption, injection blocking, trust scores
 - [[claude-flow]] — compatible project sharing Ruflo's federation plugin ecosystem; installs via npx claude-flow@latest
 - [[composio]] — tool connector with 1000+ app integrations; bridges Jarvis X agents to external services via MCP
+- [[jarvis-x-runtime]] — as-built Jarvis X (2026-09-24): repo, supervisord services, env file, launch/test commands, landed fixes
+- [[jarvis-x-openai-compatible-api]] — Jarvis X `/v1/models` + `/v1/chat/completions` adapter; tier names as model ids
+- [[starnet]] — multi-agent station app (androoAGI/starnet); web sidecar on :8787; only Ollama works (Bugs A, C open)
+- [[aider]] — terminal coding agent; launched against Groq gpt-oss-120b; never paste shell commands into its prompt
+- [[crostini]] — Debian 13 Linux env on the ASUS Chromebook; IPv6-first breaks Cloudflare POSTs; Node c-ares caveat
+- [[groq]] — provider for the fast/smart tiers (openai/gpt-oss-20b / -120b); compound-mini 404 fix
+- [[gemini]] — provider for the quality/frontier tiers (gemini-3.6-flash); models-list is stale; 3.1 Pro API is paid-only
+- [[openrouter]] — provider with free models on shared-pool rate limits; Cloudflare-fronted; not in the as-built tier table
 
 ## Concepts
 
@@ -30,6 +38,8 @@ Each entry: `- [[page-name]] — one-line summary`
 - [[jarvis-x-trading-module]] — market intelligence, paper-trading; hard gates before live
 - [[jarvis-x-income-roadmap]] — bilingual AI operations specialist path; platforms + certifications
 - [[jarvis-x-app]] — v2 delivery: FastAPI + PWA + Tauri; Linux → Windows → mobile → macOS
+- [[jarvis-x-station-view]] — planned "Station" tab in Jarvis X's React UI; the recommended path instead of a StarNet clone
+- [[free-api-tiers]] — consumer AI subscriptions don't grant API access; what is actually free (Gemini flash, Groq gpt-oss, OpenRouter)
 
 ## Skills
 
@@ -42,8 +52,11 @@ Each entry: `- [[page-name]] — one-line summary`
 
 - [[source-deepseek-jarvis-x-master-plan]] — comprehensive 12-book Jarvis X reference (DeepSeek, July 2026)
 - [[source-jarvis-x-v2-ascension-plan]] — v2 Ascension Plan; overrides master plan where they conflict
+- [[source-jarvis-x-starnet-handoff]] — 2026-09-24 technical handoff: as-built Jarvis X + StarNet state, 10 fixes, 5 open bugs, priorities
 
 ## Analyses
+
+- [[jarvis-x-plan-vs-reality]] — earlier plans vs the 2026-09-24 as-built state; divergences flagged for the human
 
 ## Audits
 

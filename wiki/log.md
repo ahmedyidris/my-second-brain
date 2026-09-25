@@ -13,6 +13,24 @@ Utility: `grep "^## \[" wiki/log.md | tail -5` returns the last 5 operations.
 
 ---
 
+## [2026-09-24] ingest | Jarvis X / StarNet technical handoff
+
+Read `raw/2026-09-24-jarvis-x-starnet-handoff.md` (as-built Jarvis X + StarNet state, 10 landed fixes, open Bugs A–E, launch commands, 10 gotchas, 4 priorities, 5 "what not to do" rules). All 86 distinct items in the source are captured, and every code block matches it verbatim.
+
+Created: [[source-jarvis-x-starnet-handoff]], [[jarvis-x-runtime]], [[jarvis-x-openai-compatible-api]], [[starnet]], [[jarvis-x-station-view]], [[aider]], [[crostini]], [[groq]], [[gemini]], [[openrouter]], [[free-api-tiers]], [[jarvis-x-plan-vs-reality]] (first page under Analyses).
+
+Updated: [[jarvis-x]], [[hermes-agent]], [[ollama]], [[universal-model-layer]], [[jarvis-x-hardware]], [[jarvis-x-voice-engine]], [[jarvis-x-app]], [[the-council]], [[constitutional-autonomy]], [[source-jarvis-x-v2-ascension-plan]], [[source-deepseek-jarvis-x-master-plan]], `wiki/index.md`.
+
+Disagreements flagged with callouts, not resolved (human to decide): machine (Lenovo Y50-70 / Pop!_OS in the plans vs ASUS Chromebook / Crostini in the handoff); tier names and roles (`local|fast|smart|long` with smart = Anthropic vs as-built `local|fast|smart|quality|frontier` with smart = Groq gpt-oss-120b, quality/frontier = gemini-3.6-flash); local models (llama3.2/qwen3/hermes3 vs the qwen2.5 family); service layout (jarvis-core/scheduler/voice under its own user vs supervisord hermes-agent/hermes-api/tts-worker); TTS (Piper + edge-tts vs Chatterbox); Tauri (planned Windows build vs "do not build for daily use"); Hermes "no cloud dependency" vs cloud-routed registry tiers.
+
+Open ambiguities in the source itself: which adapter PART 8's "do not re-enable stream: false" refers to (StarNet's sidecar vs Jarvis's app.py); whether HTTP 400s still occur after 658dc7ce9; whether `CUSTOM_OPENAI_BASE_URL` bypasses Bug C; which project `code/providers/registry.js` belongs to.
+
+Pre-existing issues noticed, not fixed (lint candidates): `[[claude-flow]]` is listed in the index but has no page; [[ollama]]'s "Unlocked after Phase 1 hardware upgrade (16GB RAM + GPU)" doesn't match the master plan, whose Phase 1 is RAM + SSD and whose GPU arrives in Phases 2–3.
+
+`graphify update` was not run from the cloud session: its manifest covers local-only, gitignored files. Run it on the local machine.
+
+---
+
 ## [2026-07-28] update | Graphify — vault query example added
 
 Ran `graphify query "show auth flow"` on the vault. No auth code — matched wiki Workflow headings in CLAUDE.md. Added result as an example in [[graphify]] showing semantic miss behavior in a pure markdown vault.
