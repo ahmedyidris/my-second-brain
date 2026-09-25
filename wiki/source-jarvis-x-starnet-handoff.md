@@ -3,7 +3,7 @@ title: Source — Jarvis X StarNet Handoff
 tags: [source, jarvis-x, starnet, handoff, as-built]
 sources:
   - raw/2026-09-24-jarvis-x-starnet-handoff.md
-related: [[jarvis-x]], [[jarvis-x-runtime]], [[jarvis-x-openai-compatible-api]], [[starnet]], [[jarvis-x-station-view]], [[aider]], [[crostini]], [[groq]], [[gemini]], [[openrouter]], [[free-api-tiers]], [[ollama]], [[hermes-agent]], [[jarvis-x-voice-engine]], [[jarvis-x-app]], [[jarvis-x-hardware]], [[universal-model-layer]], [[the-council]], [[constitutional-autonomy]], [[jarvis-x-plan-vs-reality]], [[source-jarvis-x-v2-ascension-plan]], [[source-deepseek-jarvis-x-master-plan]]
+related: [[jarvis-x]], [[jarvis-x-runtime]], [[jarvis-x-openai-compatible-api]], [[starnet]], [[jarvis-x-station-view]], [[aider]], [[crostini]], [[ipv6-dns-truncation-crostini]], [[groq]], [[gemini]], [[openrouter]], [[free-api-tiers]], [[ollama]], [[hermes-agent]], [[jarvis-x-voice-engine]], [[jarvis-x-app]], [[jarvis-x-hardware]], [[universal-model-layer]], [[the-council]], [[constitutional-autonomy]], [[jarvis-x-plan-vs-reality]], [[source-jarvis-x-v2-ascension-plan]], [[source-deepseek-jarvis-x-master-plan]]
 last_updated: 2026-09-24
 ---
 
@@ -47,7 +47,7 @@ A technical handoff for [[jarvis-x]] and [[starnet]], dated 2026-09-24. The auth
 | 2 | Jarvis system prompt dropped on registry tiers (`hermes.py`) | `4281158` | [[jarvis-x-runtime]], [[hermes-agent]] |
 | 3 | Groq fast model 404 (`groq/compound-mini` → `openai/gpt-oss-20b`) | `b634ed8` | [[groq]] |
 | 4 | Gemini model name: keep `gemini-3.6-flash`; the models-list is stale | not stated | [[gemini]] |
-| 5 | IPv6 truncation (Crostini + Cloudflare) | not stated | [[crostini]] |
+| 5 | IPv6 truncation (Crostini + Cloudflare) | not stated | [[crostini]], [[ipv6-dns-truncation-crostini]] |
 | 6 | systemd `EnvironmentFile` for Jarvis | not stated | [[jarvis-x-runtime]] |
 | 7 | OpenAI-compatible adapter in Jarvis (`app.py`) | not stated in PART 2. PART 1's latest commit, `99652aa`, has the message "feat(api): OpenAI-compatible /v1/chat/completions + /v1/models", but the handoff doesn't explicitly tie it to fix 7. | [[jarvis-x-openai-compatible-api]] |
 | 8 | Ollama model directory | not stated | [[ollama]] |
@@ -114,7 +114,7 @@ Plan areas the handoff doesn't cover include the Obsidian + ChromaDB memory laye
 
 ## Pages created from this source
 
-[[jarvis-x-runtime]] | [[jarvis-x-openai-compatible-api]] | [[starnet]] | [[jarvis-x-station-view]] | [[aider]] | [[crostini]] | [[groq]] | [[gemini]] | [[openrouter]] | [[free-api-tiers]] | [[jarvis-x-plan-vs-reality]]
+[[jarvis-x-runtime]] | [[jarvis-x-openai-compatible-api]] | [[starnet]] | [[jarvis-x-station-view]] | [[aider]] | [[crostini]] | [[ipv6-dns-truncation-crostini]] | [[groq]] | [[gemini]] | [[openrouter]] | [[free-api-tiers]] | [[jarvis-x-plan-vs-reality]]
 
 ## Existing pages this source affects
 

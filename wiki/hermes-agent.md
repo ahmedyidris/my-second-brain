@@ -4,7 +4,7 @@ tags: [jarvis-x, component, agent, local-ai]
 sources:
   - raw/2026-09-24-jarvis-x-starnet-handoff.md
   - raw/Jarvis X Resources/DeepSeek Files/DeepSeek_Jarvis_X_Master_Plan.md
-related: [[jarvis-x]], [[the-council]], [[self-improvement-loop]], [[jarvis-x-runtime]], [[jarvis-x-openai-compatible-api]], [[ollama]], [[groq]], [[gemini]], [[source-jarvis-x-starnet-handoff]], [[jarvis-x-plan-vs-reality]]
+related: [[jarvis-x]], [[the-council]], [[self-improvement-loop]], [[jarvis-x-runtime]], [[aider]], [[jarvis-x-voice-engine]], [[jarvis-x-openai-compatible-api]], [[ollama]], [[groq]], [[gemini]], [[source-jarvis-x-starnet-handoff]], [[jarvis-x-plan-vs-reality]]
 last_updated: 2026-09-24
 ---
 
@@ -49,6 +49,8 @@ As of the 2026-09-24 handoff ([[source-jarvis-x-starnet-handoff]]), the running 
 | `hermes-agent` | RUNNING | — |
 | `hermes-api` | RUNNING | uvicorn, port 8000 |
 
+The same supervisord group also runs `tts-worker` (degraded; see [[jarvis-x-voice-engine]]).
+
 The handoff names these only by their service names, `hermes-agent` and `hermes-api`. It does not say whether they are the Nous Research Hermes Agent described above, how they were installed, or which of the features listed above (skill creation, cross-session memory, 70+ tools) are active.
 
 ### The `registry:` branch in `hermes.py`
@@ -68,6 +70,10 @@ hermes
 
 Implication: the `hermes` executable appears to live in `~/venv-ai/bin` (the uv-managed Python 3.11 venv); the handoff states only the PATH requirement.
 
+### Aider (separate coding agent)
+
+The handoff launches [[aider]] with `--model groq/openai/gpt-oss-120b`, which is the same model as the `smart` tier. Aider calls [[groq]] directly and does not go through Hermes or the `/v1` adapter. See [[aider]] for the launch block and the gotcha about never pasting shell commands into Aider's prompt.
+
 ### Disagreements with the plan
 
 > **Disagreement (2026-09-24 handoff vs DeepSeek Jarvis X Master Plan):** this page says Hermes "runs entirely on local hardware via Ollama" and is "Local-first: no cloud dependency". The handoff shows the `registry:` tiers in `hermes.py` routed to cloud providers — `fast`/`smart` on [[groq]] and `quality`/`frontier` on [[gemini]] — with only the `local` tier on [[ollama]]. The handoff does not say whether Hermes can still run with the cloud tiers unavailable. Left for the human to resolve.
@@ -76,4 +82,4 @@ Implication: the `hermes` executable appears to live in `~/venv-ai/bin` (the uv-
 
 ## Related
 
-[[jarvis-x]] | [[jarvis-x-runtime]] | [[jarvis-x-openai-compatible-api]] | [[the-council]] | [[self-improvement-loop]] | [[ollama]] | [[groq]] | [[gemini]] | [[source-jarvis-x-starnet-handoff]] | [[jarvis-x-plan-vs-reality]]
+[[jarvis-x]] | [[jarvis-x-runtime]] | [[aider]] | [[jarvis-x-openai-compatible-api]] | [[the-council]] | [[self-improvement-loop]] | [[ollama]] | [[groq]] | [[gemini]] | [[source-jarvis-x-starnet-handoff]] | [[jarvis-x-plan-vs-reality]]

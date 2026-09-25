@@ -1,15 +1,15 @@
 ---
 title: StarNet
-tags: [starnet, multi-agent, sidecar, node, jarvis-x]
+tags: [starnet, ai-os, multi-agent, entity, sidecar, node, jarvis-x]
 sources:
   - raw/2026-09-24-jarvis-x-starnet-handoff.md
-related: [[jarvis-x]], [[jarvis-x-station-view]], [[jarvis-x-openai-compatible-api]], [[jarvis-x-runtime]], [[ollama]], [[groq]], [[gemini]], [[openrouter]], [[crostini]], [[the-council]], [[constitutional-autonomy]], [[source-jarvis-x-starnet-handoff]], [[jarvis-x-app]], [[jarvis-x-hardware]], [[jarvis-x-plan-vs-reality]], [[free-api-tiers]]
+related: [[jarvis-x]], [[jarvis-x-station-view]], [[jarvis-x-openai-compatible-api]], [[jarvis-x-runtime]], [[ollama]], [[groq]], [[gemini]], [[openrouter]], [[crostini]], [[ipv6-dns-truncation-crostini]], [[the-council]], [[constitutional-autonomy]], [[source-jarvis-x-starnet-handoff]], [[jarvis-x-app]], [[jarvis-x-hardware]], [[jarvis-x-plan-vs-reality]], [[free-api-tiers]]
 last_updated: 2026-09-24
 ---
 
 # StarNet
 
-A web app (the handoff: "Runs as web app") from the `androoAGI/starnet` repo, run locally next to [[jarvis-x]] on the [[crostini]] Chromebook. The 2026-09-24 handoff shows these parts of it: named agents (the working one is **Raqib**, the Overseer), a Node **sidecar** that serves a web UI, a provider registry, "connectors", channel tokens for Discord/Telegram bots, workspace state on disk, and a Tauri desktop shell (built once, since deleted). The handoff says nothing more about what StarNet is for. Its verdict is to stop chasing a StarNet clone and build a [[jarvis-x-station-view]] inside Jarvis instead.
+A separate multi-agent platform developed in parallel with [[jarvis-x]]. It is a web app (the handoff: "Runs as web app") from the `androoAGI/starnet` repo, run locally next to [[jarvis-x]] on the [[crostini]] Chromebook. The 2026-09-24 handoff shows these parts of it: named agents (the working one is **Raqib**, the Overseer), a Node **sidecar** that serves a web UI, a provider registry, "connectors", channel tokens for Discord/Telegram bots, workspace state on disk, and a Tauri desktop shell (built once, since deleted). The handoff says nothing more about what StarNet is for. Its verdict is to stop chasing a StarNet clone and build a [[jarvis-x-station-view]] inside Jarvis instead.
 
 ## State (as of the 2026-09-24 handoff)
 
@@ -111,7 +111,7 @@ rm ~/.local/share/StarNet/workspaces/.starnet-workspace-owner.json
 
 **Status:** not fixed and not diagnosed. The handoff gives three **hypotheses** ("likely one of"). None is confirmed:
 
-1. Streaming HTTP to Cloudflare-fronted endpoints fails silently on Crostini (see [[crostini]], [[groq]])
+1. Streaming HTTP to Cloudflare-fronted endpoints fails silently on Crostini (see [[crostini]], [[ipv6-dns-truncation-crostini]], [[groq]])
 2. Some uncaught async error kills Node without logging
 3. The provider adapter dereferences a field that doesn't exist for non-Ollama providers
 

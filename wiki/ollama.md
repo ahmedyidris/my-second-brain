@@ -4,7 +4,7 @@ tags: [jarvis-x, tool, local-ai, infrastructure, as-built]
 sources:
   - raw/2026-09-24-jarvis-x-starnet-handoff.md
   - raw/Jarvis X Resources/DeepSeek Files/DeepSeek_Jarvis_X_Master_Plan.md
-related: [[jarvis-x]], [[hermes-agent]], [[universal-model-layer]], [[jarvis-x-hardware]], [[obsidian]], [[jarvis-x-runtime]], [[jarvis-x-openai-compatible-api]], [[starnet]], [[gemini]], [[crostini]], [[free-api-tiers]], [[aider]], [[source-jarvis-x-starnet-handoff]], [[jarvis-x-plan-vs-reality]]
+related: [[jarvis-x]], [[hermes-agent]], [[universal-model-layer]], [[jarvis-x-hardware]], [[obsidian]], [[jarvis-x-runtime]], [[jarvis-x-openai-compatible-api]], [[starnet]], [[gemini]], [[crostini]], [[ipv6-dns-truncation-crostini]], [[free-api-tiers]], [[aider]], [[source-jarvis-x-starnet-handoff]], [[jarvis-x-plan-vs-reality]]
 last_updated: 2026-09-24
 ---
 
@@ -116,6 +116,8 @@ Gotcha 10: "ollama list shows only the active OLLAMA_MODELS directory. If models
 ```bash
 ollama list
 ```
+
+Practical note: if expected models are missing, check `/etc/systemd/system/ollama.service.d/override.conf`, or whether it exists at all, before assuming they need re-pulling. They may simply be in `~/.ollama/models` while the service reads `/usr/share/ollama/.ollama/models`, or the other way round.
 
 > **Disagreement (2026-09-24 handoff vs DeepSeek Jarvis X Master Plan):** the "Essential models (CPU-first, Lenovo Y50-70)" list above (`llama3.2:3b`, `qwen3:1.5b`, `nomic-embed-text`, `hermes3:8b`) and the "7.7GB RAM" hardware constraint come from the earlier plans. They describe a Lenovo Y50-70. The handoff's machine is an ASUS Chromebook with 14GB RAM (11th Gen i5, no GPU). Its models are the `qwen2.5` family plus `nomic-embed-text`. Of the plan's list, only `nomic-embed-text` is present, at 274MB against the plan's "~0.5GB" estimate. Unknown: whether the plan's model list was deliberately replaced, and whether the hermes3:8b "unlock" condition still applies on the new machine. The handoff's ~10 tok/s for `qwen2.5:7b` is reported for different hardware and a different model than the plan's 1–3 t/s for `hermes3:8b`, so the two figures are not directly comparable. Both are kept. Left for the human to resolve.
 

@@ -13,6 +13,21 @@ Utility: `grep "^## \[" wiki/log.md | tail -5` returns the last 5 operations.
 
 ---
 
+## [2026-09-25] update | Reconcile two parallel ingests of the 2026-09-24 handoff
+
+The same source (`raw/2026-09-24-jarvis-x-starnet-handoff.md`, byte-identical on both sides) was ingested twice: once on master by the local session (the second entry below, which created [[starnet]] and [[ipv6-dns-truncation-crostini]]), and once on the `claude/jarvis-starnet-handoff-plqfqv` branch (the entry directly below). Merged master into the branch and kept both sides' content:
+
+- [[starnet]]: both sides created it. Kept the branch version, which covers every section of master's, and added master's "separate multi-agent platform developed in parallel" framing, its tags and a link to [[ipv6-dns-truncation-crostini]].
+- [[jarvis-x]]: master's "Current working state" section and the branch's "Build state" section are merged into one section. It has master's service and tier tables, restart command and systemd gotcha, plus the branch's pointers and Disagreement callout. Master's "these are two different machines" is softened to "may be", since the handoff doesn't say.
+- [[jarvis-x-app]]: master's full adapter and Station-tab sections are condensed into the As-built bullets, linking to [[jarvis-x-openai-compatible-api]] and [[jarvis-x-station-view]]. Every fact in them was checked as present on those pages first, so nothing was dropped.
+- [[hermes-agent]], [[ollama]], [[jarvis-x-hardware]]: kept the branch versions and added master's unique content: `tts-worker` alongside the Hermes services, the "check override.conf before re-pulling" tip, the `contradiction` tag, and the working assumption to use the Crostini facts day-to-day until the human decides (labelled as an interpretation, not a resolution). Master's "Hermes usable as a coding agent via Aider, pointed at the `smart` tier" is reworded: the handoff launches [[aider]] directly on Groq with the same model as `smart`, not through Hermes.
+- [[ipv6-dns-truncation-crostini]] (master's page) is kept. "A strong suspect behind Bug A" is corrected to "one of three likely causes", with none confirmed, matching the handoff. It is now cross-linked with [[crostini]], [[groq]], [[openrouter]], [[jarvis-x-runtime]] and [[source-jarvis-x-starnet-handoff]].
+- `wiki/index.md`: one [[starnet]] entry, plus [[ipv6-dns-truncation-crostini]] under Concepts alongside the branch's new pages.
+
+Both ingest entries below are kept (the log is append-only).
+
+---
+
 ## [2026-09-24] ingest | Jarvis X / StarNet technical handoff
 
 Read `raw/2026-09-24-jarvis-x-starnet-handoff.md` (as-built Jarvis X + StarNet state, 10 landed fixes, open Bugs A–E, launch commands, 10 gotchas, 4 priorities, 5 "what not to do" rules). All 86 distinct items in the source are captured, and every code block matches it verbatim.
@@ -28,6 +43,22 @@ Open ambiguities in the source itself: which adapter PART 8's "do not re-enable 
 Pre-existing issues noticed, not fixed (lint candidates): `[[claude-flow]]` is listed in the index but has no page; [[ollama]]'s "Unlocked after Phase 1 hardware upgrade (16GB RAM + GPU)" doesn't match the master plan, whose Phase 1 is RAM + SSD and whose GPU arrives in Phases 2–3.
 
 `graphify update` was not run from the cloud session: its manifest covers local-only, gitignored files. Run it on the local machine.
+
+---
+
+## [2026-09-24] ingest | Jarvis X / StarNet technical handoff (2026-09-24)
+
+Read `raw/2026-09-24-jarvis-x-starnet-handoff.md` (full session handoff: working state, landed fixes, open bugs, launch commands, environment facts, gotchas).
+
+Created: [[starnet]] (new entity — multi-agent platform, config, Bug A/Bug C, launch command, strategic "don't clone it" direction), [[ipv6-dns-truncation-crostini]] (new concept — Crostini IPv6/Cloudflare truncation bug and the Node c-ares gap).
+
+Updated: [[jarvis-x]] (current working state: latest commit, service table, model tier table, hardware discrepancy flag, restart command, StarNet relationship), [[jarvis-x-app]] (OpenAI-compatible `/v1/chat/completions` + `/v1/models` adapter now live, tier-to-model mapping, proposed Station tab), [[jarvis-x-hardware]] (**flagged unresolved contradiction** — page says Lenovo Y50-70/Pop!_OS, handoff source says ASUS Chromebook/Crostini; documented both, did not silently overwrite, need human to confirm which machine is current), [[ollama]] (systemd `OLLAMA_MODELS` permission fix, models observed on Crostini), [[hermes-agent]] (operational status under supervisord, CLI + Aider usage).
+
+Added cross-links: [[jarvis-x]] ↔ [[starnet]], [[jarvis-x-app]] ↔ [[starnet]], [[jarvis-x-hardware]] ↔ [[ipv6-dns-truncation-crostini]], [[ollama]] ↔ [[starnet]].
+
+Flag for human: hardware contradiction above needs a decision — is the Crostini Chromebook a new/current machine replacing the Lenovo Y50-70, or a separate environment? Left both documented, current Crostini facts marked as operationally authoritative for now since they come from live service behavior rather than a plan doc.
+
+Updated [[wiki/index.md]] with 2 new entries (starnet under Entities, ipv6-dns-truncation-crostini under Concepts).
 
 ---
 

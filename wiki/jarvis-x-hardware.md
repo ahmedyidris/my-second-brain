@@ -1,11 +1,11 @@
 ---
 title: Jarvis X Hardware
-tags: [jarvis-x, hardware, lenovo, chromebook, crostini, cpu-only]
+tags: [jarvis-x, hardware, lenovo, chromebook, crostini, cpu-only, contradiction]
 sources:
   - raw/2026-09-24-jarvis-x-starnet-handoff.md
   - raw/Jarvis X Resources/DeepSeek Files/DeepSeek_Jarvis_X_Master_Plan.md
   - raw/Jarvis X Resources/Jarvis X/Jarvis_X_v2_Ascension_Plan.md
-related: [[jarvis-x]], [[hermes-agent]], [[crostini]], [[ollama]], [[universal-model-layer]], [[jarvis-x-runtime]], [[starnet]], [[source-deepseek-jarvis-x-master-plan]], [[source-jarvis-x-starnet-handoff]], [[jarvis-x-plan-vs-reality]]
+related: [[jarvis-x]], [[hermes-agent]], [[crostini]], [[ipv6-dns-truncation-crostini]], [[ollama]], [[universal-model-layer]], [[jarvis-x-runtime]], [[starnet]], [[source-deepseek-jarvis-x-master-plan]], [[source-jarvis-x-starnet-handoff]], [[jarvis-x-plan-vs-reality]]
 last_updated: 2026-09-24
 ---
 
@@ -16,6 +16,8 @@ Current body: **Lenovo Y50-70** running Pop!_OS 24.04 LTS.
 That line is the July 2026 master plan's description. The 2026-09-24 handoff ([[source-jarvis-x-starnet-handoff]]) describes a different machine: an ASUS Chromebook running [[crostini]]. See "Machine in the 2026-09-24 handoff" below.
 
 > **Disagreement (2026-09-24 handoff vs DeepSeek Jarvis X Master Plan and Jarvis X v2 Ascension Plan):** the earlier plans describe a **Lenovo Y50-70 on Pop!_OS 24.04 LTS** (i7-4710HQ, 7.7GB RAM, 953GB SSD). The v2 plan's execution prompt still assumes a "CPU-only Y50-70" and "a fresh Pop!_OS terminal". The 2026-09-24 handoff describes an **ASUS Chromebook running Crostini (Debian 13 trixie)** (11th Gen i5, no GPU, 14GB RAM, 72GB disk). The wiki does not know whether the Lenovo was replaced, retired, or is a second machine. The handoff doesn't mention it. Both descriptions are kept. Left for the human to resolve.
+
+> **Working assumption until the human decides (interpretation, not a resolution):** for day-to-day operational work, use the Chromebook/Crostini facts, because they come from a live operational handoff rather than a plan document. The Lenovo specs below stay as the plans' record.
 
 ## Current specs
 
@@ -93,10 +95,10 @@ From PART 5 ("Environment facts"), as of the 2026-09-24 handoff:
 - **Chrome RAM (gotcha 7):** "Chrome tabs eat 10GB of your 14GB. Before any heavy build, close them. free -h should show 6GB+ available."
 - **Tauri build (gotcha 8):** "The Tauri build is 30-60 min and needs 8GB disk + 6GB RAM. It's rebuildable but not useful for daily work on this hardware." PART 8: "Do not build the Tauri desktop shell for daily use. Web UI is faster and identical in function." See [[starnet]].
 - **Disk:** ~11GB free after cleanup. The Ollama models present add up to about 13.5GB (arithmetic, see [[ollama]]). The chatterbox checkpoint for the voice pipeline is ~5GB (Bug D).
-- **Networking:** Crostini's IPv6-first resolution truncates POST bodies to Cloudflare-fronted APIs. See [[crostini]].
+- **Networking:** Crostini's IPv6-first resolution truncates POST bodies to Cloudflare-fronted APIs. See [[crostini]] and [[ipv6-dns-truncation-crostini]].
 
 See [[crostini]] for one inconsistency inside the handoff: "~9-10GB free after Chrome" vs "Chrome tabs eat 10GB of your 14GB". For what runs on this machine, see [[jarvis-x-runtime]].
 
 ## Related
 
-[[jarvis-x]] | [[hermes-agent]] | [[crostini]] | [[ollama]] | [[universal-model-layer]] | [[jarvis-x-runtime]] | [[starnet]] | [[source-deepseek-jarvis-x-master-plan]] | [[source-jarvis-x-starnet-handoff]] | [[jarvis-x-plan-vs-reality]]
+[[jarvis-x]] | [[hermes-agent]] | [[crostini]] | [[ipv6-dns-truncation-crostini]] | [[ollama]] | [[universal-model-layer]] | [[jarvis-x-runtime]] | [[starnet]] | [[source-deepseek-jarvis-x-master-plan]] | [[source-jarvis-x-starnet-handoff]] | [[jarvis-x-plan-vs-reality]]

@@ -4,7 +4,7 @@ tags: [environment, linux, chromebook, networking, jarvis-x, entity]
 sources:
   - raw/2026-09-24-jarvis-x-starnet-handoff.md
   - raw/Jarvis X Resources/DeepSeek Files/DeepSeek_Jarvis_X_Master_Plan.md
-related: [[jarvis-x-hardware]], [[jarvis-x-runtime]], [[groq]], [[openrouter]], [[gemini]], [[starnet]], [[ollama]], [[jarvis-x]], [[jarvis-x-voice-engine]], [[constitutional-autonomy]], [[source-jarvis-x-starnet-handoff]], [[jarvis-x-plan-vs-reality]], [[aider]]
+related: [[jarvis-x-hardware]], [[ipv6-dns-truncation-crostini]], [[jarvis-x-runtime]], [[groq]], [[openrouter]], [[gemini]], [[starnet]], [[ollama]], [[jarvis-x]], [[jarvis-x-voice-engine]], [[constitutional-autonomy]], [[source-jarvis-x-starnet-handoff]], [[jarvis-x-plan-vs-reality]], [[aider]]
 last_updated: 2026-09-24
 ---
 
@@ -27,6 +27,8 @@ The Linux environment that [[jarvis-x]] and [[starnet]] run in, as of the 2026-0
 > **Disagreement (2026-09-24 handoff vs DeepSeek Jarvis X Master Plan):** the earlier plans put Jarvis on a Lenovo Y50-70 running Pop!_OS 24.04 LTS. The handoff has it on this Chromebook under Crostini. The details are on [[jarvis-x-hardware]]. Left for the human to resolve.
 
 ## IPv6 truncation with Cloudflare-fronted APIs (fix 5)
+
+This gotcha also has its own page, [[ipv6-dns-truncation-crostini]].
 
 In the handoff's words: "Crostini resolves to IPv6 first. For Cloudflare-fronted APIs (Groq, OpenRouter), the IPv6 path truncates POST bodies."
 

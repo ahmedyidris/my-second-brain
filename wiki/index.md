@@ -19,7 +19,7 @@ Each entry: `- [[page-name]] — one-line summary`
 - [[composio]] — tool connector with 1000+ app integrations; bridges Jarvis X agents to external services via MCP
 - [[jarvis-x-runtime]] — as-built Jarvis X (2026-09-24): repo, supervisord services, env file, launch/test commands, landed fixes
 - [[jarvis-x-openai-compatible-api]] — Jarvis X `/v1/models` + `/v1/chat/completions` adapter; tier names as model ids
-- [[starnet]] — multi-agent station app (androoAGI/starnet); web sidecar on :8787; only Ollama works (Bugs A, C open)
+- [[starnet]] — separate multi-agent platform (androoAGI/starnet); web sidecar on :8787; only Ollama works, Groq crashes the sidecar (Bugs A, C open)
 - [[aider]] — terminal coding agent; launched against Groq gpt-oss-120b; never paste shell commands into its prompt
 - [[crostini]] — Debian 13 Linux env on the ASUS Chromebook; IPv6-first breaks Cloudflare POSTs; Node c-ares caveat
 - [[groq]] — provider for the fast/smart tiers (openai/gpt-oss-20b / -120b); compound-mini 404 fix
@@ -40,6 +40,7 @@ Each entry: `- [[page-name]] — one-line summary`
 - [[jarvis-x-app]] — v2 delivery: FastAPI + PWA + Tauri; Linux → Windows → mobile → macOS
 - [[jarvis-x-station-view]] — planned "Station" tab in Jarvis X's React UI; the recommended path instead of a StarNet clone
 - [[free-api-tiers]] — consumer AI subscriptions don't grant API access; what is actually free (Gemini flash, Groq gpt-oss, OpenRouter)
+- [[ipv6-dns-truncation-crostini]] — Crostini resolves IPv6 first, truncating POSTs to Cloudflare-fronted APIs; Node's https/c-ares ignores the usual fix
 
 ## Skills
 
