@@ -13,6 +13,10 @@ Utility: `grep "^## \[[0-9]" wiki/log.md | head -5` returns the 5 most recent op
 
 ---
 
+## [2026-09-26] update | Graphify refresh after ruling 3
+
+Merge-only refresh of the 7 files from the StarNet-on-ChromeOS ingest. Result: 1,168 nodes, 2,578 edges, 106 communities (was 1,155 / 2,567 / 99). 411 local-only nodes kept; 0 dangling edges; `manifest.json` unchanged; built from `f9380943`. Updated [[graphify]] and [[index]].
+
 ## [2026-09-26] ingest | Ruling 3 (StarNet itself on ChromeOS) and the install findings
 
 Read `raw/2026-09-26-ahmed-ruling-3-starnet-itself-on-chromeos.md`, the human's verbatim ruling that he wants StarNet's own system and exact interface on ChromeOS (run it or clone it), and `raw/2026-09-26-starnet-on-chromeos-install-findings.md`, the notes from installing and running upstream StarNet on Debian through the Jarvis gateway.

@@ -56,7 +56,8 @@ graphify explain "concept"           # focused explanation of one concept
 
 ## This vault (~/my-second-brain)
 
-- **1,155 nodes**, **2,567 edges**, **99 communities** (as of the 2026-09-26 refresh, built from commit `7ed53565`). The 8 files touched by the StarNet gateway and Station ingest were re-extracted and merged the same way. All 411 local-only nodes were kept, and 0 edges are dangling.
+- **1,168 nodes**, **2,578 edges**, **106 communities** (as of the second 2026-09-26 refresh, built from commit `f9380943`, after the StarNet-on-ChromeOS ingest). Same merge-only method: 411 local-only nodes kept, 0 dangling edges.
+- Before that: **1,155 nodes**, **2,567 edges**, **99 communities** (first 2026-09-26 refresh, built from commit `7ed53565`). The 8 files touched by the StarNet gateway and Station ingest were re-extracted and merged the same way. All 411 local-only nodes were kept, and 0 edges are dangling.
 - Before that: **1,132 nodes**, **2,527 edges**, **97 communities** (as of the second 2026-09-25 refresh).
   - The 47 files changed since the 2026-07-28 build were re-extracted structurally and merged into the existing graph with pruning off.
   - The 411 nodes from local-only files were kept, and `manifest.json` was left unchanged, so the next local `--update` still sees the true local state. Details: `graphify-out/GRAPH_REPORT.md`, "Graph Freshness".
