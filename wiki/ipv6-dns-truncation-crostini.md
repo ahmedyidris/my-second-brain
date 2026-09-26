@@ -1,19 +1,19 @@
 ---
-title: IPv6 DNS Truncation on Crostini
+title: IPv6 DNS Truncation (Crostini)
 tags: [jarvis-x, starnet, infrastructure, gotcha, networking]
 sources:
   - raw/2026-09-24-jarvis-x-starnet-handoff.md
-related: [[jarvis-x-hardware]], [[jarvis-x]], [[starnet]]
-last_updated: 2026-09-24
+related: [[jarvis-x-hardware]], [[jarvis-x]], [[starnet]], [[crostini]], [[groq]], [[openrouter]], [[jarvis-x-runtime]], [[source-jarvis-x-starnet-handoff]]
+last_updated: 2026-09-25
 ---
 
-# IPv6 DNS Truncation on Crostini
+# IPv6 DNS Truncation (Crostini)
 
-Environment-level networking bug affecting both [[jarvis-x]] and [[starnet]] on Crostini (Debian 13 trixie, ChromeOS Linux container).
+Environment-level networking bug affecting both [[jarvis-x]] and [[starnet]] on Crostini (Debian 13 trixie, ChromeOS Linux container). For the environment as a whole (RAM, disk, the other gotchas), see [[crostini]].
 
 ## Symptom
 
-Crostini resolves hostnames to IPv6 first. For Cloudflare-fronted APIs (Groq, OpenRouter), the IPv6 path truncates POST request bodies. This is a strong suspect behind [[starnet]] Bug A (sidecar dies silently on Groq calls).
+Crostini resolves hostnames to IPv6 first. For Cloudflare-fronted APIs ([[groq]], [[openrouter]]), the IPv6 path truncates POST request bodies. The handoff lists this as one of three likely causes of [[starnet]] Bug A (the sidecar dies silently on Groq calls). None of the three is confirmed.
 
 ## System-level fix
 
@@ -40,5 +40,5 @@ If a Node script fails with a network error (timeout, truncation) but `curl` to 
 ## Where this bites
 
 - `api.groq.com`, `nodejs.org`, and other Cloudflare-fronted hosts have been observed timing out from Node despite `curl` working.
-- Applied as a systemd `EnvironmentFile` + `Environment=NODE_OPTIONS=...` override for the `jarvis-supervisord.service` unit (see [[jarvis-x]]), since systemd units don't inherit shell exports.
+- Applied as a systemd `EnvironmentFile` + `Environment=NODE_OPTIONS=...` override for the `jarvis-supervisord.service` unit (see [[jarvis-x]] and [[jarvis-x-runtime]]), since systemd units don't inherit shell exports.
 - Suspected root cause of [[starnet]]'s unresolved Bug A (Groq kills the sidecar). Not yet confirmed — the `/etc/gai.conf` and `NODE_OPTIONS` fixes were applied for Jarvis X's own services, but StarNet's sidecar was still observed dying on Groq calls as of 2026-09-24, which is consistent with the c-ares gap above (Node's `https` still bypasses both fixes).

@@ -3,8 +3,8 @@ title: wiki-self-heal Skill
 tags: [skill, meta, maintenance, llm-wiki]
 sources:
   - raw/ai-second-brain-skills/wiki-self-heal/SKILL.md
-related: [[llm-wiki-pattern]], [[llm-wiki-setup-skill]], [[second-brain]]
-last_updated: 2026-07-27
+related: [[llm-wiki-pattern]], [[llm-wiki-setup-skill]], [[second-brain]], [[agent-starter-kit]]
+last_updated: 2026-09-25
 ---
 
 # wiki-self-heal Skill

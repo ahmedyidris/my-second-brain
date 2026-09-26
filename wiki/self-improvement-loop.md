@@ -3,8 +3,9 @@ title: Self-Improvement Loop
 tags: [jarvis-x, evolution, meta-agent, autonomy]
 sources:
   - raw/Jarvis X Resources/DeepSeek Files/DeepSeek_Jarvis_X_Master_Plan.md
-related: [[jarvis-x]], [[hermes-agent]], [[constitutional-autonomy]]
-last_updated: 2026-07-27
+  - raw/2026-09-25-ahmed-rulings-machine-and-model-priority.md
+related: [[jarvis-x]], [[hermes-agent]], [[constitutional-autonomy]], [[jarvis-x-model-priority]]
+last_updated: 2026-09-25
 ---
 
 # Self-Improvement Loop
@@ -42,7 +43,7 @@ Logs the change → Repeat
 - Automatic skill creation without intervention
 - Cross-session memory
 - Meta-agent self-review
-- Automatic model upgrades
+- Automatic model upgrades. Which models and providers an upgrade may move to follows [[jarvis-x-model-priority]], the human's 2026-09-25 ruling.
 - Portable one-click installer
 - iOS companion app
 

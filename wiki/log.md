@@ -1,6 +1,6 @@
 # Wiki Log
 
-Chronological, append-only. One entry per operation.
+Newest first, add-only: new entries go at the top, and past entries are never edited or deleted. One entry per operation.
 
 Format:
 ```
@@ -9,7 +9,180 @@ Format:
 
 Operations: `ingest`, `query`, `lint`, `update`, `init`.
 
-Utility: `grep "^## \[" wiki/log.md | tail -5` returns the last 5 operations.
+Utility: `grep "^## \[[0-9]" wiki/log.md | head -5` returns the 5 most recent operations.
+
+---
+
+## [2026-09-26] update | Graphify refresh after ruling 3
+
+Merge-only refresh of the 7 files from the StarNet-on-ChromeOS ingest. Result: 1,168 nodes, 2,578 edges, 106 communities (was 1,155 / 2,567 / 99). 411 local-only nodes kept; 0 dangling edges; `manifest.json` unchanged; built from `f9380943`. Updated [[graphify]] and [[index]].
+
+## [2026-09-26] ingest | Ruling 3 (StarNet itself on ChromeOS) and the install findings
+
+Read `raw/2026-09-26-ahmed-ruling-3-starnet-itself-on-chromeos.md`, the human's verbatim ruling that he wants StarNet's own system and exact interface on ChromeOS (run it or clone it), and `raw/2026-09-26-starnet-on-chromeos-install-findings.md`, the notes from installing and running upstream StarNet on Debian through the Jarvis gateway.
+
+Updated:
+- [[starnet]]: new section "Running StarNet itself on the Chromebook", with a Disagreement against handoff PART 8.
+- [[jarvis-x-station-view]]: an "Open" note saying the tab is now optional.
+- [[jarvis-x-starnet-gateway]]: a launcher section.
+- [[index]]: starnet and station-view lines.
+
+Flags for the human:
+- Keep or close the Station tab (PR #38).
+- Nothing has been verified on the Chromebook yet.
+
+## [2026-09-26] update | Graphify refresh (structural, merge-only)
+
+Re-extracted the 8 files from the gateway/Station ingest and merged them into `graphify-out/graph.json` with pruning off, the same method as the 2026-09-25 refresh. Result: 1,155 nodes, 2,567 edges and 99 communities (was 1,132 / 2,527 / 97). All 411 local-only nodes kept; 0 dangling edges; `manifest.json` unchanged. `built_at_commit` is stamped `7ed53565`; graph.json keeps its 2-space indent; the report title and Graph Freshness section were patched. Updated [[graphify]] and [[index]] with the new counts. `graphify update .` was not run: it shrinks the graph in a cloud checkout.
+
+## [2026-09-26] ingest | StarNet gateway and Station tab build notes
+
+Read `raw/2026-09-26-starnet-gateway-and-station-build.md`: session notes from building the human's "A then C" in jarvis-x. A is StarNet routed through Jarvis (PR #37); C is the Station tab (PR #38). Both are drafts, CI-green or pending, not merged, and not yet run on the Chromebook.
+
+Created [[jarvis-x-starnet-gateway]].
+
+Updated:
+- [[jarvis-x-station-view]]: status is built; new "As built" section; the open questions answered by the build.
+- [[starnet]]: Bug C code analysis with ranked causes and a workaround; Bug A mitigation; a Disagreement on the Priority 2 target (:8000 vs :8010); the direction question marked Resolved ("A then C").
+- [[jarvis-x-openai-compatible-api]]: why StarNet can't use it, with a Disagreement against the handoff; streaming partly answered (app.py doesn't stream).
+- [[jarvis-x-runtime]]: a ports table (8000, 8001 tts-worker, 8002 dashboard, 8010 gateway, 8787, 11434); Priority 2/3 status.
+- [[index]]: new gateway entry; station-view, starnet and API lines refreshed.
+
+Flags for the human:
+- The gateway's first port (8001) collided with tts-worker. It was fixed before merge.
+- app.py still needs one mount call for the Station, added by the local session.
+- The Bug C causes come from upstream StarNet code, not the local `feat/harness-backend` branch.
+
+## [2026-09-25] update | Apply the human's follow-up rulings (free vs paid, by-provider catalog, tier names, direction)
+
+Source added: `raw/2026-09-25-ahmed-rulings-2-providers-tiers-direction.md` (verbatim reply to the eight open questions).
+
+Resolved:
+- **gpt-oss:** free counts as free, under its official name, so it's slot 1.
+- **Gemma:** listed in both slot 1 and slot 2.
+- **Kimi:** each paid Kimi model is a standalone paid entry. Free models are listed under every provider that serves them.
+- **Tier names:** they stay as they are, picked StarNet-style (local, or a provider's API).
+- **Lenovo roadmap:** parked.
+- **Budget:** $0/month still binds, with paid routes as options.
+- **Tokens:** "we need more tokens". Recommended adding Gemini Flash-Lite and spreading load across the free providers; not yet made in Jarvis.
+
+Still open: which adapter the stream:false warning means (the human: "I don't know").
+
+New direction, recorded on [[starnet]], [[jarvis-x-station-view]] and [[jarvis-x]]: complete both StarNet and Jarvis and merge them. It is kept alongside the handoff's "do not chase a StarNet clone" as an explicit Disagreement. What "merge" means concretely, and in which repo, is left for the human.
+
+Pages touched:
+- [[jarvis-x-model-priority]]: restructured into a catalog by access route (Local/Ollama, Groq, OpenRouter, Ollama cloud, Google, then paid standalone Anthropic, OpenAI and Kimi); a new "Getting more tokens" section.
+- [[universal-model-layer]], [[free-api-tiers]], [[groq]], [[openrouter]], [[gemini]], [[the-council]], [[aider]], [[chinese-open-source-models]], [[jarvis-x-hardware]], [[jarvis-x-plan-vs-reality]].
+
+---
+
+## [2026-09-25] update | Graphify refresh (structural, merge-only)
+
+The committed graph was purely structural (all 811 nodes had `_origin: ast`). 411 of its nodes come from gitignored files that exist only on the human's machine.
+
+In a scratch copy:
+- re-extracted the 47 files changed since `df27757` with graphify's structural extractor;
+- merged them into the existing graph with `build_merge` and pruning off;
+- re-clustered;
+- kept community names where at least 40% of the members overlap an old community, and named new communities after their main file;
+- re-signed `.graphify_labels.json.sig`;
+- regenerated `graph.html` and `GRAPH_REPORT.md`.
+
+Result: 1,119 nodes, 2,514 edges, 103 communities. All 411 local-only nodes were kept, and the health check found 0 dangling edges.
+
+`manifest.json` and the cache were left unchanged, so the human's next `/graphify . --update` on the Chromebook sees the real local state. Updated the stats on [[graphify]] and in the index.
+
+---
+
+## [2026-09-25] lint | Audit after the handoff ingest and rulings
+
+Script checks over all 44 pages: links, frontmatter, source paths, titles and filenames, index coverage, orphans and secrets. Wrote [[audits/audit-2026-09-25]].
+
+Fixed:
+- 4 broken `[[claude-flow]]` links: created [[claude-flow]].
+- Two title/filename mismatches: [[agent-secure-comms]] and [[ipv6-dns-truncation-crostini]] retitled; files not renamed.
+- Two orphans: [[graphify]] and [[agent-starter-kit]] now have reciprocal links.
+- The [[ollama]] Phase 1 error.
+- Schema: the log is newest-first (`head -5`), and `Skills` is now a valid index category (`CLAUDE.md`, `AGENTS.md`, log header).
+
+Flagged, not fixed:
+- search-excerpt confidence on the model research;
+- legacy wiki text not in its raw source;
+- two skill pages citing gitignored sources;
+- the open questions for the human.
+
+No broken wikilinks remain, apart from the `[[page-name]]` format example in the index header.
+
+---
+
+## [2026-09-25] update | Apply the human's 2026-09-25 rulings (Chromebook current; model priority) with web research
+
+Sources added:
+- `raw/2026-09-25-ahmed-rulings-machine-and-model-priority.md` (verbatim ruling);
+- `raw/2026-09-25-model-landscape-research.md` (web research, with [F]/[S] confidence marks);
+- `raw/2026-09-25-graphify-update-cloud-test.md` (recorded tool output).
+
+Created:
+- [[jarvis-x-model-priority]]: the ruling's ladder — local and free open-source first, then Google free, then Anthropic, then OpenAI, with Kimi in the paid slot — plus concrete options per slot and a recommended Chromebook stack, labelled as inference;
+- [[chinese-open-source-models]];
+- [[source-model-landscape-research]].
+
+Updated for the machine ruling:
+- [[jarvis-x-hardware]]: the Chromebook first; the Lenovo kept as the earlier plan machine.
+- "Resolved" lines on [[crostini]], [[jarvis-x]], [[jarvis-x-runtime]], [[jarvis-x-app]], [[jarvis-x-plan-vs-reality]], [[source-deepseek-jarvis-x-master-plan]], [[source-jarvis-x-v2-ascension-plan]] and [[source-jarvis-x-starnet-handoff]].
+
+Updated for the model ruling and the research:
+- [[ollama]] (reworked around the Chromebook);
+- [[hermes-agent]], [[free-api-tiers]], [[groq]], [[gemini]], [[openrouter]], [[universal-model-layer]];
+- [[the-council]] (a seat-by-slot table; Kimi in the paid slot);
+- [[jarvis-x]], [[jarvis-x-plan-vs-reality]] (new "Rulings since the handoff" section), [[source-jarvis-x-v2-ascension-plan]];
+- [[obsidian]], [[aider]];
+- single cross-links on [[self-improvement-loop]], [[ruflo]] and [[jarvis-x-content-engine]].
+
+Also updated [[graphify]] and `CLAUDE.md`: `graphify update .` is code-only and shrank the graph in a cloud checkout.
+
+Kept open for the human:
+- gpt-oss: slot 1 or slot 4?
+- Gemma: slot 1, slot 2 or both?
+- Kimi's order within the paid slot, and whether a live OpenRouter `:free` route moves it up.
+- Tier names.
+- The Lenovo roadmap.
+- The stream:false adapter question.
+- Whether $0/month still binds.
+- `gemini-3.6-flash` vs the Flash-Lite models.
+
+---
+
+## [2026-09-25] update | Reconcile two parallel ingests of the 2026-09-24 handoff
+
+The same source (`raw/2026-09-24-jarvis-x-starnet-handoff.md`, byte-identical on both sides) was ingested twice: once on master by the local session (the second entry below, which created [[starnet]] and [[ipv6-dns-truncation-crostini]]), and once on the `claude/jarvis-starnet-handoff-plqfqv` branch (the entry directly below). Merged master into the branch and kept both sides' content:
+
+- [[starnet]]: both sides created it. Kept the branch version, which covers every section of master's, and added master's "separate multi-agent platform developed in parallel" framing, its tags and a link to [[ipv6-dns-truncation-crostini]].
+- [[jarvis-x]]: master's "Current working state" section and the branch's "Build state" section are merged into one section. It has master's service and tier tables, restart command and systemd gotcha, plus the branch's pointers and Disagreement callout. Master's "these are two different machines" is softened to "may be", since the handoff doesn't say.
+- [[jarvis-x-app]]: master's full adapter and Station-tab sections are condensed into the As-built bullets, linking to [[jarvis-x-openai-compatible-api]] and [[jarvis-x-station-view]]. Every fact in them was checked as present on those pages first, so nothing was dropped.
+- [[hermes-agent]], [[ollama]], [[jarvis-x-hardware]]: kept the branch versions and added master's unique content: `tts-worker` alongside the Hermes services, the "check override.conf before re-pulling" tip, the `contradiction` tag, and the working assumption to use the Crostini facts day-to-day until the human decides (labelled as an interpretation, not a resolution). Master's "Hermes usable as a coding agent via Aider, pointed at the `smart` tier" is reworded: the handoff launches [[aider]] directly on Groq with the same model as `smart`, not through Hermes.
+- [[ipv6-dns-truncation-crostini]] (master's page) is kept. "A strong suspect behind Bug A" is corrected to "one of three likely causes", with none confirmed, matching the handoff. It is now cross-linked with [[crostini]], [[groq]], [[openrouter]], [[jarvis-x-runtime]] and [[source-jarvis-x-starnet-handoff]].
+- `wiki/index.md`: one [[starnet]] entry, plus [[ipv6-dns-truncation-crostini]] under Concepts alongside the branch's new pages.
+
+Both ingest entries below are kept (the log is append-only).
+
+---
+
+## [2026-09-24] ingest | Jarvis X / StarNet technical handoff
+
+Read `raw/2026-09-24-jarvis-x-starnet-handoff.md` (as-built Jarvis X + StarNet state, 10 landed fixes, open Bugs A–E, launch commands, 10 gotchas, 4 priorities, 5 "what not to do" rules). All 86 distinct items in the source are captured, and every code block matches it verbatim.
+
+Created: [[source-jarvis-x-starnet-handoff]], [[jarvis-x-runtime]], [[jarvis-x-openai-compatible-api]], [[starnet]], [[jarvis-x-station-view]], [[aider]], [[crostini]], [[groq]], [[gemini]], [[openrouter]], [[free-api-tiers]], [[jarvis-x-plan-vs-reality]] (first page under Analyses).
+
+Updated: [[jarvis-x]], [[hermes-agent]], [[ollama]], [[universal-model-layer]], [[jarvis-x-hardware]], [[jarvis-x-voice-engine]], [[jarvis-x-app]], [[the-council]], [[constitutional-autonomy]], [[source-jarvis-x-v2-ascension-plan]], [[source-deepseek-jarvis-x-master-plan]], `wiki/index.md`.
+
+Disagreements flagged with callouts, not resolved (human to decide): machine (Lenovo Y50-70 / Pop!_OS in the plans vs ASUS Chromebook / Crostini in the handoff); tier names and roles (`local|fast|smart|long` with smart = Anthropic vs as-built `local|fast|smart|quality|frontier` with smart = Groq gpt-oss-120b, quality/frontier = gemini-3.6-flash); local models (llama3.2/qwen3/hermes3 vs the qwen2.5 family); service layout (jarvis-core/scheduler/voice under its own user vs supervisord hermes-agent/hermes-api/tts-worker); TTS (Piper + edge-tts vs Chatterbox); Tauri (planned Windows build vs "do not build for daily use"); Hermes "no cloud dependency" vs cloud-routed registry tiers.
+
+Open ambiguities in the source itself: which adapter PART 8's "do not re-enable stream: false" refers to (StarNet's sidecar vs Jarvis's app.py); whether HTTP 400s still occur after 658dc7ce9; whether `CUSTOM_OPENAI_BASE_URL` bypasses Bug C; which project `code/providers/registry.js` belongs to.
+
+Pre-existing issues noticed, not fixed (lint candidates): `[[claude-flow]]` is listed in the index but has no page; [[ollama]]'s "Unlocked after Phase 1 hardware upgrade (16GB RAM + GPU)" doesn't match the master plan, whose Phase 1 is RAM + SSD and whose GPU arrives in Phases 2–3.
+
+`graphify update` was not run from the cloud session: its manifest covers local-only, gitignored files. Run it on the local machine.
 
 ---
 

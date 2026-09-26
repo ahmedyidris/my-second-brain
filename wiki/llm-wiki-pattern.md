@@ -7,8 +7,8 @@ sources:
   - raw/2026-07-27-llm-wiki-skills-install.md
   - raw/2026-07-27-llm-wiki-query-patterns.md
   - raw/2026-07-27-llm-wiki-self-heal-prompt.md
-related: [[second-brain]], [[wiki-self-heal-skill]], [[llm-wiki-setup-skill]]
-last_updated: 2026-07-27
+related: [[second-brain]], [[wiki-self-heal-skill]], [[llm-wiki-setup-skill]], [[graphify]]
+last_updated: 2026-09-25
 ---
 
 # LLM Wiki Pattern

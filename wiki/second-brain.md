@@ -3,8 +3,8 @@ title: Second Brain
 tags: [meta, knowledge-management, pattern]
 sources:
   - raw/2026-07-27-llm-wiki-pattern-why.md
-related: [[llm-wiki-pattern]], [[jarvis-x]], [[research-vault]], [[obsidian]]
-last_updated: 2026-07-27
+related: [[llm-wiki-pattern]], [[jarvis-x]], [[research-vault]], [[obsidian]], [[graphify]]
+last_updated: 2026-09-25
 ---
 
 # Second Brain

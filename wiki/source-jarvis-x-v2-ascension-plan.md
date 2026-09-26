@@ -2,9 +2,11 @@
 title: Source — Jarvis X v2 Ascension Plan
 tags: [source, jarvis-x, v2]
 sources:
+  - raw/2026-09-25-ahmed-rulings-machine-and-model-priority.md
   - raw/Jarvis X Resources/Jarvis X/Jarvis_X_v2_Ascension_Plan.md
-related: [[jarvis-x]], [[universal-model-layer]], [[constitutional-autonomy]], [[jarvis-x-voice-engine]], [[jarvis-x-content-engine]], [[source-deepseek-jarvis-x-master-plan]]
-last_updated: 2026-07-27
+  - raw/2026-09-24-jarvis-x-starnet-handoff.md
+related: [[jarvis-x]], [[universal-model-layer]], [[constitutional-autonomy]], [[jarvis-x-voice-engine]], [[jarvis-x-content-engine]], [[source-deepseek-jarvis-x-master-plan]], [[source-jarvis-x-starnet-handoff]], [[jarvis-x-plan-vs-reality]], [[jarvis-x-runtime]], [[jarvis-x-app]], [[crostini]], [[free-api-tiers]], [[starnet]], [[jarvis-x-model-priority]]
+last_updated: 2026-09-25
 ---
 
 # Source — Jarvis X v2 Ascension Plan
@@ -35,3 +37,19 @@ The v2 update to [[jarvis-x]]. Overrides [[source-deepseek-jarvis-x-master-plan]
 ## Execute prompt
 
 > JARVIS X Ascension — execute. Read the Unified Master Blueprint and the v2 Ascension Plan; v2 overrides v1 where they conflict, and constraints (CPU-only Y50-70, $0/month, 6–10 hrs/wk, Egypt/Payoneer, income-first 60/40) still bind everything.
+
+## Later sources
+
+[[source-jarvis-x-starnet-handoff]] (dated 2026-09-24) reports the as-built state of [[jarvis-x]]. It differs from this plan in several places. The full area-by-area comparison is in [[jarvis-x-plan-vs-reality]]. Examples, as of the 2026-09-24 handoff:
+
+- **Hardware:** the plan's constraint is "CPU-only Y50-70". The handoff's machine is an ASUS Chromebook running Crostini (Debian 13 trixie), with an 11th Gen i5 and no GPU ([[crostini]]). It is still CPU-only.
+- **Model layer (§3):** the plan has `jj ask "..." --tier local|fast|smart|long`. As built, the tiers are `local | fast | smart | quality | frontier`, served by Ollama, Groq and Gemini and verified via `POST /api/ask` ([[jarvis-x-runtime]], [[universal-model-layer]]).
+- **Services (§5):** the plan has `jarvis-core`, `jarvis-scheduler` and `jarvis-voice` running under Jarvis's own Linux user in `~/jarvis/`. As built, supervisord runs `hermes-agent`, `hermes-api` and `tts-worker` under the systemd unit `jarvis-supervisord.service`, with the source in `~/jarvis-x` ([[constitutional-autonomy]]).
+- **App (§8):** the plan wraps the web UI with Tauri "later for Windows/macOS desktop builds". The handoff says "Do not build the Tauri desktop shell for daily use. Web UI is faster and identical in function." But the only Tauri shell the handoff records is StarNet's (built, then deleted), so it doesn't say whether this rule covers a Jarvis Tauri wrapper, or a build for distribution rather than daily use ([[jarvis-x-app]], [[starnet]]).
+- **Subscriptions:** the plan uses Claude/Gemini "while subs live". The handoff reports that consumer AI subscriptions don't give API access (Bug E) ([[free-api-tiers]]).
+
+> **Disagreement (2026-09-24 handoff vs Jarvis X v2 Ascension Plan):** the plan's binding constraints (§10) name a "CPU-only Y50-70", and the same §10 prompt asks for scripts "for a fresh Pop!_OS terminal". The handoff's machine is an ASUS Chromebook running Crostini (Debian 13 trixie). The handoff doesn't say whether the Y50-70 was retired or is still the target.
+
+> **Resolved by the human (2026-09-25):** the Chromebook is the current machine ("Current machine is chrome boo[k]"). See [[jarvis-x-hardware]]. The plan's other constraints ($0/month, 6–10 hrs/wk, Egypt/Payoneer, income-first 60/40) are not affected by the ruling.
+
+**Provider order (human ruling, 2026-09-25):** the ruling reorders providers ([[jarvis-x-model-priority]]). The plan registers Anthropic "while sub lives, then optional API" (§3), and [[universal-model-layer]]'s provider table puts it on the `smart` tier. That tier assignment is this wiki's compilation, not the plan's text (see the note on [[universal-model-layer]]). The ruling puts Anthropic in slot 3, after local and free open-source models (slot 1) and the most free Google options (slot 2), with OpenAI in slot 4.

@@ -2,11 +2,13 @@
 title: Jarvis X
 tags: [jarvis-x, ai-os, sovereign, entity]
 sources:
+  - raw/2026-09-25-ahmed-rulings-2-providers-tiers-direction.md
+  - raw/2026-09-25-ahmed-rulings-machine-and-model-priority.md
+  - raw/2026-09-24-jarvis-x-starnet-handoff.md
   - raw/Jarvis X Resources/DeepSeek Files/DeepSeek_Jarvis_X_Master_Plan.md
   - raw/Jarvis X Resources/Jarvis X/Jarvis_X_v2_Ascension_Plan.md
-  - raw/2026-09-24-jarvis-x-starnet-handoff.md
-related: [[the-council]], [[hermes-agent]], [[constitutional-autonomy]], [[jarvis-x-hardware]], [[universal-model-layer]], [[self-improvement-loop]], [[jarvis-x-app]], [[starnet]], [[ollama]], [[ipv6-dns-truncation-crostini]]
-last_updated: 2026-09-24
+related: [[the-council]], [[hermes-agent]], [[constitutional-autonomy]], [[jarvis-x-hardware]], [[universal-model-layer]], [[self-improvement-loop]], [[jarvis-x-runtime]], [[jarvis-x-openai-compatible-api]], [[jarvis-x-app]], [[starnet]], [[jarvis-x-station-view]], [[jarvis-x-plan-vs-reality]], [[source-jarvis-x-starnet-handoff]], [[ipv6-dns-truncation-crostini]], [[free-api-tiers]], [[crostini]], [[aider]], [[ollama]], [[groq]], [[gemini]], [[jarvis-x-model-priority]]
+last_updated: 2026-09-25
 ---
 
 # Jarvis X
@@ -37,31 +39,39 @@ Bilingual by design: Egyptian Arabic and English are both first-class citizens.
 - **Portable** — entire system can be replicated and backed up
 - **Zero-subscription** — must boot and function with zero cloud keys
 
-## Current working state (2026-09-24)
+## Current working state (2026-09-24 handoff)
 
-Repo: https://github.com/ahmedyidris/jarvis-x, branch `master`. Latest commit `99652aa` — OpenAI-compatible `/v1/chat/completions` + `/v1/models` (see [[jarvis-x-app]]).
+What actually exists, as of the 2026-09-24 handoff ([[source-jarvis-x-starnet-handoff]]). Full detail on [[jarvis-x-runtime]].
+
+- **Repo:** https://github.com/ahmedyidris/jarvis-x (branch `master`), checked out at `~/jarvis-x`. Latest commit `99652aa` — feat(api): OpenAI-compatible /v1/chat/completions + /v1/models. See [[jarvis-x-openai-compatible-api]].
+- **Machine:** ASUS Chromebook, Crostini (Debian 13 trixie). See [[crostini]] and [[jarvis-x-hardware]].
+- **Multi-agent:** a separate, parallel app, [[starnet]], is under active development in this environment. The explicit direction is not to build StarNet out into a full Jarvis X clone, but to add a "Station" tab to Jarvis X's own frontend instead ([[jarvis-x-station-view]]).
+- **Coding agent:** [[aider]], launched from `~/jarvis-x` with `aider --model groq/openai/gpt-oss-120b --no-show-model-warnings`.
+- **Plan vs as-built:** [[jarvis-x-plan-vs-reality]].
+- **Model priority (human ruling, 2026-09-25):** [[jarvis-x-model-priority]] sets the order for plans: local models and free open-source tiers first (including top-tier Chinese open-source models via [[ollama]]), then the most free options from Google, then Anthropic, then OpenAI. Kimi goes in the paid slot if it isn't free.
+- **Observation (this wiki's reading):** the ruling is consistent with the Sovereignty principles above. Putting local and free open-source models first fits **Local-first**, and putting free tiers ahead of paid ones fits **Zero-subscription**. It doesn't by itself settle the local-first vs cloud-tiers Disagreement below, because slot 1 also covers free open-source *tiers*, which [[jarvis-x-model-priority]] reads as including free hosted tiers such as Groq's gpt-oss.
 
 Services managed by `supervisord` under systemd unit `jarvis-supervisord.service`:
 
 | Service | Status |
 |---|---|
-| hermes-agent | RUNNING |
+| hermes-agent | RUNNING ([[hermes-agent]]) |
 | hermes-api (uvicorn, port 8000) | RUNNING |
-| tts-worker | RUNNING — degraded, chatterbox model absent, `/synthesize` returns 500 |
+| tts-worker | RUNNING — degraded, chatterbox model absent, `/synthesize` returns 500 ([[jarvis-x-voice-engine]]) |
 
-Model tiers, all verified working via `POST /api/ask`:
+Model tiers, all verified working via `POST /api/ask` (see [[universal-model-layer]]):
 
 | tier | provider | model |
 |---|---|---|
-| local | ollama | qwen2.5:3b |
-| fast | groq | openai/gpt-oss-20b |
-| smart | groq | openai/gpt-oss-120b |
-| quality | gemini | gemini-3.6-flash |
-| frontier | gemini | gemini-3.6-flash |
+| local | [[ollama]] | qwen2.5:3b |
+| fast | [[groq]] | openai/gpt-oss-20b |
+| smart | [[groq]] | openai/gpt-oss-120b |
+| quality | [[gemini]] | gemini-3.6-flash |
+| frontier | [[gemini]] | gemini-3.6-flash |
 
-Note: `gemini-3.6-flash` does not appear in Google's models-list endpoint (stale listing) but works when called directly — do not "correct" it to a listed model.
+Note: `gemini-3.6-flash` does not appear in Google's models-list endpoint (the handoff calls the listing stale), but it works when called directly. Do not "correct" it to a listed model.
 
-**Hardware discrepancy flagged 2026-09-24:** [[jarvis-x-hardware]] describes the machine as a Lenovo Y50-70 running Pop!_OS. The 2026-09-24 handoff source describes the actual working environment as an ASUS Chromebook running Crostini (Debian 13 trixie) — 14GB RAM, 11th Gen i5, no GPU, 72GB disk. These are two different machines/environments. Not silently resolved — see the note in [[jarvis-x-hardware]] for detail. Treat the Crostini facts as current for day-to-day operational work as of this date.
+**Hardware discrepancy (flagged 2026-09-24):** [[jarvis-x-hardware]] describes the machine as a Lenovo Y50-70 running Pop!_OS. The handoff describes the working environment as an ASUS Chromebook running Crostini (Debian 13 trixie), with 14GB RAM, an 11th Gen i5, no GPU and a 72GB disk. **Resolved by the human on 2026-09-25:** the Chromebook is the current machine. The Lenovo stays on [[jarvis-x-hardware]] as the plans' record.
 
 Restart command:
 
@@ -71,9 +81,13 @@ sleep 8
 supervisorctl -c ~/jarvis-x/config/supervisord.conf status
 ```
 
-Gotcha: systemd units don't inherit shell exports, so `jarvis-supervisord.service` needed an explicit `EnvironmentFile=/home/ahmedyidris/.jarvis-x/.env` drop-in (`/etc/systemd/system/jarvis-supervisord.service.d/env.conf`) plus `NODE_OPTIONS=--dns-result-order=ipv4first` — see [[ipv6-dns-truncation-crostini]].
+Gotcha: systemd units don't inherit shell exports. So `jarvis-supervisord.service` needed an explicit `EnvironmentFile=/home/ahmedyidris/.jarvis-x/.env` drop-in (`/etc/systemd/system/jarvis-supervisord.service.d/env.conf`), plus `NODE_OPTIONS=--dns-result-order=ipv4first`. See [[jarvis-x-runtime]] and [[ipv6-dns-truncation-crostini]].
 
-A separate, parallel multi-agent platform, [[starnet]], is also under active development in this environment. Explicit direction: do not build StarNet out into a full Jarvis X clone — add a lighter "Station" view to Jarvis X's own frontend instead (see [[jarvis-x-app]]).
+**Direction (2026-09-25):** the human wants to complete both Jarvis and [[starnet]] and merge them, so that work on StarNet also moves Jarvis forward. The details are still to be confirmed ([[starnet]], "Direction from the human").
+
+Cloud tiers on Groq and Gemini are in active use alongside the local Ollama tier. Their models (`openai/gpt-oss-20b`, `openai/gpt-oss-120b`, `gemini-3.6-flash`) are the ones the handoff lists under free API access (Bug E; see [[free-api-tiers]]). The handoff does not say whether the system boots and functions with zero cloud keys (the "Zero-subscription" principle above), and reports no test of it.
+
+> **Disagreement (2026-09-24 handoff vs Jarvis X v2 Ascension Plan / DeepSeek Master Plan):** this page's sovereignty principles (above, drawn from the plans) say "all models, data, logic run on your hardware" and "nothing leaves the machine without explicit permission", while the as-built routes `fast`, `smart`, `quality` and `frontier` to Groq and Gemini. The plans themselves also register cloud providers ([[universal-model-layer]], with "privacy-sensitive → local only"). The handoff does not say whether privacy-based routing to `local` is implemented. Left for the human to resolve.
 
 ## v2 identity notes
 
@@ -85,4 +99,4 @@ One installer script → services up → web UI on phone & laptop → voice chat
 
 ## Related
 
-[[jarvis-x-hardware]] | [[the-council]] | [[universal-model-layer]] | [[constitutional-autonomy]] | [[jarvis-x-voice-engine]] | [[jarvis-x-content-engine]] | [[jarvis-x-trading-module]] | [[jarvis-x-income-roadmap]] | [[self-improvement-loop]]
+[[jarvis-x-hardware]] | [[the-council]] | [[universal-model-layer]] | [[constitutional-autonomy]] | [[jarvis-x-voice-engine]] | [[jarvis-x-content-engine]] | [[jarvis-x-trading-module]] | [[jarvis-x-income-roadmap]] | [[self-improvement-loop]] | [[jarvis-x-runtime]] | [[jarvis-x-openai-compatible-api]] | [[jarvis-x-app]] | [[starnet]] | [[jarvis-x-station-view]] | [[jarvis-x-plan-vs-reality]] | [[crostini]] | [[ipv6-dns-truncation-crostini]] | [[aider]] | [[free-api-tiers]] | [[source-jarvis-x-starnet-handoff]] | [[jarvis-x-model-priority]]

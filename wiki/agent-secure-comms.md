@@ -1,15 +1,15 @@
 ---
-title: Agent-to-Agent Secure Communication
+title: Agent Secure Comms
 tags: [security, agent-architecture, protocol, trust]
 sources:
   - raw/2026-07-27-agent-secure-comms.md
 related: [[ruflo]], [[the-council]], [[constitutional-autonomy]], [[jarvis-x]], [[claude-flow]]
-last_updated: 2026-07-27
+last_updated: 2026-09-25
 ---
 
-# Agent-to-Agent Secure Communication
+# Agent Secure Comms
 
-A protocol for agents communicating with other agents safely. Five layers on the send path, three on the receive path, plus a meta-layer for reputation.
+Agent-to-agent secure communication: a protocol for agents communicating with other agents safely. Five layers on the send path, three on the receive path, plus a meta-layer for reputation.
 
 ## The protocol
 

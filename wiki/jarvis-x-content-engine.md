@@ -4,8 +4,9 @@ tags: [jarvis-x, monetization, content, v2]
 sources:
   - raw/Jarvis X Resources/DeepSeek Files/DeepSeek_Jarvis_X_Master_Plan.md
   - raw/Jarvis X Resources/Jarvis X/Jarvis_X_v2_Ascension_Plan.md
-related: [[jarvis-x]], [[jarvis-x-income-roadmap]], [[jarvis-x-voice-engine]]
-last_updated: 2026-07-27
+  - raw/2026-09-25-ahmed-rulings-machine-and-model-priority.md
+related: [[jarvis-x]], [[jarvis-x-income-roadmap]], [[jarvis-x-voice-engine]], [[jarvis-x-model-priority]]
+last_updated: 2026-09-25
 ---
 
 # Jarvis X Content Engine
@@ -15,6 +16,8 @@ Income stream #3 for [[jarvis-x]] (after Outlier + gigs). Fully automated biling
 ## Pipeline
 
 Topic queue in vault → script drafted by [[the-council]] → voiceover via [[jarvis-x-voice-engine]] → assembly via ffmpeg templates (stock/AI images + subtitles, AR & EN) → human approval → publish.
+
+Model and provider choice for the Council's script-drafting step follows [[jarvis-x-model-priority]], the human's 2026-09-25 ruling.
 
 ## Content types
 

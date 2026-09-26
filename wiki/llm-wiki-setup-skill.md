@@ -3,8 +3,8 @@ title: llm-wiki-setup Skill
 tags: [skill, meta, setup, llm-wiki]
 sources:
   - raw/ai-second-brain-skills/llm-wiki-setup/SKILL.md
-related: [[llm-wiki-pattern]], [[wiki-self-heal-skill]], [[second-brain]]
-last_updated: 2026-07-27
+related: [[llm-wiki-pattern]], [[wiki-self-heal-skill]], [[second-brain]], [[agent-starter-kit]]
+last_updated: 2026-09-25
 ---
 
 # llm-wiki-setup Skill
