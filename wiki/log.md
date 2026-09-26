@@ -13,6 +13,10 @@ Utility: `grep "^## \[[0-9]" wiki/log.md | head -5` returns the 5 most recent op
 
 ---
 
+## [2026-09-26] update | Graphify refresh (structural, merge-only)
+
+Re-extracted the 8 files from the gateway/Station ingest and merged them into `graphify-out/graph.json` with pruning off, the same method as the 2026-09-25 refresh. Result: 1,155 nodes, 2,567 edges and 99 communities (was 1,132 / 2,527 / 97). All 411 local-only nodes kept; 0 dangling edges; `manifest.json` unchanged. `built_at_commit` is stamped `7ed53565`; graph.json keeps its 2-space indent; the report title and Graph Freshness section were patched. Updated [[graphify]] and [[index]] with the new counts. `graphify update .` was not run: it shrinks the graph in a cloud checkout.
+
 ## [2026-09-26] ingest | StarNet gateway and Station tab build notes
 
 Read `raw/2026-09-26-starnet-gateway-and-station-build.md`: session notes from building the human's "A then C" in jarvis-x. A is StarNet routed through Jarvis (PR #37); C is the Station tab (PR #38). Both are drafts, CI-green or pending, not merged, and not yet run on the Chromebook.

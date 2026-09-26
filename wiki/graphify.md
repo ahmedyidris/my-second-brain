@@ -5,7 +5,7 @@ sources:
   - raw/2026-07-28-graphify-output-structure.md
   - raw/2026-09-25-graphify-update-cloud-test.md
 related: [[llm-wiki-pattern]], [[second-brain]], [[jarvis-x]], [[the-council]]
-last_updated: 2026-09-25
+last_updated: 2026-09-26
 ---
 
 # Graphify
@@ -56,7 +56,8 @@ graphify explain "concept"           # focused explanation of one concept
 
 ## This vault (~/my-second-brain)
 
-- **1,132 nodes**, **2,527 edges**, **97 communities** (as of the second 2026-09-25 refresh).
+- **1,155 nodes**, **2,567 edges**, **99 communities** (as of the 2026-09-26 refresh, built from commit `7ed53565`). The 8 files touched by the StarNet gateway and Station ingest were re-extracted and merged the same way. All 411 local-only nodes were kept, and 0 edges are dangling.
+- Before that: **1,132 nodes**, **2,527 edges**, **97 communities** (as of the second 2026-09-25 refresh).
   - The 47 files changed since the 2026-07-28 build were re-extracted structurally and merged into the existing graph with pruning off.
   - The 411 nodes from local-only files were kept, and `manifest.json` was left unchanged, so the next local `--update` still sees the true local state. Details: `graphify-out/GRAPH_REPORT.md`, "Graph Freshness".
 - Before that: **811 nodes**, **1,980 edges**, **63 communities** (as of 2026-07-28, after .graphifyignore applied)
