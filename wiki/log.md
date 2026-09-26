@@ -13,6 +13,24 @@ Utility: `grep "^## \[[0-9]" wiki/log.md | head -5` returns the 5 most recent op
 
 ---
 
+## [2026-09-26] ingest | StarNet gateway and Station tab build notes
+
+Read `raw/2026-09-26-starnet-gateway-and-station-build.md`: session notes from building the human's "A then C" in jarvis-x. A is StarNet routed through Jarvis (PR #37); C is the Station tab (PR #38). Both are drafts, CI-green or pending, not merged, and not yet run on the Chromebook.
+
+Created [[jarvis-x-starnet-gateway]].
+
+Updated:
+- [[jarvis-x-station-view]]: status is built; new "As built" section; the open questions answered by the build.
+- [[starnet]]: Bug C code analysis with ranked causes and a workaround; Bug A mitigation; a Disagreement on the Priority 2 target (:8000 vs :8010); the direction question marked Resolved ("A then C").
+- [[jarvis-x-openai-compatible-api]]: why StarNet can't use it, with a Disagreement against the handoff; streaming partly answered (app.py doesn't stream).
+- [[jarvis-x-runtime]]: a ports table (8000, 8001 tts-worker, 8002 dashboard, 8010 gateway, 8787, 11434); Priority 2/3 status.
+- [[index]]: new gateway entry; station-view, starnet and API lines refreshed.
+
+Flags for the human:
+- The gateway's first port (8001) collided with tts-worker. It was fixed before merge.
+- app.py still needs one mount call for the Station, added by the local session.
+- The Bug C causes come from upstream StarNet code, not the local `feat/harness-backend` branch.
+
 ## [2026-09-25] update | Apply the human's follow-up rulings (free vs paid, by-provider catalog, tier names, direction)
 
 Source added: `raw/2026-09-25-ahmed-rulings-2-providers-tiers-direction.md` (verbatim reply to the eight open questions).

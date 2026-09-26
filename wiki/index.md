@@ -18,8 +18,9 @@ Each entry: `- [[page-name]] — one-line summary`
 - [[claude-flow]] — compatible project sharing Ruflo's federation plugin ecosystem; installs via npx claude-flow@latest
 - [[composio]] — tool connector with 1000+ app integrations; bridges Jarvis X agents to external services via MCP
 - [[jarvis-x-runtime]] — as-built Jarvis X (2026-09-24): repo, supervisord services, env file, launch/test commands, landed fixes
-- [[jarvis-x-openai-compatible-api]] — Jarvis X `/v1/models` + `/v1/chat/completions` adapter; tier names as model ids
-- [[starnet]] — separate multi-agent platform (androoAGI/starnet); web sidecar on :8787; only Ollama works, Groq crashes the sidecar (Bugs A, C open)
+- [[jarvis-x-openai-compatible-api]] — Jarvis X `/v1/models` + `/v1/chat/completions` adapter; tier names as model ids; can't serve StarNet (no streaming, last user turn only)
+- [[jarvis-x-starnet-gateway]] — second OpenAI-compatible endpoint on :8010 so StarNet can use Jarvis's tiers (streamed replies, full history, tools); built in jarvis-x PR #37, not merged
+- [[starnet]] — separate multi-agent platform (androoAGI/starnet); web sidecar on :8787; only Ollama works, Groq crashes the sidecar (Bugs A, C open; Bug C causes analysed 2026-09-26)
 - [[aider]] — terminal coding agent; launched against Groq gpt-oss-120b; never paste shell commands into its prompt
 - [[crostini]] — Debian 13 Linux env on the ASUS Chromebook; IPv6-first breaks Cloudflare POSTs; Node c-ares caveat
 - [[groq]] — provider for the fast/smart tiers (openai/gpt-oss-20b / -120b); compound-mini 404 fix
@@ -38,7 +39,7 @@ Each entry: `- [[page-name]] — one-line summary`
 - [[jarvis-x-trading-module]] — market intelligence, paper-trading; hard gates before live
 - [[jarvis-x-income-roadmap]] — bilingual AI operations specialist path; platforms + certifications
 - [[jarvis-x-app]] — v2 delivery: FastAPI + PWA + Tauri; Linux → Windows → mobile → macOS
-- [[jarvis-x-station-view]] — planned "Station" tab in Jarvis X's React UI; the recommended path instead of a StarNet clone
+- [[jarvis-x-station-view]] — "Station" tab in Jarvis X's React UI: 4 text-only agents (Raqib + 3 StarNet-derived roles); built in jarvis-x PR #38, awaiting merge and one app.py mount call
 - [[jarvis-x-model-priority]] — the human's 2026-09-25 ladder: local + free open-source (incl. Chinese open models via Ollama) → Google free → Anthropic → OpenAI; Kimi in the paid slot
 - [[chinese-open-source-models]] — Qwen, DeepSeek, GLM, Kimi, MiniMax, MiniCPM: what fits the Chromebook via Ollama, what's cloud-only, where it's free-hosted
 - [[free-api-tiers]] — consumer AI subscriptions don't grant API access; what is actually free (Gemini flash, Groq gpt-oss, OpenRouter)

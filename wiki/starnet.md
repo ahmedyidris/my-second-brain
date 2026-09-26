@@ -2,10 +2,11 @@
 title: StarNet
 tags: [starnet, ai-os, multi-agent, entity, sidecar, node, jarvis-x]
 sources:
+  - raw/2026-09-26-starnet-gateway-and-station-build.md
   - raw/2026-09-25-ahmed-rulings-2-providers-tiers-direction.md
   - raw/2026-09-24-jarvis-x-starnet-handoff.md
-related: [[jarvis-x]], [[jarvis-x-station-view]], [[jarvis-x-openai-compatible-api]], [[jarvis-x-runtime]], [[ollama]], [[groq]], [[gemini]], [[openrouter]], [[crostini]], [[ipv6-dns-truncation-crostini]], [[the-council]], [[constitutional-autonomy]], [[source-jarvis-x-starnet-handoff]], [[jarvis-x-app]], [[jarvis-x-hardware]], [[jarvis-x-plan-vs-reality]], [[free-api-tiers]]
-last_updated: 2026-09-25
+related: [[jarvis-x]], [[jarvis-x-station-view]], [[jarvis-x-openai-compatible-api]], [[jarvis-x-runtime]], [[ollama]], [[groq]], [[gemini]], [[openrouter]], [[crostini]], [[ipv6-dns-truncation-crostini]], [[the-council]], [[constitutional-autonomy]], [[source-jarvis-x-starnet-handoff]], [[jarvis-x-app]], [[jarvis-x-hardware]], [[jarvis-x-plan-vs-reality]], [[free-api-tiers]], [[jarvis-x-starnet-gateway]]
+last_updated: 2026-09-26
 ---
 
 # StarNet
@@ -116,7 +117,9 @@ rm ~/.local/share/StarNet/workspaces/.starnet-workspace-owner.json
 2. Some uncaught async error kills Node without logging
 3. The provider adapter dereferences a field that doesn't exist for non-Ollama providers
 
-**Tried and reverted:** "The stream: false patch made it worse (broke Ollama too). It was reverted." PART 8 adds: "Do not re-enable stream: false on the OpenAI-compatible adapter. It breaks all providers."
+**Tried and reverted:** "The stream: false patch made it worse (broke Ollama too). It was reverted."
+
+**Mitigation built (2026-09-26, not yet tested on the machine):** [[jarvis-x-starnet-gateway]] makes StarNet stream only from 127.0.0.1, while Jarvis makes non-streamed calls to Groq. If hypothesis 1 is right, Bug A no longer bites on that route. It does not diagnose Bug A. PART 8 adds: "Do not re-enable stream: false on the OpenAI-compatible adapter. It breaks all providers."
 
 Interpretation: read alongside Bug A, "the OpenAI-compatible adapter" in PART 8 most likely means StarNet's `sidecar/providers/openai-compatible.js`. The handoff also calls Jarvis's `/v1` layer the "OpenAI-compatible adapter" ([[jarvis-x-openai-compatible-api]]), so it's not fully explicit which one is meant.
 
@@ -125,6 +128,19 @@ Interpretation: read alongside Bug A, "the OpenAI-compatible adapter" in PART 8 
 When you add `http://127.0.0.1:8000/v1` as a custom provider in the StarNet UI, verification fails even with a valid key. The registry supports the `CUSTOM_OPENAI_BASE_URL` env var correctly, but the UI-side verification blocks it.
 
 **Status:** not fully investigated. The env-var path (setting `CUSTOM_OPENAI_BASE_URL` at launch, as the launch block above does) *may* bypass the UI verification if StarNet reads it at boot. **Unconfirmed.**
+
+**Analysis from StarNet's code (2026-09-26).** Source: `raw/2026-09-26-starnet-gateway-and-station-build.md`. This read upstream `androoAGI/starnet`, not the local `feat/harness-backend` branch, and nothing was confirmed on the machine.
+
+- The custom provider needs no key.
+- The key check runs only when a key is typed. It streams "Reply with OK." to the selected model (or the first listed) with a hard **15s** budget.
+- The settings form adds `https://` to a URL typed without a scheme.
+
+Candidate causes, ranked:
+1. The 15s check hit a slow model. app.py's `/v1/models` lists `local` first, and app.py sends no headers until the answer exists.
+2. A missing `http://` was turned into `https://`, which fails TLS against a plain-HTTP server.
+3. The local branch differs from upstream.
+
+Workaround: type the URL with `http://`, and leave the key empty so the check never runs. The env-var path is real: `providerRuntimeBaseUrl` falls back to `CUSTOM_OPENAI_BASE_URL`.
 
 ### Bug B (context) — agents must send file contents themselves
 
@@ -150,6 +166,10 @@ Then send a message and watch the terminal. The exit reason will appear there. A
 ### Priority 2 — Route StarNet through Jarvis
 
 "Get the custom provider UI to accept localhost, OR confirm the env-var path works. Then all StarNet traffic goes through Jarvis, which handles fallbacks and never dies on truncation." The target is Jarvis's OpenAI-compatible endpoint at `http://127.0.0.1:8000/v1` ([[jarvis-x-openai-compatible-api]]). Its `model` field takes `local | fast | smart | quality | frontier`.
+
+> **Disagreement (2026-09-24 handoff vs 2026-09-26 code reading):** the handoff targets `http://127.0.0.1:8000/v1`. StarNet's own adapter, run against app.py's reply shape, reads **zero** text events from it: app.py answers with one JSON body, while StarNet parses only a streamed (SSE) reply. app.py's `/v1` also sends headers only after the full answer, keeps only the last user turn, and drops tools. Source: `raw/2026-09-26-starnet-gateway-and-station-build.md`.
+>
+> What was built instead: a separate gateway on `http://127.0.0.1:8010/v1` ([[jarvis-x-starnet-gateway]], jarvis-x PR #37). It is not yet run on the Chromebook.
 
 ## Tauri desktop shell
 
@@ -185,6 +205,8 @@ The goal now is to **complete both and merge them**, so that setting up StarNet 
 > - which repo "this repo" refers to.
 >
 > Left for the human to confirm.
+>
+> **Resolved (2026-09-25):** asked to choose, the human said "A then C, go ahead". A means StarNet uses Jarvis as its model gateway ([[jarvis-x-starnet-gateway]]). C means building the [[jarvis-x-station-view]], with StarNet's roster idea (Raqib plus role templates) moved into Jarvis. Both were built on 2026-09-26 and are awaiting merge (`raw/2026-09-26-starnet-gateway-and-station-build.md`).
 
 Implication (interpretation): the smallest step that serves both is the handoff's own Priority 2, routing StarNet through Jarvis's [[jarvis-x-openai-compatible-api]]. That gives StarNet Jarvis's working providers, and would sidestep Bug A if that bug is on the Groq path. Every StarNet run then also exercises Jarvis.
 

@@ -2,9 +2,10 @@
 title: Jarvis X OpenAI-Compatible API
 tags: [jarvis-x, api, openai-compatible, entity, as-built]
 sources:
+  - raw/2026-09-26-starnet-gateway-and-station-build.md
   - raw/2026-09-24-jarvis-x-starnet-handoff.md
-related: [[jarvis-x-runtime]], [[jarvis-x-app]], [[universal-model-layer]], [[aider]], [[starnet]], [[hermes-agent]], [[jarvis-x]], [[jarvis-x-station-view]], [[ollama]], [[groq]], [[gemini]], [[source-jarvis-x-starnet-handoff]], [[jarvis-x-plan-vs-reality]]
-last_updated: 2026-09-24
+related: [[jarvis-x-runtime]], [[jarvis-x-app]], [[universal-model-layer]], [[aider]], [[starnet]], [[hermes-agent]], [[jarvis-x]], [[jarvis-x-station-view]], [[ollama]], [[groq]], [[gemini]], [[source-jarvis-x-starnet-handoff]], [[jarvis-x-plan-vs-reality]], [[jarvis-x-starnet-gateway]]
+last_updated: 2026-09-26
 ---
 
 # Jarvis X OpenAI-Compatible API
@@ -80,11 +81,22 @@ The plan is to point [[starnet]] at this adapter, via its custom-provider suppor
 
 The handoff does not say whether this adapter checks the bearer key, or what `sk-jarvis-local` is validated against.
 
+## StarNet can't use this endpoint (found 2026-09-26)
+
+Source: `raw/2026-09-26-starnet-gateway-and-station-build.md`, from reading `app.py` and StarNet's adapter.
+
+- **No streaming.** This endpoint returns one JSON `chat.completion` body. StarNet always requests and parses a streamed (SSE) reply, so it reads zero text events.
+- **Headers late.** Headers go out only after the whole answer, and StarNet aborts after 30s without them.
+- **Conversation lost.** Only the last user message is kept, and the caller's system prompt is replaced with Jarvis's persona.
+- **No tools.** `tools` are dropped.
+
+> **Disagreement (2026-09-24 handoff vs 2026-09-26 code reading):** the handoff names StarNet agents as callers of this adapter and makes it the Priority 2 target. As built, it suits Aider- and Continue-style callers that use one prompt and one reply, but not StarNet. The fix built is a separate endpoint, [[jarvis-x-starnet-gateway]] on port 8010, so this adapter stays as it is.
+
 ## "Do not re-enable stream: false"
 
 PART 8 of the handoff says: "Do not re-enable stream: false on the OpenAI-compatible adapter. It breaks all providers."
 
-> **Ambiguity:** in context this most likely refers to StarNet's `sidecar/providers/openai-compatible.js`, not to this `app.py` adapter. Under Bug A (StarNet Groq runs kill the sidecar) the handoff says "The stream: false patch made it worse (broke Ollama too). It was reverted." Nothing in the handoff says `stream: false` was ever applied to Jarvis's `app.py`. The handoff also does not say whether this adapter supports streaming responses. Left for the human to confirm.
+> **Ambiguity:** in context this most likely refers to StarNet's `sidecar/providers/openai-compatible.js`, not to this `app.py` adapter. Under Bug A (StarNet Groq runs kill the sidecar) the handoff says "The stream: false patch made it worse (broke Ollama too). It was reverted." Nothing in the handoff says `stream: false` was ever applied to Jarvis's `app.py`. The handoff also does not say whether this adapter supports streaming responses. Left for the human to confirm. (Partly answered 2026-09-26: `app.py` shows this adapter does **not** stream. Which adapter PART 8 meant is still open.)
 
 ## Related
 

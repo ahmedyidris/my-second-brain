@@ -2,12 +2,13 @@
 title: Jarvis X Runtime
 tags: [jarvis-x, runtime, deployment, entity, as-built]
 sources:
+  - raw/2026-09-26-starnet-gateway-and-station-build.md
   - raw/2026-09-25-ahmed-rulings-machine-and-model-priority.md
   - raw/2026-09-24-jarvis-x-starnet-handoff.md
   - raw/Jarvis X Resources/Jarvis X/Jarvis_X_v2_Ascension_Plan.md
   - raw/Jarvis X Resources/DeepSeek Files/DeepSeek_Jarvis_X_Master_Plan.md
-related: [[jarvis-x]], [[jarvis-x-openai-compatible-api]], [[hermes-agent]], [[jarvis-x-voice-engine]], [[jarvis-x-app]], [[universal-model-layer]], [[ollama]], [[groq]], [[gemini]], [[crostini]], [[jarvis-x-hardware]], [[constitutional-autonomy]], [[source-jarvis-x-starnet-handoff]], [[jarvis-x-plan-vs-reality]], [[jarvis-x-station-view]], [[free-api-tiers]], [[aider]], [[starnet]], [[openrouter]]
-last_updated: 2026-09-25
+related: [[jarvis-x]], [[jarvis-x-openai-compatible-api]], [[hermes-agent]], [[jarvis-x-voice-engine]], [[jarvis-x-app]], [[universal-model-layer]], [[ollama]], [[groq]], [[gemini]], [[crostini]], [[jarvis-x-hardware]], [[constitutional-autonomy]], [[source-jarvis-x-starnet-handoff]], [[jarvis-x-plan-vs-reality]], [[jarvis-x-station-view]], [[free-api-tiers]], [[aider]], [[starnet]], [[openrouter]], [[jarvis-x-starnet-gateway]]
+last_updated: 2026-09-26
 ---
 
 # Jarvis X Runtime
@@ -137,9 +138,24 @@ hermes
 
 The handoff's [[aider]] launch command also runs from `~/jarvis-x`.
 
+### Ports in use (read from the repo, 2026-09-26)
+
+| Port | Service | Where it is set |
+|------|---------|-----------------|
+| 8000 | `hermes-api` (app.py) | `config/supervisord.conf` |
+| 8001 | `tts-worker` | `code/tts_worker.py`, app.py `TTS_WORKER_URL` |
+| 8002 | dashboard backend | `code/reply/tools/weather.py`, `dashboard/` |
+| 8010 | [[jarvis-x-starnet-gateway]] (built, not merged) | `code/openai-gateway.js` |
+| 8787 | [[starnet]] sidecar | StarNet |
+| 11434 | [[ollama]] | systemd |
+
+Source: `raw/2026-09-26-starnet-gateway-and-station-build.md`.
+
 ## Planned additions (PART 7)
 
 - **Priority 3:** a "Station" tab in Jarvis's existing React frontend, with a roster at `config/agents.yaml` and four endpoints in `app.py` (list, chat, transcript, task) — see [[jarvis-x-station-view]].
+  - Built 2026-09-26 (jarvis-x PR #38), not merged. The endpoints live in `code/station/` and are mounted into `app.py` with one call that the local session still has to add.
+- **Priority 2** (StarNet through Jarvis) was built as a separate gateway on port 8010 (jarvis-x PR #37, not merged). See [[jarvis-x-starnet-gateway]].
 - **Priority 4:** obtain the chatterbox checkpoint (~5GB), place it at `~/jarvis-x/voices/chatterbox-eg/`, restart `tts-worker` — see [[jarvis-x-voice-engine]].
 
 ## Environment
