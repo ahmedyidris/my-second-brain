@@ -2,6 +2,8 @@
 title: StarNet
 tags: [starnet, ai-os, multi-agent, entity, sidecar, node, jarvis-x]
 sources:
+  - raw/2026-09-26-ahmed-ruling-3-starnet-itself-on-chromeos.md
+  - raw/2026-09-26-starnet-on-chromeos-install-findings.md
   - raw/2026-09-26-starnet-gateway-and-station-build.md
   - raw/2026-09-25-ahmed-rulings-2-providers-tiers-direction.md
   - raw/2026-09-24-jarvis-x-starnet-handoff.md
@@ -209,6 +211,31 @@ The goal now is to **complete both and merge them**, so that setting up StarNet 
 > **Resolved (2026-09-25):** asked to choose, the human said "A then C, go ahead". A means StarNet uses Jarvis as its model gateway ([[jarvis-x-starnet-gateway]]). C means building the [[jarvis-x-station-view]], with StarNet's roster idea (Raqib plus role templates) moved into Jarvis. Both were built on 2026-09-26 and are awaiting merge (`raw/2026-09-26-starnet-gateway-and-station-build.md`).
 
 Implication (interpretation): the smallest step that serves both is the handoff's own Priority 2, routing StarNet through Jarvis's [[jarvis-x-openai-compatible-api]]. That gives StarNet Jarvis's working providers, and would sidestep Bug A if that bug is on the Groq path. Every StarNet run then also exercises Jarvis.
+
+## Running StarNet itself on the Chromebook (2026-09-26)
+
+**The human's ruling** (verbatim, `raw/2026-09-26-ahmed-ruling-3-starnet-itself-on-chromeos.md`):
+
+> "I wanted to clone the whole system of Starnet as Jarvis exactly how it is to be able run on chrome os, mainly same exact interface as Starnet or be able to run Starnet itself on chrome os or clone there system as it is"
+
+**What was done:** StarNet itself runs, unmodified, in web mode, with Jarvis as its model provider through [[jarvis-x-starnet-gateway]]. One script does it: `scripts/starnet.sh` in jarvis-x PR #37. Source: `raw/2026-09-26-starnet-on-chromeos-install-findings.md`.
+
+- **Why run it rather than clone it.** StarNet's `npm start` is `node sidecar/index.js`, which serves the whole product (UI and engine) on :8787. Its public installers are Windows and macOS only, but web mode is plain Node and needs `node >= 18`. Running the upstream code keeps its updates. A fork would drift.
+- **Install fixes found by installing it on Debian:**
+  - skip `onnxruntime-node`'s CUDA download (`ONNXRUNTIME_NODE_INSTALL=skip`);
+  - prune a 343 MB CUDA library plus Mac/Windows binaries (packages go from 1210 MB to 592 MB);
+  - `node-pty` compiles from source, so it needs `build-essential` and `python3`;
+  - a fresh clone skips history and `website/`, `docs/`, `output/` and `qa/`, for about 2.8 GB in total. An existing `~/starnet` is reused untouched.
+- **Verified in a cloud container, with a stand-in model:**
+  - StarNet's full UI rendered;
+  - its custom-provider probe reported Jarvis reachable and verified;
+  - a chat run and an 87-tool task run finished `done` at $0;
+  - Jarvis's kill switch surfaced inside StarNet.
+- **Not verified on the Chromebook.**
+- **Safety.** StarNet's first-run screen offers ASK FOR APPROVAL (the default) or FULL POWER. The handoff's "no YOLO agents" rule means choosing ASK FOR APPROVAL. The launcher only advises this; it never sets approval.
+- **Bug A and Bug C.** The launcher removes the provider keys from StarNet's environment, so StarNet's own Groq path (Bug A) is never used. It passes `CUSTOM_OPENAI_BASE_URL` so the backend knows Jarvis. In StarNet's UI the address must still be typed with `http://` (Bug C, cause 2).
+
+> **Disagreement (2026-09-24 handoff PART 8 vs the human's 2026-09-26 ruling):** the handoff says "Do not chase a StarNet clone... Add a station view to Jarvis instead." The human now explicitly wants StarNet's exact interface on ChromeOS, and accepts either running StarNet itself or a clone. The build follows the human's ruling by running StarNet itself, and the handoff's advice stays as the record. The earlier Station tab ([[jarvis-x-station-view]]) is now optional, and whether to keep it is the human's call.
 
 ## Verdict (PART 8)
 

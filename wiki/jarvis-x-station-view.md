@@ -2,6 +2,7 @@
 title: Jarvis X Station View
 tags: [jarvis-x, multi-agent, frontend, built-not-merged]
 sources:
+  - raw/2026-09-26-ahmed-ruling-3-starnet-itself-on-chromeos.md
   - raw/2026-09-26-starnet-gateway-and-station-build.md
   - raw/2026-09-25-ahmed-rulings-2-providers-tiers-direction.md
   - raw/2026-09-24-jarvis-x-starnet-handoff.md
@@ -16,6 +17,8 @@ last_updated: 2026-09-26
 A planned **"Station" tab** in [[jarvis-x]]'s existing React frontend. It's meant to give Jarvis a multi-agent station of its own instead of a clone of [[starnet]]. **Status: not started as of the 2026-09-24 handoff.** It is Priority 3 in the handoff's "what to try next" list, so it's a plan, not a feature.
 
 **Update (2026-09-26):** built, in jarvis-x PR #38 (draft), not merged. It is not yet mounted in `app.py` and not yet run on the Chromebook. See "As built" below.
+
+> **Open (2026-09-26):** after this was built, the human clarified that he wants StarNet's own system and exact interface on ChromeOS (`raw/2026-09-26-ahmed-ruling-3-starnet-itself-on-chromeos.md`). That is now delivered by running StarNet itself ([[starnet]], "Running StarNet itself on the Chromebook"). This tab is Jarvis's own, lighter station. It is not a copy of StarNet's interface. Whether to keep it (PR #38) or close it is left for the human to decide.
 
 ## Status
 

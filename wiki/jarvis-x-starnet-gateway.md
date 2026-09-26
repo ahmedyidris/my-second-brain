@@ -2,6 +2,7 @@
 title: Jarvis X StarNet Gateway
 tags: [jarvis-x, starnet, api, openai-compatible, gateway, entity, built-not-merged]
 sources:
+  - raw/2026-09-26-starnet-on-chromeos-install-findings.md
   - raw/2026-09-26-starnet-gateway-and-station-build.md
   - raw/2026-09-24-jarvis-x-starnet-handoff.md
 related: [[starnet]], [[jarvis-x-openai-compatible-api]], [[jarvis-x-runtime]], [[universal-model-layer]], [[jarvis-x-station-view]], [[groq]], [[gemini]], [[openrouter]], [[ollama]], [[crostini]], [[ipv6-dns-truncation-crostini]], [[jarvis-x-model-priority]], [[constitutional-autonomy]]
@@ -55,6 +56,15 @@ A second OpenAI-compatible endpoint for [[jarvis-x]], built so that [[starnet]] 
 ## StarNet side
 
 Start StarNet with `CUSTOM_OPENAI_BASE_URL="http://127.0.0.1:8010/v1"`. In StarNet's settings, type the URL **with `http://`**, leave the key empty, and pick model `fast`. Full steps are in the repo's `docs/STARNET_GATEWAY.md`.
+
+## The launcher (2026-09-26)
+
+`scripts/starnet.sh` (same PR #37) installs and runs StarNet itself on the Chromebook, wired to this gateway:
+- `install` reuses `~/starnet` untouched, skips the CUDA download and prunes GPU/Mac/Windows binaries;
+- `start` starts the gateway if it's down, then StarNet, with the provider keys removed from StarNet's environment;
+- `stop`, `status`, `logs`, `doctor`, `clear-lock` and `prune` cover the rest.
+
+It was verified end to end in a container (`raw/2026-09-26-starnet-on-chromeos-install-findings.md`). StarNet's own probe reported this gateway reachable and verified. Chat and task runs finished `done`. With `.jarvis-x-STOP` present, StarNet showed the kill-switch message. See [[starnet]].
 
 ## Verification
 

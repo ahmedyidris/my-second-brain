@@ -13,6 +13,20 @@ Utility: `grep "^## \[[0-9]" wiki/log.md | head -5` returns the 5 most recent op
 
 ---
 
+## [2026-09-26] ingest | Ruling 3 (StarNet itself on ChromeOS) and the install findings
+
+Read `raw/2026-09-26-ahmed-ruling-3-starnet-itself-on-chromeos.md`, the human's verbatim ruling that he wants StarNet's own system and exact interface on ChromeOS (run it or clone it), and `raw/2026-09-26-starnet-on-chromeos-install-findings.md`, the notes from installing and running upstream StarNet on Debian through the Jarvis gateway.
+
+Updated:
+- [[starnet]]: new section "Running StarNet itself on the Chromebook", with a Disagreement against handoff PART 8.
+- [[jarvis-x-station-view]]: an "Open" note saying the tab is now optional.
+- [[jarvis-x-starnet-gateway]]: a launcher section.
+- [[index]]: starnet and station-view lines.
+
+Flags for the human:
+- Keep or close the Station tab (PR #38).
+- Nothing has been verified on the Chromebook yet.
+
 ## [2026-09-26] update | Graphify refresh (structural, merge-only)
 
 Re-extracted the 8 files from the gateway/Station ingest and merged them into `graphify-out/graph.json` with pruning off, the same method as the 2026-09-25 refresh. Result: 1,155 nodes, 2,567 edges and 99 communities (was 1,132 / 2,527 / 97). All 411 local-only nodes kept; 0 dangling edges; `manifest.json` unchanged. `built_at_commit` is stamped `7ed53565`; graph.json keeps its 2-space indent; the report title and Graph Freshness section were patched. Updated [[graphify]] and [[index]] with the new counts. `graphify update .` was not run: it shrinks the graph in a cloud checkout.
